@@ -1,0 +1,52 @@
+@import "reset";
+@import "variables/global";
+@import "themes/normal";
+@import "themes/dark";
+
+.app {
+    font: var(--font-m);
+    color: var(--text-redesigned);
+    background: var(--bg-redesigned);
+    min-height: 100vh;
+}
+
+
+*::-webkit-scrollbar {
+    /* ширина scrollbar */
+    width: 12px;
+    height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    /* цвет дорожки */
+    background: var(--light-bg-redesigned);
+}
+
+*::-webkit-scrollbar-thumb {
+    /* цвет плашки */
+    background-color: var(--icon-redesigned);
+    /* закругления плашки */
+    border-radius: 20px;
+    /* padding вокруг плашки */
+    border: 1px solid var(--accent-redesigned);
+}
+
+.app *::-webkit-scrollbar {
+    /* ширина scrollbar */
+    width: 12px;
+    height: 8px;
+}
+
+.app *::-webkit-scrollbar-track {
+    /* цвет дорожки */
+    background: var(--card-bg);
+}
+
+.app *::-webkit-scrollbar-thumb {
+    /* цвет плашки */
+    background-color: var(--inverted-primary-color);
+    /* закругления плашки */
+    border-radius: 20px;
+    /* padding вокруг плашки */
+    border: 2px solid var(--primary-color);
+}

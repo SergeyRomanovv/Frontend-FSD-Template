@@ -1,0 +1,31 @@
+.MainLayout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+            'header header'
+            'sidebar content';
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content 1fr;
+}
+
+
+.header {
+  grid-area: header;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 32px;
+  max-width: 284px;
+  position: sticky;
+  top: var(--navbar-height);
+  height: calc(100vh - var(--navbar-height));
+}
+
+.content {
+  grid-area: content;
+  max-width: 1200px;
+  justify-self: center;
+  padding: 32px;
+  width: 100%;
+}

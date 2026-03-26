@@ -1,0 +1,21 @@
+.Navbar {
+    padding: 16px;
+    width: 100%;
+    height: var(--navbar-height);
+    background: var(--light-bg-redesigned);
+    display: flex;
+    align-items: center;
+}
+
+.actions {
+    margin-left: auto;
+}
+
+.mainLink {
+    margin-right: 15px;
+}
+
+.appName {
+    width: var(--sidebar-width);
+    margin-left: 15px;
+}

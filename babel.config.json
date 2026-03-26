@@ -1,0 +1,23 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-typescript",
+        [
+            "@babel/preset-react",
+            {
+                "runtime": "automatic"
+            }
+        ]
+    ],
+    "plugins": [
+        // Временно отключи т.к засерает переводами и перезаписывает текущие необработаные значения
+        // [
+        //   "i18next-extract",
+        // {
+        //     "outputPath": "public/locales/{{locale}}/{{ns}}.json",
+        //     "locales": ["en", "ru"], // Список локалей
+        //     "keySeparator": false // Отключить вложенность ключей
+        //   }
+        // ]
+    ]
+}
