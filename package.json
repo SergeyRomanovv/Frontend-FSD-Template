@@ -19,15 +19,15 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/SergeyRomanovv/Advanced-Frontend.git"
+        "url": "git+https://github.com/SergeyRomanovv/Frontend-FSD-Template.git"
     },
     "keywords": [],
     "author": "Sergey Romanov",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/SergeyRomanovv/Advanced-Frontend/issues"
+        "url": "https://github.com/SergeyRomanovv/Frontend-FSD-Template/issues"
     },
-    "homepage": "https://github.com/SergeyRomanovv/Advanced-Frontend",
+    "homepage": "https://github.com/SergeyRomanovv/Frontend-FSD-Template",
     "lint-staged": {
         "**/*.{ts,tsx}": [
             "prettier --list-different",
