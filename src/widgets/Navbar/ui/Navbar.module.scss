@@ -1,21 +1,24 @@
 .Navbar {
-    padding: 16px;
+    padding: 0 16px;
     width: 100%;
     height: var(--navbar-height);
     background: var(--light-bg-redesigned);
+    border-bottom: 1px solid var(--hint-redesigned);
     display: flex;
     align-items: center;
 }
 
-.actions {
-    margin-left: auto;
-}
+.links {
+    display: flex;
+    gap: 16px;
+    align-items: center;
 
-.mainLink {
-    margin-right: 15px;
-}
+    a {
+        color: var(--text-redesigned);
+        font: var(--font-m);
 
-.appName {
-    width: var(--sidebar-width);
-    margin-left: 15px;
+        &:hover {
+            color: var(--accent-redesigned);
+        }
+    }
 }
