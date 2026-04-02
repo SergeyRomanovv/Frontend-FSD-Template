@@ -29,10 +29,6 @@ export function buildPlugins(
         }),
         new ForkTsCheckerWebpackPlugin({
             typescript: {
-                diagnosticOptions: {
-                    semantic: true,
-                    syntactic: true,
-                },
                 mode: 'write-references',
             },
         }),
@@ -46,7 +42,6 @@ export function buildPlugins(
 
     if (isDev) {
         plugins.push(new ReactRefreshWebpackPlugin());
-        plugins.push(new webpack.HotModuleReplacementPlugin());
         plugins.push(new BundleAnalyzerPlugin({
             openAnalyzer: false,
         }));

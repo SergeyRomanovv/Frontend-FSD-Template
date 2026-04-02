@@ -14,10 +14,21 @@ export function buildCssLoader(isDev: boolean) {
                         localIdentName: isDev
                             ? '[path][name]__[local]--[hash:base64:5]'
                             : '[hash:base64:8]',
+                        // css-loader@7: сохраняем экспорт имён as-is (иначе .Button -> 'button', ломая все uppercase классы)
+                        exportLocalsConvention: 'asIs',
+                        namedExport: false,
                     },
                 },
             },
-            'sass-loader',
+            {
+                loader: 'sass-loader',
+                options: {
+                    sassOptions: {
+                        // Глушим deprecation-предупреждение о @import (миграция на @use/@forward — отдельный этап)
+                        silenceDeprecations: ['import'],
+                    },
+                },
+            },
         ],
     };
 }
