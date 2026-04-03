@@ -13,6 +13,7 @@ export interface BuildEnv {
     mode: BuildMode;
     port: number;
     apiUrl: string;
+    analyze?: boolean;
 }
 
 export interface BuildOptions {
@@ -22,4 +23,5 @@ export interface BuildOptions {
     port: number;
     apiUrl: string;
     project: 'frontend' | 'jest';
+    analyze?: boolean;
 }

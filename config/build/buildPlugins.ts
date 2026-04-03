@@ -14,6 +14,7 @@ export function buildPlugins(
         isDev,
         apiUrl,
         project,
+        analyze,
     }: BuildOptions,
 ): webpack.WebpackPluginInstance[] {
     const isProd = !isDev;
@@ -42,8 +43,14 @@ export function buildPlugins(
 
     if (isDev) {
         plugins.push(new ReactRefreshWebpackPlugin());
+    }
+
+    // Анализатор бандла запускается только через npm run build:analyze
+    if (analyze) {
         plugins.push(new BundleAnalyzerPlugin({
-            openAnalyzer: false,
+            analyzerMode: 'static',
+            reportFilename: 'bundle-report.html',
+            openAnalyzer: true,
         }));
     }
 

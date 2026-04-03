@@ -8,6 +8,7 @@
         "start:dev": "npm start",
         "build:prod": "webpack  --env mode=production",
         "build:dev": "webpack  --env mode=development",
+        "build:analyze": "webpack --env mode=production --env analyze=true",
         "prettier": "npx prettier --write **/*.{ts,tsx,json}",
         "lint:ts": "eslint \"./src/**/*.{ts,tsx}\"",
         "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
