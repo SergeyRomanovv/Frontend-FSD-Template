@@ -1,10 +1,9 @@
 import {
-    AnyAction,
     EnhancedStore,
     Reducer,
     ReducersMapObject,
+    UnknownAction,
 } from '@reduxjs/toolkit';
-import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
 import { UserSchema } from '@/entities/User';
 import { CounterSchema } from '@/entities/Counter';
@@ -23,10 +22,9 @@ export type MountedReducers = OptionalRecord<StateSchemaKey, boolean>;
 
 export interface ReducerManager {
     getReducerMap: () => ReducersMapObject<StateSchema>;
-    reduce: (
-        state: StateSchema,
-        action: AnyAction,
-    ) => CombinedState<StateSchema>;
+    // UnknownAction — строже чем AnyAction (type: string, payload: unknown)
+    // StateSchema вместо CombinedState<StateSchema> — CombinedState удалён в Redux 5 / RTK 2
+    reduce: (state: StateSchema, action: UnknownAction) => StateSchema;
     add: (key: StateSchemaKey, reducer: Reducer) => void;
     remove: (key: StateSchemaKey) => void;
     // true - вмонтирован, false - демонтирован
