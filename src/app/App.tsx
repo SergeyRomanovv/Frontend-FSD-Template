@@ -8,7 +8,6 @@ import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { MainLayout } from '@/shared/layouts/MainLayout';
 import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout';
-import { withTheme } from './providers/ThemeProvider/ui/withTheme';
 import { Sidebar } from '@/widgets/SideBar';
 
 const App = memo(() => {
@@ -25,7 +24,7 @@ const App = memo(() => {
     if (!inited) {
         return (
             <div id="app" className={classNames('app', {}, [theme])}>
-                <AppLoaderLayout />{' '}
+                <AppLoaderLayout />
             </div>
         );
     }
@@ -43,4 +42,4 @@ const App = memo(() => {
     );
 });
 
-export default withTheme(App);
+export default App;

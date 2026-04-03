@@ -1,4 +1,4 @@
-import { MutableRefObject, useCallback, useRef } from 'react';
+import { useCallback, useRef } from 'react';
 
 /**
  * Хук, который позволяет отменять предыдущий вызов функции пока не истечет delay
@@ -6,7 +6,7 @@ import { MutableRefObject, useCallback, useRef } from 'react';
  * @param delay - задержка в мс
  */
 export function useDebounce(callback: (...args: any[]) => void, delay: number) {
-    const timer = useRef() as MutableRefObject<any>;
+    const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     return useCallback(
         (...args: any[]) => {

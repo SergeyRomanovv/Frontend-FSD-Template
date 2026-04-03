@@ -6,7 +6,6 @@ import { VStack } from '@/shared/ui/Stack';
 import cls from './Sidebar.module.scss';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
 import { useSidebarItems } from '../../model/selectors/getSidebarItems';
-import { AppLogo } from '@/shared/ui/AppLogo';
 import { Icon } from '@/shared/ui/Icon';
 import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg';
 
@@ -41,7 +40,6 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
                 className,
             ])}
         >
-            <AppLogo size={collapsed ? 30 : 50} className={cls.appLogo} />
             <VStack role="navigation" gap="8" className={cls.items}>
                 {itemsList}
             </VStack>

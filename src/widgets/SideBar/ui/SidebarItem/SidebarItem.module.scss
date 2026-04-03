@@ -8,14 +8,13 @@
 .link {
     margin-left: 10px;
     opacity: 1;
-}
-
-.icon {
-    fill: var(--inverted-primary-color);
+    color: var(--text-redesigned);
+    font: var(--font-m);
 }
 
 .collapsed {
     padding: 0 8px;
+
     .link {
         opacity: 0;
         width: 0;
