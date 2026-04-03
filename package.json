@@ -99,7 +99,7 @@
         "webpack-dev-server": "^5.2.3"
     },
     "dependencies": {
-        "@headlessui/react": "^1.6.6",
+        "@headlessui/react": "^2.2.9",
         "@reduxjs/toolkit": "^2.11.2",
         "axios": "^1.14.0",
         "i18next": "^26.0.3",
