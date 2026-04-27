@@ -14,7 +14,7 @@ const config = {
 
     // === Базовое поведение раннера ===
     clearMocks: true,
-    testEnvironment: 'jsdom',
+    testEnvironment: '<rootDir>/config/jest/jsdomEnvironment.js',
     rootDir: '../../',
 
     // === Поиск тестов ===
