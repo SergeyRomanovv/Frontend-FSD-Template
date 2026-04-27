@@ -38,17 +38,13 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     //     exclude: /node_modules/,
     // };
 
-    const fileLoader = {
+    const assetLoader = {
         test: /\.(png|jpe?g|gif|woff2|woff)$/i,
-        use: [
-            {
-                loader: 'file-loader',
-            },
-        ],
+        type: 'asset/resource',
     };
 
     return [
-        fileLoader,
+        assetLoader,
         svgLoader,
         codeBabelLoader,
         tsxCodeBabelLoader,
