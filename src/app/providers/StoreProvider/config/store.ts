@@ -1,19 +1,31 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import {
+    combineReducers,
+    configureStore,
+    StateFromReducersMapObject,
+} from '@reduxjs/toolkit';
+import { PreloadedStateShapeFromReducersMapObject } from 'redux';
 import { counterReducer } from '@/entities/Counter';
 import { userReducer } from '@/entities/User';
 import { $api } from '@/shared/api/api';
 import { uiReducer } from '@/features/UI';
 import { rtkApi } from '@/shared/api/rtkApi';
-import { StateSchema, ThunkExtraArg } from './StateSchema';
+import { ThunkExtraArg } from './StateSchema';
 
-export function createReduxStore(initialState?: DeepPartial<StateSchema>) {
-    const rootReducer = combineReducers({
-        counter: counterReducer,
-        user: userReducer,
-        ui: uiReducer,
-        [rtkApi.reducerPath]: rtkApi.reducer,
-    });
+export const rootReducers = {
+    counter: counterReducer,
+    user: userReducer,
+    ui: uiReducer,
+    [rtkApi.reducerPath]: rtkApi.reducer,
+};
 
+export const rootReducer = combineReducers(rootReducers);
+
+export type RootState = StateFromReducersMapObject<typeof rootReducers>;
+export type StorePreloadedState = Partial<
+    PreloadedStateShapeFromReducersMapObject<typeof rootReducers>
+>;
+
+export function createReduxStore(initialState?: StorePreloadedState) {
     const extraArg: ThunkExtraArg = {
         api: $api,
     };
@@ -21,7 +33,7 @@ export function createReduxStore(initialState?: DeepPartial<StateSchema>) {
     const store = configureStore({
         reducer: rootReducer,
         devTools: __IS_DEV__,
-        preloadedState: initialState as Partial<StateSchema>,
+        preloadedState: initialState,
         middleware: (getDefaultMiddleware) =>
             getDefaultMiddleware({
                 thunk: {
@@ -34,6 +46,3 @@ export function createReduxStore(initialState?: DeepPartial<StateSchema>) {
 }
 
 export type AppDispatch = ReturnType<typeof createReduxStore>['dispatch'];
-export type RootState = ReturnType<
-    ReturnType<typeof createReduxStore>['getState']
->;

@@ -3,14 +3,17 @@ import { render } from '@testing-library/react';
 import { I18nextProvider } from 'react-i18next';
 import { MemoryRouter } from 'react-router-dom';
 import i18nForTests from '@/shared/config/i18n/i18nForTests';
-import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
+import {
+    StorePreloadedState,
+    StoreProvider,
+} from '@/app/providers/StoreProvider';
 import { Theme } from '@/shared/const/theme';
 import { ThemeProvider } from '@/app/providers/ThemeProvider';
 import '@/app/styles/index.scss';
 
 export interface componentRenderOptions {
     route?: string;
-    initialState?: DeepPartial<StateSchema>;
+    initialState?: StorePreloadedState;
     theme?: Theme;
 }
 

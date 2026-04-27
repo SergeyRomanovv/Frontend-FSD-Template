@@ -55,7 +55,10 @@ describe('app/router/AppRouter', () => {
         componentRender(<AppRouter />, {
             route: getRouteAdmin(),
             initialState: {
-                user: { _inited: true, authData: {} },
+                user: {
+                    _inited: true,
+                    authData: { id: '3', username: 'user' },
+                },
             },
         });
 
