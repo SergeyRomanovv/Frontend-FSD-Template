@@ -1,34 +1,35 @@
 const { default: NodeEnvironment } = require('jest-environment-node');
-const { JSDOM } = require('jsdom');
+const { Window } = require('happy-dom');
 
 module.exports = class CustomJSDOMEnvironment extends NodeEnvironment {
     async setup() {
         await super.setup();
 
-        this.dom = new JSDOM('<!DOCTYPE html><html><body></body></html>', {
+        this.window = new Window({
             url: 'http://localhost',
-            pretendToBeVisual: true,
-            resources: 'usable',
+            width: 1920,
+            height: 1080,
         });
 
-        const { window } = this.dom;
-        const { document } = window;
+        const { document } = this.window;
 
-        this.global.window = window;
+        this.global.window = this.window;
         this.global.document = document;
-        this.global.navigator = window.navigator;
-        this.global.location = window.location;
-        this.global.history = window.history;
-        this.global.Element = window.Element;
-        this.global.HTMLElement = window.HTMLElement;
-        this.global.localStorage = window.localStorage;
-        this.global.sessionStorage = window.sessionStorage;
+        this.global.navigator = this.window.navigator;
+        this.global.location = this.window.location;
+        this.global.history = this.window.history;
+        this.global.Element = this.window.Element;
+        this.global.HTMLElement = this.window.HTMLElement;
+        this.global.localStorage = this.window.localStorage;
+        this.global.sessionStorage = this.window.sessionStorage;
+        this.global.XMLSerializer = this.window.XMLSerializer;
 
-        this.global.fetch = window.fetch;
-        this.global.Request = window.Request;
-        this.global.Response = window.Response;
-        this.global.Headers = window.Headers;
-        this.global.URL = window.URL;
+        this.global.fetch = this.window.fetch;
+        this.global.Request = this.window.Request;
+        this.global.Response = this.window.Response;
+        this.global.Headers = this.window.Headers;
+        this.global.URL = this.window.URL;
+        this.global.DOMException = this.window.DOMException;
 
         const { TextEncoder, TextDecoder } = require('util');
         if (typeof this.global.TextEncoder === 'undefined') {
@@ -40,7 +41,7 @@ module.exports = class CustomJSDOMEnvironment extends NodeEnvironment {
     }
 
     async teardown() {
-        this.dom?.window?.close();
+        this.window?.close?.();
         await super.teardown();
     }
 };
