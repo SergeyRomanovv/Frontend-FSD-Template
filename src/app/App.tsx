@@ -1,8 +1,8 @@
-import React, { memo, Suspense, useEffect } from 'react';
+import { memo, useEffect } from 'react';
+import { Outlet } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { getUserInited, initAuthData } from '@/entities/User';
-import { AppRouter } from './providers/router';
 import { Navbar } from '@/widgets/Navbar';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -31,13 +31,11 @@ const App = memo(() => {
 
     return (
         <div id="app" className={classNames('app', {}, [theme])}>
-            <Suspense fallback="">
-                <MainLayout
-                    header={<Navbar />}
-                    content={<AppRouter />}
-                    sidebar={<Sidebar />}
-                />
-            </Suspense>
+            <MainLayout
+                header={<Navbar />}
+                content={<Outlet />}
+                sidebar={<Sidebar />}
+            />
         </div>
     );
 });

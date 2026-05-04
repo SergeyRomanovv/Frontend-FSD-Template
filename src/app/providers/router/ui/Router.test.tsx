@@ -1,40 +1,29 @@
 import { screen } from '@testing-library/react';
-import { componentRender } from '@/shared/lib/tests/componentRender/componentRender';
-import AppRouter from './AppRouter';
+import { routerRender } from '@/shared/lib/tests/componentRender/componentRender';
 import { getRouteAbout, getRouteAdmin } from '@/shared/const/router';
 import { UserRole } from '@/entities/User';
 
-describe('app/router/AppRouter', () => {
+describe('app/router', () => {
     test('Страница должна отрендериться', async () => {
-        componentRender(<AppRouter />, {
-            route: getRouteAbout(),
-        });
-
+        routerRender(getRouteAbout());
         const page = await screen.findByTestId('AboutPage');
         expect(page).toBeInTheDocument();
     });
 
     test('Страница не найдена', async () => {
-        componentRender(<AppRouter />, {
-            route: '/asfasfasfasf',
-        });
-
+        routerRender('/asfasfasfasf');
         const page = await screen.findByTestId('NotFoundPage');
         expect(page).toBeInTheDocument();
     });
 
     test('Редирект неавторизованного пользователя на главную', async () => {
-        componentRender(<AppRouter />, {
-            route: getRouteAdmin(),
-        });
-
+        routerRender(getRouteAdmin());
         const page = await screen.findByTestId('MainPage');
         expect(page).toBeInTheDocument();
     });
 
-    test('Доступ к закрытой страницы для авторизованного пользователя', async () => {
-        componentRender(<AppRouter />, {
-            route: getRouteAdmin(),
+    test('Доступ к закрытой странице для авторизованного пользователя', async () => {
+        routerRender(getRouteAdmin(), {
             initialState: {
                 user: {
                     _inited: true,
@@ -46,14 +35,12 @@ describe('app/router/AppRouter', () => {
                 },
             },
         });
-
         const page = await screen.findByTestId('AdminPanelPage');
         expect(page).toBeInTheDocument();
     });
 
-    test('Доступ запрещен (отсутствует роль)', async () => {
-        componentRender(<AppRouter />, {
-            route: getRouteAdmin(),
+    test('Доступ запрещён (отсутствует роль)', async () => {
+        routerRender(getRouteAdmin(), {
             initialState: {
                 user: {
                     _inited: true,
@@ -61,7 +48,6 @@ describe('app/router/AppRouter', () => {
                 },
             },
         });
-
         const page = await screen.findByTestId('ForbiddenPage');
         expect(page).toBeInTheDocument();
     });

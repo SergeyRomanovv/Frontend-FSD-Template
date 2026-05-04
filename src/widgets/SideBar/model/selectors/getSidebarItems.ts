@@ -25,7 +25,6 @@ export const useSidebarItems = () => {
             path: getRouteAdmin(),
             Icon: AdminIcon,
             text: 'Админ панель',
-            authOnly: true,
         },
     ];
 
