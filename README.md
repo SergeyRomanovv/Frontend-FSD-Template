@@ -4,10 +4,11 @@
 
 ## Стек
 
--   **React 18** + **TypeScript**
+-   **React 19** + **TypeScript 5**
 -   **Webpack 5** (dev/prod конфиги вынесены в `config/build/`)
--   **Redux Toolkit** + **RTK Query** (dynamic reducers через `ReducerManager`)
--   **React Router DOM v6** с `RequireAuth` guard и ролевым доступом
+-   **Redux Toolkit** + **RTK Query**
+-   **React Router DOM v7** (Data Router API: `createBrowserRouter`, `RouterProvider`, route-level lazy)
+-   **@headlessui/react** — доступные headless-компоненты для построения UI
 -   **i18n** (`react-i18next`, два языка: EN / RU)
 -   **ESLint 9** (flat config) + **Stylelint** + **Prettier**
 -   **Jest** + **Testing Library** (с HTML-отчётом)
@@ -30,10 +31,10 @@ src/
 | Модуль | Что показывает |
 |---|---|
 | `entities/Counter` | `buildSlice`, `buildSelector`, динамический reducer, тесты |
-| `entities/User` | auth-скелет: `initAuthData`, `RequireAuth`, роли (`UserRole`) |
-| `features/ThemeSwitcher` | переключение темы через localStorage |
+| `entities/User` | auth-скелет: `initAuthData` (заготовка), `RequireAuth`, роли (`UserRole`) |
+| `features/ThemeSwitcher` | переключение темы |
 | `features/LangSwitcher` | переключение языка i18n |
-| `pages/AdminPanelPage` | защищённый маршрут (`authOnly`, роли `ADMIN`/`MANAGER`) |
+| `pages/AdminPanelPage` | защищённый маршрут (`roles: [ADMIN, MANAGER]`) |
 
 ## Shared UI-kit
 
@@ -44,6 +45,7 @@ src/
 -   Публичные маршруты: `/`, `/about`, `/forbidden`, `*`
 -   Защищённый маршрут: `/admin` (требуются роли `ADMIN` или `MANAGER`)
 -   Guard `RequireAuth` — редирект на `/` без авторизации, на `/forbidden` без нужной роли
+-   Подробнее: [`src/app/providers/router/README.md`](src/app/providers/router/README.md)
 
 ## Быстрый старт
 
