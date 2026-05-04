@@ -26,7 +26,6 @@ describe('app/router', () => {
         routerRender(getRouteAdmin(), {
             initialState: {
                 user: {
-                    _inited: true,
                     authData: {
                         id: '2',
                         username: 'admin',
@@ -43,7 +42,6 @@ describe('app/router', () => {
         routerRender(getRouteAdmin(), {
             initialState: {
                 user: {
-                    _inited: true,
                     authData: { id: '3', username: 'user' },
                 },
             },

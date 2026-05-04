@@ -1,29 +1,23 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { ThunkConfig } from '@/app/providers/StoreProvider';
-import { getUserDataByIdQuery } from '../../api/userApi';
 import { User } from '../types/user';
-import { USER_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 
+// Заготовка для инициализации авторизации при старте приложения.
+// Реализуй логику получения текущего пользователя под свой стек:
+//   - cookie/session  → GET /auth/me
+//   - JWT             → проверка токена, refresh при необходимости
+//   - OAuth           → обмен кода на токен и получение профиля
 export const initAuthData = createAsyncThunk<User, void, ThunkConfig<string>>(
     'user/initAuthData',
-    async (newJsonSettings, thunkApi) => {
-        const { rejectWithValue, dispatch } = thunkApi;
-
-        const userId = localStorage.getItem(USER_LOCALSTORAGE_KEY);
-
-        if (!userId) {
-            return rejectWithValue('');
-        }
-
+    async (_, { extra, rejectWithValue }) => {
         try {
-            const response = await dispatch(
-                getUserDataByIdQuery(userId),
-            ).unwrap();
+            // TODO: заменить на реальный запрос
+            // const { data } = await extra.api.get<User>('/auth/me');
+            // return data;
 
-            return response;
-        } catch (e) {
-            console.log(e);
-            return rejectWithValue('');
+            return rejectWithValue('Не реализовано');
+        } catch {
+            return rejectWithValue('Ошибка инициализации авторизации');
         }
     },
 );

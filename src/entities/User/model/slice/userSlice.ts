@@ -1,11 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { USER_LOCALSTORAGE_KEY } from '@/shared/const/localstorage';
 import { UserSchema, User } from '../types/user';
 import { initAuthData } from '../services/initAuthData';
 
-const initialState: UserSchema = {
-    _inited: false,
-};
+const initialState: UserSchema = {};
 
 export const userSlice = createSlice({
     name: 'user',
@@ -13,27 +10,21 @@ export const userSlice = createSlice({
     reducers: {
         setAuthData: (state, { payload }: PayloadAction<User>) => {
             state.authData = payload;
-            localStorage.setItem(USER_LOCALSTORAGE_KEY, payload.id);
         },
         logout: (state) => {
             state.authData = undefined;
-            localStorage.removeItem(USER_LOCALSTORAGE_KEY);
         },
     },
     extraReducers: (builder) => {
+        // Устанавливает authData после успешной инициализации (см. initAuthData)
         builder.addCase(
             initAuthData.fulfilled,
             (state, { payload }: PayloadAction<User>) => {
                 state.authData = payload;
-                state._inited = true;
             },
         );
-        builder.addCase(initAuthData.rejected, (state) => {
-            state._inited = true;
-        });
     },
 });
 
-// Action creators are generated for each case reducer function
 export const { actions: userActions } = userSlice;
 export const { reducer: userReducer } = userSlice;
