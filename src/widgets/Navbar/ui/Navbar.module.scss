@@ -1,24 +1,44 @@
 .Navbar {
-    padding: 0 16px;
+    padding: 0 24px;
     width: 100%;
     height: var(--navbar-height);
     background: var(--light-bg-redesigned);
     border-bottom: 1px solid var(--hint-redesigned);
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo {
+    font: var(--font-l);
+    font-weight: 700;
+    color: var(--text-redesigned);
+    text-decoration: none;
+
+    &:hover {
+        color: var(--accent-redesigned);
+    }
+}
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background: var(--hint-redesigned);
+    flex-shrink: 0;
 }
 
 .links {
     display: flex;
     gap: 16px;
     align-items: center;
+}
 
-    a {
-        color: var(--text-redesigned);
-        font: var(--font-m);
-
-        &:hover {
-            color: var(--accent-redesigned);
-        }
-    }
+.activeLink {
+    color: var(--accent-redesigned) !important;
 }

@@ -10,6 +10,7 @@ interface AppLinkProps extends LinkProps {
     variant?: AppLinkVariant;
     children?: ReactNode;
     activeClassName?: string;
+    end?: boolean;
 }
 
 export const AppLink = memo((props: AppLinkProps) => {
