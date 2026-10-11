@@ -17,6 +17,8 @@ The User entity SHALL export its whole surface through
 `User`/`UserSchema` types, `UserRole`, and `initAuthData`. Consumers SHALL
 import from this public API only.
 
+- **Implementation**: `getUserRoles::src/entities/User/index.ts`
+
 #### Scenario: Widget consumes user roles
 - **WHEN** a widget needs to know whether the user is an admin
 - **THEN** it imports `isUserAdmin` from `@/entities/User` (the public entry)
@@ -24,6 +26,8 @@ import from this public API only.
 ### Requirement: Auth data initialization
 The app SHALL dispatch `initAuthData` (a `createAsyncThunk`) on start. On
 fulfillment the user slice SHALL store the fetched `User` as auth data.
+
+- **Implementation**: `initAuthData::src/entities/User/model/services/initAuthData.ts`
 
 #### Scenario: Successful initialization
 - **WHEN** `initAuthData` fulfills with a `User`
@@ -37,6 +41,8 @@ fulfillment the user slice SHALL store the fetched `User` as auth data.
 Role checks (`isUserAdmin`, `isUserManager`) SHALL be memoized selectors
 derived from `getUserRoles` via `createSelector`.
 
+- **Implementation**: `isUserAdmin::src/entities/User/model/selectors/roleSelectors.ts`
+
 #### Scenario: Role check
 - **WHEN** the store holds roles `[UserRole.USER]`
 - **THEN** `isUserAdmin` selects `false` without recomputation on unrelated state updates
@@ -46,6 +52,8 @@ The profile fetch used by `initAuthData` SHALL go through `userApi`, created
 with `rtkApi.injectEndpoints` in the entity's `api` folder, and SHALL surface
 the domain `User` type to consumers.
 
+- **Implementation**: `getUserDataByIdQuery::src/entities/User/api/userApi.ts`
+
 #### Scenario: Fetching the profile
 - **WHEN** `initAuthData` runs
 - **THEN** the request is issued by the RTK Query endpoint declared in `src/entities/User/api/userApi.ts`
@@ -54,6 +62,8 @@ the domain `User` type to consumers.
 The entity SHALL NOT persist auth state to storage and SHALL NOT track a
 separate initialized flag in the slice; initialization re-runs per application
 session.
+
+- **Implementation**: `userSlice::src/entities/User/model/slice/userSlice.ts`
 
 #### Scenario: Page reload
 - **WHEN** the user reloads the app

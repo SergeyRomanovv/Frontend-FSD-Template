@@ -13,6 +13,8 @@ The application SHALL be wrapped in `StoreProvider`
 (`src/app/providers/StoreProvider`), which accepts `children` and an optional
 `initialState` preloaded state.
 
+- **Implementation**: `StoreProvider::src/app/providers/StoreProvider/ui/StoreProvider.tsx`
+
 #### Scenario: App bootstrap
 - **WHEN** the app starts
 - **THEN** the component tree renders inside `StoreProvider` with the configured root reducer
@@ -27,6 +29,8 @@ There SHALL be exactly one RTK Query `createApi` instance (`rtkApi` in
 `rtkApi.injectEndpoints` (as `userApi` does), never by calling `createApi` a
 second time.
 
+- **Implementation**: `rtkApi::src/shared/api/rtkApi.ts`
+
 #### Scenario: New endpoint set
 - **WHEN** an entity needs server endpoints
 - **THEN** they are added via `rtkApi.injectEndpoints` in the entity's `api` folder
@@ -35,6 +39,8 @@ second time.
 The root reducer and middleware SHALL include `rtkApi.reducer` under its
 `reducerPath`, and the state schema (`StateSchema`) SHALL declare that key.
 
+- **Implementation**: `rootReducer::src/app/providers/StoreProvider/config/store.ts`
+
 #### Scenario: Store assembly
 - **WHEN** the store is created
 - **THEN** `[rtkApi.reducerPath]: rtkApi.reducer` is present and the RTK Query middleware is concatenated
@@ -42,6 +48,8 @@ The root reducer and middleware SHALL include `rtkApi.reducer` under its
 ### Requirement: Shared slice and selector builders
 Slices and selectors across layers SHALL be built with the shared helpers
 `buildSlice` and `buildSelector` from `src/shared/lib/store`.
+
+- **Implementation**: `buildSelector::src/shared/lib/store/buildSelector.ts`
 
 #### Scenario: Creating an entity slice
 - **WHEN** a new entity adds local state
