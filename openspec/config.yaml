@@ -1,20 +1,31 @@
 schema: spec-driven
 
 context: |-
-  # User-provided context (preserved)
   Language: English
   All artifacts must be written in English.
   Keep OpenSpec structural headings and SHALL/MUST keywords in English.
-  Project: Frontend-FSD-Template — a reusable React frontend template built on
-  Feature-Sliced Design. Layers (low to high): shared, entities, features,
-  widgets, pages, app; a layer may only import from lower layers.
-  Follow AGENTS.md for the full conventions.
 
-  # Auto-detected by openlore
-  Tech stack: node-typescript, React, Jest
-  Architecture: unknown
-  Domains: aboutpage, adminpanelpage, agents, applink, button, config, counter, domain, en, errorboundary, errorpage, features, forbiddenpage, icon, input, langswitcher, loader, mainlayout, mainpage, navbar, notfoundpage, page, pages, providers, public, router, ru, shared, sidebar, skeleton, stack, store, storeprovider, styles, text, themeprovider, themeswitcher, ui, users, widgets
-  Key patterns: Component-based UI
+  Project: Frontend-FSD-Template — a reusable React frontend template.
+
+  Methodology: Feature-Sliced Design. Layers (low to high): shared, entities,
+  features, widgets, pages, app; a layer may only import from lower layers.
+  Slices expose a public API via index.ts; use alias imports (@/...); avoid
+  deep imports. Follow AGENTS.md for the full conventions.
+
+  Tech stack (package.json holds the exact versions):
+  - Language/UI: TypeScript, React 19
+  - Routing: React Router 7
+  - State: Redux Toolkit + RTK Query + react-redux
+  - UI primitives: @headlessui/react (accessibility-first base)
+  - i18n: i18next + react-i18next (locales ru/en)
+  - HTTP: axios; single RTK Query base api in src/shared/api
+  - Styling: SCSS modules + design tokens from src/app/styles
+  - Bundler: Webpack 5 (babel, svgr, fork-ts-checker, bundle-analyzer)
+  - Tests: Jest + Testing Library + happy-dom
+  - Quality: ESLint 9 (flat config), Stylelint, Prettier, Husky + lint-staged
+
+  Verification entry points: npm run lint:ts, npm run lint:scss,
+  npm run test:unit, npm run build:prod.
 
 rules:
   proposal:
