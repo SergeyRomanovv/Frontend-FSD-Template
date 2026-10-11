@@ -1,0 +1,387 @@
+{
+  "generatedAt": "2026-10-11T17:36:08.876Z",
+  "specVersion": "1.0.0",
+  "domains": [
+    {
+      "domain": "aboutpage",
+      "specPath": "openspec/specs/aboutpage/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 2,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "adminpanelpage",
+      "specPath": "openspec/specs/adminpanelpage/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 2,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "agents",
+      "specPath": "openspec/specs/agents/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/eslint.config.mjs",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/tsconfig.json",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/babel.config.json",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/webpack.config.ts",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/AGENTS.md",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/package.json",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/README.md",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/.browserslistrc",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/.gitignore",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/.prettierignore",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/.prettierrc.json",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/.stylelintignore",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/.stylelintrc.json",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/index.html"
+      ],
+      "requirementCount": 1,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "applink",
+      "specPath": "openspec/specs/applink/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/AppLink/AppLink.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/AppLink/AppLink.module.scss",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/AppLink/index.ts"
+      ],
+      "requirementCount": 1,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "button",
+      "specPath": "openspec/specs/button/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Button/Button.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Button/Button.module.scss",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Button/index.ts"
+      ],
+      "requirementCount": 1,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "config",
+      "specPath": "openspec/specs/config/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/app/providers/router/config/routeConfig.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/app/providers/router/config/router.tsx"
+      ],
+      "requirementCount": 3,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "counter",
+      "specPath": "openspec/specs/counter/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/entities/Counter/index.ts",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/entities/Counter/README.md"
+      ],
+      "requirementCount": 8,
+      "dependsOn": [
+        "slice",
+        "ui"
+      ],
+      "calledBy": []
+    },
+    {
+      "domain": "en",
+      "specPath": "openspec/specs/en/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/public/locales/en/about.json",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/public/locales/en/main.json",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/public/locales/en/translation.json"
+      ],
+      "requirementCount": 4,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "errorboundary",
+      "specPath": "openspec/specs/errorboundary/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 5,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "errorpage",
+      "specPath": "openspec/specs/errorpage/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 2,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "features",
+      "specPath": "openspec/specs/features/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 2,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "forbiddenpage",
+      "specPath": "openspec/specs/forbiddenpage/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 2,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "icon",
+      "specPath": "openspec/specs/icon/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Icon/Icon.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Icon/Icon.module.scss",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Icon/index.ts"
+      ],
+      "requirementCount": 1,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "input",
+      "specPath": "openspec/specs/input/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Input/Input.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Input/Input.module.scss",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Input/index.ts"
+      ],
+      "requirementCount": 1,
+      "dependsOn": [
+        "text"
+      ],
+      "calledBy": []
+    },
+    {
+      "domain": "langswitcher",
+      "specPath": "openspec/specs/langswitcher/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/features/LangSwitcher/index.ts",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/features/LangSwitcher/README.md"
+      ],
+      "requirementCount": 2,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "loader",
+      "specPath": "openspec/specs/loader/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Loader/Loader.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Loader/Loader.scss",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Loader/index.ts"
+      ],
+      "requirementCount": 2,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "mainlayout",
+      "specPath": "openspec/specs/mainlayout/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/layouts/MainLayout/MainLayout.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/layouts/MainLayout/index.ts",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/layouts/MainLayout/MainLayout.module.scss"
+      ],
+      "requirementCount": 1,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "mainpage",
+      "specPath": "openspec/specs/mainpage/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 1,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "navbar",
+      "specPath": "openspec/specs/navbar/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/widgets/Navbar/README.md",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/widgets/Navbar/index.ts"
+      ],
+      "requirementCount": 1,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "notfoundpage",
+      "specPath": "openspec/specs/notfoundpage/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 2,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "page",
+      "specPath": "openspec/specs/page/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/widgets/Page/ui/Page/Page.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/widgets/Page/ui/Page/Page.module.scss"
+      ],
+      "requirementCount": 4,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "pages",
+      "specPath": "openspec/specs/pages/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 5,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "public",
+      "specPath": "openspec/specs/public/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 3,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "router",
+      "specPath": "openspec/specs/router/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/app/providers/router/README.md",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/app/providers/router/index.ts"
+      ],
+      "requirementCount": 3,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "ru",
+      "specPath": "openspec/specs/ru/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/public/locales/ru/about.json",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/public/locales/ru/main.json",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/public/locales/ru/translation.json"
+      ],
+      "requirementCount": 4,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "sidebar",
+      "specPath": "openspec/specs/sidebar/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/widgets/SideBar/ui/Sidebar/Sidebar.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/widgets/SideBar/ui/Sidebar/Sidebar.module.scss",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/widgets/SideBar/ui/Sidebar/Sidebar.test.tsx"
+      ],
+      "requirementCount": 2,
+      "dependsOn": [
+        "sidebaritem"
+      ],
+      "calledBy": []
+    },
+    {
+      "domain": "skeleton",
+      "specPath": "openspec/specs/skeleton/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Skeleton/Skeleton.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Skeleton/index.ts",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Skeleton/Skeleton.module.scss"
+      ],
+      "requirementCount": 1,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "stack",
+      "specPath": "openspec/specs/stack/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 3,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "store",
+      "specPath": "openspec/specs/store/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/lib/store/buildSelector.ts",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/lib/store/buildSlice.ts",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/lib/store/index.ts"
+      ],
+      "requirementCount": 1,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "storeprovider",
+      "specPath": "openspec/specs/storeprovider/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 4,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "text",
+      "specPath": "openspec/specs/text/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Text/Text.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Text/Text.module.scss",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/shared/ui/Text/index.ts"
+      ],
+      "requirementCount": 1,
+      "dependsOn": [],
+      "calledBy": [
+        "input"
+      ]
+    },
+    {
+      "domain": "themeprovider",
+      "specPath": "openspec/specs/themeprovider/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 2,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "themeswitcher",
+      "specPath": "openspec/specs/themeswitcher/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/features/ThemeSwitcher/index.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/features/ThemeSwitcher/README.md"
+      ],
+      "requirementCount": 2,
+      "dependsOn": [],
+      "calledBy": []
+    },
+    {
+      "domain": "ui",
+      "specPath": "openspec/specs/ui/spec.md",
+      "sourceFiles": [
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/entities/Counter/ui/Counter.tsx",
+        "/home/horo134pc/work/reps/Frontend-FSD-Template/src/entities/Counter/ui/Counter.test.tsx"
+      ],
+      "requirementCount": 3,
+      "dependsOn": [
+        "getcountervalue",
+        "slice"
+      ],
+      "calledBy": [
+        "counter"
+      ]
+    },
+    {
+      "domain": "widgets",
+      "specPath": "openspec/specs/widgets/spec.md",
+      "sourceFiles": [],
+      "requirementCount": 1,
+      "dependsOn": [],
+      "calledBy": []
+    }
+  ]
+}
