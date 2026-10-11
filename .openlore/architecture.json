@@ -1,0 +1,16 @@
+{
+  "layers": {
+    "app": ["src/app"],
+    "pages": ["src/pages"],
+    "widgets": ["src/widgets"],
+    "features": ["src/features"],
+    "entities": ["src/entities"],
+    "shared": ["src/shared"]
+  },
+  "circular": [
+    {
+      "scope": "src",
+      "reason": "FSD template: import cycles between modules are refactor candidates"
+    }
+  ]
+}

@@ -32,3 +32,7 @@ yarn-error.log*
 .loki/report.html
 .loki/report.json
 /reports/unit
+
+# openlore analysis artifacts (index is rebuildable; architecture rules are shared)
+.openlore/*
+!.openlore/architecture.json

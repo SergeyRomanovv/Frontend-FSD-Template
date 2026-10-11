@@ -1,0 +1,42 @@
+schema: spec-driven
+
+context: |
+  Language: English
+  All artifacts must be written in English.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+  Project: Frontend-FSD-Template — a reusable React frontend template built on
+  Feature-Sliced Design. Layers (low to high): shared, entities, features,
+  widgets, pages, app; a layer may only import from lower layers.
+  Follow AGENTS.md for the full conventions.
+
+rules:
+  proposal:
+    - List the affected FSD layers/slices explicitly
+    - Always state what is out of scope
+    - Before proposing a new component/hook/service/selector, verify no existing implementation can be reused
+    - Prefer evolutionary changes over rewrites of the existing architecture
+  design:
+    - State the FSD placement (layer/slice) of every new module and justify why that layer was chosen
+    - Show that the dependency direction between layers is respected by the proposed structure
+    - For data changes, document the API contract (endpoint, DTO vs domain type boundary)
+    - For UI changes, list the existing reusable primitives and style tokens to build on
+    - Do not restate coding standards — reference the governing AGENTS.md sections
+  specs:
+    - Keep every requirement verifiable and testable
+    - Align capability paths with FSD slices where practical
+  tasks:
+    - Break tasks into small, independently verifiable chunks
+    - 'End implementation tasks with the base verification chain: npm run lint:ts && npm run test:unit && npm run build:prod'
+    - UI/layout/routing changes require a visual check via MCP browser tooling
+    - Extended checks (extra scenarios, extended smoke/e2e) require explicit user approval first
+
+operations:
+  apply:
+    guidance:
+      - Call orient before touching modules not yet read in this session (OpenLore architectural memory)
+      - Record significant design choices with record_decision before writing the code
+      - Run the base verification chain before reporting an implementation task complete
+  archive:
+    guidance:
+      - Summarize the archive outcome before finishing
+      - Make sure delta specs are merged into the main specs without losing requirements
