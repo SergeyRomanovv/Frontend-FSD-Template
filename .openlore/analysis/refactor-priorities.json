@@ -1,0 +1,121 @@
+{
+  "generatedAt": "2026-10-11T17:56:11.834Z",
+  "stats": {
+    "totalFunctions": 66,
+    "withIssues": 5,
+    "unreachable": 0,
+    "highFanIn": 0,
+    "highFanOut": 0,
+    "srpViolations": 0,
+    "cycleParticipants": 5,
+    "cyclesDetected": 2,
+    "highComplexity": 0
+  },
+  "priorities": [
+    {
+      "function": "render",
+      "file": "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx",
+      "className": "ErrorBoundary",
+      "fanIn": 3,
+      "fanOut": 0,
+      "depth": 1,
+      "sccSize": 3,
+      "requirements": [],
+      "issues": [
+        "in_cycle"
+      ],
+      "cyclomaticComplexity": 2,
+      "priorityScore": 2.5
+    },
+    {
+      "function": "componentRender",
+      "file": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "fanIn": 0,
+      "fanOut": 1,
+      "depth": 0,
+      "sccSize": 3,
+      "requirements": [],
+      "issues": [
+        "in_cycle"
+      ],
+      "cyclomaticComplexity": 1,
+      "priorityScore": 2.5
+    },
+    {
+      "function": "routerRender",
+      "file": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "fanIn": 0,
+      "fanOut": 3,
+      "depth": 0,
+      "sccSize": 2,
+      "requirements": [],
+      "issues": [
+        "in_cycle"
+      ],
+      "cyclomaticComplexity": 1,
+      "priorityScore": 2.5
+    },
+    {
+      "function": "buildRouteObjects",
+      "file": "src/app/providers/router/config/router.tsx",
+      "fanIn": 2,
+      "fanOut": 1,
+      "depth": 1,
+      "sccSize": 2,
+      "requirements": [],
+      "issues": [
+        "in_cycle"
+      ],
+      "cyclomaticComplexity": 4,
+      "priorityScore": 2.5
+    },
+    {
+      "function": "renderWithTranslation",
+      "file": "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx",
+      "fanIn": 0,
+      "fanOut": 1,
+      "depth": 0,
+      "sccSize": 3,
+      "requirements": [],
+      "issues": [
+        "in_cycle"
+      ],
+      "cyclomaticComplexity": 1,
+      "priorityScore": 2.5
+    }
+  ],
+  "cycles": [
+    {
+      "sccId": 21,
+      "size": 3,
+      "participants": [
+        {
+          "function": "render",
+          "file": "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx"
+        },
+        {
+          "function": "componentRender",
+          "file": "src/shared/lib/tests/componentRender/componentRender.tsx"
+        },
+        {
+          "function": "renderWithTranslation",
+          "file": "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx"
+        }
+      ]
+    },
+    {
+      "sccId": 25,
+      "size": 2,
+      "participants": [
+        {
+          "function": "routerRender",
+          "file": "src/shared/lib/tests/componentRender/componentRender.tsx"
+        },
+        {
+          "function": "buildRouteObjects",
+          "file": "src/app/providers/router/config/router.tsx"
+        }
+      ]
+    }
+  ]
+}

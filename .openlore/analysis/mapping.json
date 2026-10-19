@@ -1,0 +1,2026 @@
+{
+  "version": 8,
+  "generatedAt": "2026-10-11T17:50:38.913Z",
+  "provenance": {
+    "analysisGeneration": "ad3022802a36145d4c3c0a112d7c7b343c92e394da26a6f6d46371a524685369",
+    "specDigest": "14dcf94e2e328099ccdeb2f8c69c7d6bf69e407d3d68aa3743bfca20a054718a",
+    "sourceAnalysisFingerprint": "ad3022802a36145d4c3c0a112d7c7b343c92e394da26a6f6d46371a524685369"
+  },
+  "links": [
+    {
+      "requirement": "ExportPublicApi",
+      "domain": "aboutpage",
+      "specFile": "openspec/specs/aboutpage/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "RenderAboutPage",
+      "domain": "aboutpage",
+      "specFile": "openspec/specs/aboutpage/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ExposeAdminPanelPage",
+      "domain": "adminpanelpage",
+      "specFile": "openspec/specs/adminpanelpage/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "Render",
+      "domain": "adminpanelpage",
+      "specFile": "openspec/specs/adminpanelpage/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ApplinkOverview",
+      "domain": "applink",
+      "specFile": "openspec/specs/applink/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "Auth data initialization",
+      "domain": "auth",
+      "specFile": "openspec/specs/auth/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "initAuthData::src/entities/User/model/services/initAuthData.ts",
+          "file": "src/entities/User/model/services/initAuthData.ts",
+          "symbol": "initAuthData",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "initAuthData",
+              "file": "src/entities/User/model/services/initAuthData.ts",
+              "line": 10,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "initAuthData",
+          "file": "src/entities/User/model/services/initAuthData.ts",
+          "line": 10,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/entities/User/model/services/initAuthData.ts"
+      ]
+    },
+    {
+      "requirement": "In-memory session scope",
+      "domain": "auth",
+      "specFile": "openspec/specs/auth/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "userSlice::src/entities/User/model/slice/userSlice.ts",
+          "file": "src/entities/User/model/slice/userSlice.ts",
+          "symbol": "userSlice",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "userSlice",
+              "file": "src/entities/User/model/slice/userSlice.ts",
+              "line": 7,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "userSlice",
+          "file": "src/entities/User/model/slice/userSlice.ts",
+          "line": 7,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/entities/User/model/slice/userSlice.ts"
+      ]
+    },
+    {
+      "requirement": "Public entity API",
+      "domain": "auth",
+      "specFile": "openspec/specs/auth/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "getUserRoles::src/entities/User/index.ts",
+          "file": "src/entities/User/index.ts",
+          "symbol": "getUserRoles",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "getUserRoles",
+              "file": "src/entities/User/index.ts",
+              "line": 3,
+              "kind": "unknown"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "getUserRoles",
+          "file": "src/entities/User/index.ts",
+          "line": 3,
+          "kind": "unknown"
+        }
+      ],
+      "footprintFiles": [
+        "src/entities/User/index.ts"
+      ]
+    },
+    {
+      "requirement": "Role selectors",
+      "domain": "auth",
+      "specFile": "openspec/specs/auth/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "isUserAdmin::src/entities/User/model/selectors/roleSelectors.ts",
+          "file": "src/entities/User/model/selectors/roleSelectors.ts",
+          "symbol": "isUserAdmin",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "isUserAdmin",
+              "file": "src/entities/User/model/selectors/roleSelectors.ts",
+              "line": 7,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "isUserAdmin",
+          "file": "src/entities/User/model/selectors/roleSelectors.ts",
+          "line": 7,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/entities/User/model/selectors/roleSelectors.ts"
+      ]
+    },
+    {
+      "requirement": "User data via RTK Query",
+      "domain": "auth",
+      "specFile": "openspec/specs/auth/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "getUserDataByIdQuery::src/entities/User/api/userApi.ts",
+          "file": "src/entities/User/api/userApi.ts",
+          "symbol": "getUserDataByIdQuery",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "getUserDataByIdQuery",
+              "file": "src/entities/User/api/userApi.ts",
+              "line": 15,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "getUserDataByIdQuery",
+          "file": "src/entities/User/api/userApi.ts",
+          "line": 15,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/entities/User/api/userApi.ts"
+      ]
+    },
+    {
+      "requirement": "ButtonOverview",
+      "domain": "button",
+      "specFile": "openspec/specs/button/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "Counter state transitions",
+      "domain": "counter",
+      "specFile": "openspec/specs/counter/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "counterSlice::src/entities/Counter/model/slice/counterSlice.ts",
+          "file": "src/entities/Counter/model/slice/counterSlice.ts",
+          "symbol": "counterSlice",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "counterSlice",
+              "file": "src/entities/Counter/model/slice/counterSlice.ts",
+              "line": 9,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "counterSlice",
+          "file": "src/entities/Counter/model/slice/counterSlice.ts",
+          "line": 9,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/entities/Counter/model/slice/counterSlice.ts"
+      ]
+    },
+    {
+      "requirement": "Counter UI display and controls",
+      "domain": "counter",
+      "specFile": "openspec/specs/counter/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "Counter::src/entities/Counter/ui/Counter.tsx",
+          "file": "src/entities/Counter/ui/Counter.tsx",
+          "symbol": "Counter",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "Counter",
+              "file": "src/entities/Counter/ui/Counter.tsx",
+              "line": 7,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "Counter",
+          "file": "src/entities/Counter/ui/Counter.tsx",
+          "line": 7,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/entities/Counter/ui/Counter.tsx"
+      ]
+    },
+    {
+      "requirement": "Counter value selection",
+      "domain": "counter",
+      "specFile": "openspec/specs/counter/spec.md",
+      "state": "stale",
+      "anchors": [
+        {
+          "raw": "getCounterValue::src/entities/Counter/model/selectors/getCounterValue/getCounterValue.ts",
+          "file": "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.ts",
+          "symbol": "getCounterValue",
+          "state": "stale",
+          "candidates": [],
+          "candidateTotal": 0
+        }
+      ],
+      "functions": [],
+      "footprintFiles": [
+        "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.ts"
+      ]
+    },
+    {
+      "requirement": "Unknown actions leave counter state intact",
+      "domain": "counter",
+      "specFile": "openspec/specs/counter/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "counterSlice::src/entities/Counter/model/slice/counterSlice.ts",
+          "file": "src/entities/Counter/model/slice/counterSlice.ts",
+          "symbol": "counterSlice",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "counterSlice",
+              "file": "src/entities/Counter/model/slice/counterSlice.ts",
+              "line": 9,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "counterSlice",
+          "file": "src/entities/Counter/model/slice/counterSlice.ts",
+          "line": 9,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/entities/Counter/model/slice/counterSlice.ts"
+      ]
+    },
+    {
+      "requirement": "CaptureChildError",
+      "domain": "errorboundary",
+      "specFile": "openspec/specs/errorboundary/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ExportPublicApi",
+      "domain": "errorboundary",
+      "specFile": "openspec/specs/errorboundary/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "LogCaughtError",
+      "domain": "errorboundary",
+      "specFile": "openspec/specs/errorboundary/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "RenderFallback",
+      "domain": "errorboundary",
+      "specFile": "openspec/specs/errorboundary/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ThrowTestError",
+      "domain": "errorboundary",
+      "specFile": "openspec/specs/errorboundary/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ReloadPage",
+      "domain": "errorpage",
+      "specFile": "openspec/specs/errorpage/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "RenderErrorPage",
+      "domain": "errorpage",
+      "specFile": "openspec/specs/errorpage/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ExportPublicApi",
+      "domain": "forbiddenpage",
+      "specFile": "openspec/specs/forbiddenpage/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "RenderForbiddenPage",
+      "domain": "forbiddenpage",
+      "specFile": "openspec/specs/forbiddenpage/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "Language switching",
+      "domain": "i18n",
+      "specFile": "openspec/specs/i18n/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "LangSwitcher::src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx",
+          "file": "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx",
+          "symbol": "LangSwitcher",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "LangSwitcher",
+              "file": "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx",
+              "line": 11,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "LangSwitcher",
+          "file": "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx",
+          "line": 11,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx"
+      ]
+    },
+    {
+      "requirement": "Locale dictionaries and namespaces",
+      "domain": "i18n",
+      "specFile": "openspec/specs/i18n/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "AboutPage::src/pages/AboutPage/ui/AboutPage.tsx",
+          "file": "src/pages/AboutPage/ui/AboutPage.tsx",
+          "symbol": "AboutPage",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "AboutPage",
+              "file": "src/pages/AboutPage/ui/AboutPage.tsx",
+              "line": 11,
+              "kind": "unknown"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "AboutPage",
+          "file": "src/pages/AboutPage/ui/AboutPage.tsx",
+          "line": 11,
+          "kind": "unknown"
+        }
+      ],
+      "footprintFiles": [
+        "src/pages/AboutPage/ui/AboutPage.tsx"
+      ]
+    },
+    {
+      "requirement": "Translated UI text",
+      "domain": "i18n",
+      "specFile": "openspec/specs/i18n/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "MainPage::src/pages/MainPage/ui/MainPage.tsx",
+          "file": "src/pages/MainPage/ui/MainPage.tsx",
+          "symbol": "MainPage",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "MainPage",
+              "file": "src/pages/MainPage/ui/MainPage.tsx",
+              "line": 16,
+              "kind": "unknown"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "MainPage",
+          "file": "src/pages/MainPage/ui/MainPage.tsx",
+          "line": 16,
+          "kind": "unknown"
+        }
+      ],
+      "footprintFiles": [
+        "src/pages/MainPage/ui/MainPage.tsx"
+      ]
+    },
+    {
+      "requirement": "Translation-aware tests",
+      "domain": "i18n",
+      "specFile": "openspec/specs/i18n/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "renderWithTranslation::src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx",
+          "file": "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx",
+          "symbol": "renderWithTranslation",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "renderWithTranslation",
+              "file": "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx",
+              "line": 6,
+              "kind": "function"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "renderWithTranslation",
+          "file": "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx",
+          "line": 6,
+          "kind": "function"
+        }
+      ],
+      "footprintFiles": [
+        "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx"
+      ]
+    },
+    {
+      "requirement": "IconOverview",
+      "domain": "icon",
+      "specFile": "openspec/specs/icon/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "InputOverview",
+      "domain": "input",
+      "specFile": "openspec/specs/input/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "DeprecationMarker",
+      "domain": "loader",
+      "specFile": "openspec/specs/loader/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "Render",
+      "domain": "loader",
+      "specFile": "openspec/specs/loader/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "MainlayoutOverview",
+      "domain": "mainlayout",
+      "specFile": "openspec/specs/mainlayout/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ExportMainPageComponent",
+      "domain": "mainpage",
+      "specFile": "openspec/specs/mainpage/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ExportNavbar",
+      "domain": "navbar",
+      "specFile": "openspec/specs/navbar/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ExportPublicApi",
+      "domain": "notfoundpage",
+      "specFile": "openspec/specs/notfoundpage/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "Render",
+      "domain": "notfoundpage",
+      "specFile": "openspec/specs/notfoundpage/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ExposePageId",
+      "domain": "page",
+      "specFile": "openspec/specs/page/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "RenderPageContent",
+      "domain": "page",
+      "specFile": "openspec/specs/page/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "RestoreScrollPosition",
+      "domain": "page",
+      "specFile": "openspec/specs/page/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "SaveScrollPosition",
+      "domain": "page",
+      "specFile": "openspec/specs/page/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "Central route table",
+      "domain": "routing",
+      "specFile": "openspec/specs/routing/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "routeConfig::src/app/providers/router/config/routeConfig.tsx",
+          "file": "src/app/providers/router/config/routeConfig.tsx",
+          "symbol": "routeConfig",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "routeConfig",
+              "file": "src/app/providers/router/config/routeConfig.tsx",
+              "line": 14,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "routeConfig",
+          "file": "src/app/providers/router/config/routeConfig.tsx",
+          "line": 14,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/app/providers/router/config/routeConfig.tsx"
+      ]
+    },
+    {
+      "requirement": "Error and not-found fallbacks",
+      "domain": "routing",
+      "specFile": "openspec/specs/routing/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "NotFoundPage::src/pages/NotFoundPage/ui/NotFoundPage.tsx",
+          "file": "src/pages/NotFoundPage/ui/NotFoundPage.tsx",
+          "symbol": "NotFoundPage",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "NotFoundPage",
+              "file": "src/pages/NotFoundPage/ui/NotFoundPage.tsx",
+              "line": 9,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "NotFoundPage",
+          "file": "src/pages/NotFoundPage/ui/NotFoundPage.tsx",
+          "line": 9,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/pages/NotFoundPage/ui/NotFoundPage.tsx"
+      ]
+    },
+    {
+      "requirement": "Insufficient-role redirect",
+      "domain": "routing",
+      "specFile": "openspec/specs/routing/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "RequireAuth::src/app/providers/router/ui/RequireAuth.tsx",
+          "file": "src/app/providers/router/ui/RequireAuth.tsx",
+          "symbol": "RequireAuth",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "RequireAuth",
+              "file": "src/app/providers/router/ui/RequireAuth.tsx",
+              "line": 12,
+              "kind": "function"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "RequireAuth",
+          "file": "src/app/providers/router/ui/RequireAuth.tsx",
+          "line": 12,
+          "kind": "function"
+        }
+      ],
+      "footprintFiles": [
+        "src/app/providers/router/ui/RequireAuth.tsx"
+      ]
+    },
+    {
+      "requirement": "Lazy page loading",
+      "domain": "routing",
+      "specFile": "openspec/specs/routing/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "routeConfig::src/app/providers/router/config/routeConfig.tsx",
+          "file": "src/app/providers/router/config/routeConfig.tsx",
+          "symbol": "routeConfig",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "routeConfig",
+              "file": "src/app/providers/router/config/routeConfig.tsx",
+              "line": 14,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "routeConfig",
+          "file": "src/app/providers/router/config/routeConfig.tsx",
+          "line": 14,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/app/providers/router/config/routeConfig.tsx"
+      ]
+    },
+    {
+      "requirement": "Role-based route protection",
+      "domain": "routing",
+      "specFile": "openspec/specs/routing/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "buildRouteObjects::src/app/providers/router/config/router.tsx",
+          "file": "src/app/providers/router/config/router.tsx",
+          "symbol": "buildRouteObjects",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "buildRouteObjects",
+              "file": "src/app/providers/router/config/router.tsx",
+              "line": 10,
+              "kind": "function"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "buildRouteObjects",
+          "file": "src/app/providers/router/config/router.tsx",
+          "line": 10,
+          "kind": "function"
+        }
+      ],
+      "footprintFiles": [
+        "src/app/providers/router/config/router.tsx"
+      ]
+    },
+    {
+      "requirement": "Route path helpers",
+      "domain": "routing",
+      "specFile": "openspec/specs/routing/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "getRouteAdmin::src/shared/const/router.ts",
+          "file": "src/shared/const/router.ts",
+          "symbol": "getRouteAdmin",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "getRouteAdmin",
+              "file": "src/shared/const/router.ts",
+              "line": 12,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "getRouteAdmin",
+          "file": "src/shared/const/router.ts",
+          "line": 12,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/shared/const/router.ts"
+      ]
+    },
+    {
+      "requirement": "Unauthenticated redirect",
+      "domain": "routing",
+      "specFile": "openspec/specs/routing/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "RequireAuth::src/app/providers/router/ui/RequireAuth.tsx",
+          "file": "src/app/providers/router/ui/RequireAuth.tsx",
+          "symbol": "RequireAuth",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "RequireAuth",
+              "file": "src/app/providers/router/ui/RequireAuth.tsx",
+              "line": 12,
+              "kind": "function"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "RequireAuth",
+          "file": "src/app/providers/router/ui/RequireAuth.tsx",
+          "line": 12,
+          "kind": "function"
+        }
+      ],
+      "footprintFiles": [
+        "src/app/providers/router/ui/RequireAuth.tsx"
+      ]
+    },
+    {
+      "requirement": "RenderSidebar",
+      "domain": "sidebar",
+      "specFile": "openspec/specs/sidebar/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ToggleCollapsed",
+      "domain": "sidebar",
+      "specFile": "openspec/specs/sidebar/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "SkeletonOverview",
+      "domain": "skeleton",
+      "specFile": "openspec/specs/skeleton/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ExportStackComponents",
+      "domain": "stack",
+      "specFile": "openspec/specs/stack/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "HStack",
+      "domain": "stack",
+      "specFile": "openspec/specs/stack/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "VStack",
+      "domain": "stack",
+      "specFile": "openspec/specs/stack/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "API reducer registration",
+      "domain": "state-store",
+      "specFile": "openspec/specs/state-store/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "rootReducer::src/app/providers/StoreProvider/config/store.ts",
+          "file": "src/app/providers/StoreProvider/config/store.ts",
+          "symbol": "rootReducer",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "rootReducer",
+              "file": "src/app/providers/StoreProvider/config/store.ts",
+              "line": 21,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "rootReducer",
+          "file": "src/app/providers/StoreProvider/config/store.ts",
+          "line": 21,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/app/providers/StoreProvider/config/store.ts"
+      ]
+    },
+    {
+      "requirement": "Shared slice and selector builders",
+      "domain": "state-store",
+      "specFile": "openspec/specs/state-store/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "buildSelector::src/shared/lib/store/buildSelector.ts",
+          "file": "src/shared/lib/store/buildSelector.ts",
+          "symbol": "buildSelector",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "buildSelector",
+              "file": "src/shared/lib/store/buildSelector.ts",
+              "line": 8,
+              "kind": "function"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "buildSelector",
+          "file": "src/shared/lib/store/buildSelector.ts",
+          "line": 8,
+          "kind": "function"
+        }
+      ],
+      "footprintFiles": [
+        "src/shared/lib/store/buildSelector.ts"
+      ]
+    },
+    {
+      "requirement": "Single base API",
+      "domain": "state-store",
+      "specFile": "openspec/specs/state-store/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "rtkApi::src/shared/api/rtkApi.ts",
+          "file": "src/shared/api/rtkApi.ts",
+          "symbol": "rtkApi",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "rtkApi",
+              "file": "src/shared/api/rtkApi.ts",
+              "line": 4,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "rtkApi",
+          "file": "src/shared/api/rtkApi.ts",
+          "line": 4,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/shared/api/rtkApi.ts"
+      ]
+    },
+    {
+      "requirement": "Store provider",
+      "domain": "state-store",
+      "specFile": "openspec/specs/state-store/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "StoreProvider::src/app/providers/StoreProvider/ui/StoreProvider.tsx",
+          "file": "src/app/providers/StoreProvider/ui/StoreProvider.tsx",
+          "symbol": "StoreProvider",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "StoreProvider",
+              "file": "src/app/providers/StoreProvider/ui/StoreProvider.tsx",
+              "line": 10,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "StoreProvider",
+          "file": "src/app/providers/StoreProvider/ui/StoreProvider.tsx",
+          "line": 10,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/app/providers/StoreProvider/ui/StoreProvider.tsx"
+      ]
+    },
+    {
+      "requirement": "CreateReduxStore",
+      "domain": "storeprovider",
+      "specFile": "openspec/specs/storeprovider/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "DefineRootStateContract",
+      "domain": "storeprovider",
+      "specFile": "openspec/specs/storeprovider/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "DefineThunkConfig",
+      "domain": "storeprovider",
+      "specFile": "openspec/specs/storeprovider/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ProvideStore",
+      "domain": "storeprovider",
+      "specFile": "openspec/specs/storeprovider/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "TextOverview",
+      "domain": "text",
+      "specFile": "openspec/specs/text/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ApplyTheme",
+      "domain": "themeprovider",
+      "specFile": "openspec/specs/themeprovider/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ThemeProvider",
+      "domain": "themeprovider",
+      "specFile": "openspec/specs/themeprovider/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ExportPublicApi",
+      "domain": "themeswitcher",
+      "specFile": "openspec/specs/themeswitcher/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "ToggleTheme",
+      "domain": "themeswitcher",
+      "specFile": "openspec/specs/themeswitcher/spec.md",
+      "state": "unmapped",
+      "anchors": [],
+      "functions": [],
+      "footprintFiles": []
+    },
+    {
+      "requirement": "Accessible interactive components",
+      "domain": "ui-kit",
+      "specFile": "openspec/specs/ui-kit/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "Input::src/shared/ui/Input/Input.tsx",
+          "file": "src/shared/ui/Input/Input.tsx",
+          "symbol": "Input",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "Input",
+              "file": "src/shared/ui/Input/Input.tsx",
+              "line": 33,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "Input",
+          "file": "src/shared/ui/Input/Input.tsx",
+          "line": 33,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/shared/ui/Input/Input.tsx"
+      ]
+    },
+    {
+      "requirement": "Layout via stack primitives",
+      "domain": "ui-kit",
+      "specFile": "openspec/specs/ui-kit/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "Flex::src/shared/ui/Stack/Flex/Flex.tsx",
+          "file": "src/shared/ui/Stack/Flex/Flex.tsx",
+          "symbol": "Flex",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "Flex",
+              "file": "src/shared/ui/Stack/Flex/Flex.tsx",
+              "line": 53,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "Flex",
+          "file": "src/shared/ui/Stack/Flex/Flex.tsx",
+          "line": 53,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/shared/ui/Stack/Flex/Flex.tsx"
+      ]
+    },
+    {
+      "requirement": "Primitive inventory",
+      "domain": "ui-kit",
+      "specFile": "openspec/specs/ui-kit/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "Button::src/shared/ui/Button/Button.tsx",
+          "file": "src/shared/ui/Button/Button.tsx",
+          "symbol": "Button",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "Button",
+              "file": "src/shared/ui/Button/Button.tsx",
+              "line": 48,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "Button",
+          "file": "src/shared/ui/Button/Button.tsx",
+          "line": 48,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/shared/ui/Button/Button.tsx"
+      ]
+    },
+    {
+      "requirement": "Ref and className forwarding",
+      "domain": "ui-kit",
+      "specFile": "openspec/specs/ui-kit/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "Button::src/shared/ui/Button/Button.tsx",
+          "file": "src/shared/ui/Button/Button.tsx",
+          "symbol": "Button",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "Button",
+              "file": "src/shared/ui/Button/Button.tsx",
+              "line": 48,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "Button",
+          "file": "src/shared/ui/Button/Button.tsx",
+          "line": 48,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/shared/ui/Button/Button.tsx"
+      ]
+    },
+    {
+      "requirement": "Variant-driven styling",
+      "domain": "ui-kit",
+      "specFile": "openspec/specs/ui-kit/spec.md",
+      "state": "linked",
+      "anchors": [
+        {
+          "raw": "Text::src/shared/ui/Text/Text.tsx",
+          "file": "src/shared/ui/Text/Text.tsx",
+          "symbol": "Text",
+          "state": "linked",
+          "candidates": [
+            {
+              "name": "Text",
+              "file": "src/shared/ui/Text/Text.tsx",
+              "line": 36,
+              "kind": "variable"
+            }
+          ],
+          "candidateTotal": 1
+        }
+      ],
+      "functions": [
+        {
+          "name": "Text",
+          "file": "src/shared/ui/Text/Text.tsx",
+          "line": 36,
+          "kind": "variable"
+        }
+      ],
+      "footprintFiles": [
+        "src/shared/ui/Text/Text.tsx"
+      ]
+    }
+  ],
+  "orphanFunctions": [
+    {
+      "name": "function",
+      "file": "config/babel/babelRemovePropsPlugin.ts",
+      "line": 3,
+      "kind": "unknown"
+    },
+    {
+      "name": "config",
+      "file": "config/jest/jest.config.mjs",
+      "line": 56,
+      "kind": "unknown"
+    },
+    {
+      "name": "jestEmptyComponent",
+      "file": "config/jest/jestEmptyComponent.tsx",
+      "line": 9,
+      "kind": "unknown"
+    },
+    {
+      "name": "class",
+      "file": "config/jest/jsdomEnvironment.js",
+      "line": 4,
+      "kind": "unknown"
+    },
+    {
+      "name": "App",
+      "file": "src/app/App.tsx",
+      "line": 23,
+      "kind": "unknown"
+    },
+    {
+      "name": "BugButton",
+      "file": "src/app/providers/ErrorBoundary/index.ts",
+      "line": 4,
+      "kind": "unknown"
+    },
+    {
+      "name": "ErrorBoundary",
+      "file": "src/app/providers/ErrorBoundary/index.ts",
+      "line": 4,
+      "kind": "unknown"
+    },
+    {
+      "name": "BugButton",
+      "file": "src/app/providers/ErrorBoundary/ui/BugButton.tsx",
+      "line": 6,
+      "kind": "variable"
+    },
+    {
+      "name": "ErrorBoundary",
+      "file": "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx",
+      "line": 48,
+      "kind": "unknown"
+    },
+    {
+      "name": "router",
+      "file": "src/app/providers/router/config/router.tsx",
+      "line": 34,
+      "kind": "variable"
+    },
+    {
+      "name": "router",
+      "file": "src/app/providers/router/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "createReduxStore",
+      "file": "src/app/providers/StoreProvider/config/store.ts",
+      "line": 28,
+      "kind": "function"
+    },
+    {
+      "name": "rootReducers",
+      "file": "src/app/providers/StoreProvider/config/store.ts",
+      "line": 14,
+      "kind": "variable"
+    },
+    {
+      "name": "createReduxStore",
+      "file": "src/app/providers/StoreProvider/index.ts",
+      "line": 10,
+      "kind": "unknown"
+    },
+    {
+      "name": "StoreProvider",
+      "file": "src/app/providers/StoreProvider/index.ts",
+      "line": 10,
+      "kind": "unknown"
+    },
+    {
+      "name": "ThemeProvider",
+      "file": "src/app/providers/ThemeProvider/index.ts",
+      "line": 3,
+      "kind": "unknown"
+    },
+    {
+      "name": "ThemeProvider",
+      "file": "src/app/providers/ThemeProvider/ui/ThemeProvider.tsx",
+      "line": 51,
+      "kind": "unknown"
+    },
+    {
+      "name": "SVG",
+      "file": "src/app/types/global.d.ts",
+      "line": 16,
+      "kind": "unknown"
+    },
+    {
+      "name": "Counter",
+      "file": "src/entities/Counter/index.ts",
+      "line": 5,
+      "kind": "unknown"
+    },
+    {
+      "name": "counterReducer",
+      "file": "src/entities/Counter/index.ts",
+      "line": 5,
+      "kind": "unknown"
+    },
+    {
+      "name": "CounterSchema",
+      "file": "src/entities/Counter/index.ts",
+      "line": 5,
+      "kind": "unknown"
+    },
+    {
+      "name": "getCounter",
+      "file": "src/entities/Counter/model/selectors/getCounter/getCounter.ts",
+      "line": 3,
+      "kind": "variable"
+    },
+    {
+      "name": "getUserAuthData",
+      "file": "src/entities/User/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "initAuthData",
+      "file": "src/entities/User/index.ts",
+      "line": 13,
+      "kind": "unknown"
+    },
+    {
+      "name": "isUserAdmin",
+      "file": "src/entities/User/index.ts",
+      "line": 3,
+      "kind": "unknown"
+    },
+    {
+      "name": "isUserManager",
+      "file": "src/entities/User/index.ts",
+      "line": 3,
+      "kind": "unknown"
+    },
+    {
+      "name": "userActions",
+      "file": "src/entities/User/index.ts",
+      "line": 9,
+      "kind": "unknown"
+    },
+    {
+      "name": "userReducer",
+      "file": "src/entities/User/index.ts",
+      "line": 9,
+      "kind": "unknown"
+    },
+    {
+      "name": "UserRole",
+      "file": "src/entities/User/index.ts",
+      "line": 12,
+      "kind": "unknown"
+    },
+    {
+      "name": "UserRole",
+      "file": "src/entities/User/model/consts/userConsts.ts",
+      "line": 1,
+      "kind": "enum"
+    },
+    {
+      "name": "getUserAuthData",
+      "file": "src/entities/User/model/selectors/getUserAuthData/getUserAuthData.ts",
+      "line": 3,
+      "kind": "variable"
+    },
+    {
+      "name": "getUserRoles",
+      "file": "src/entities/User/model/selectors/roleSelectors.ts",
+      "line": 5,
+      "kind": "variable"
+    },
+    {
+      "name": "isUserManager",
+      "file": "src/entities/User/model/selectors/roleSelectors.ts",
+      "line": 10,
+      "kind": "variable"
+    },
+    {
+      "name": "LangSwitcher",
+      "file": "src/features/LangSwitcher/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "ThemeSwitcher",
+      "file": "src/features/ThemeSwitcher/index.tsx",
+      "line": 3,
+      "kind": "unknown"
+    },
+    {
+      "name": "ThemeSwitcher",
+      "file": "src/features/ThemeSwitcher/ui/ThemeSwitcher.tsx",
+      "line": 10,
+      "kind": "variable"
+    },
+    {
+      "name": "getUIScrollByPath",
+      "file": "src/features/UI/index.ts",
+      "line": 3,
+      "kind": "unknown"
+    },
+    {
+      "name": "uiActions",
+      "file": "src/features/UI/index.ts",
+      "line": 4,
+      "kind": "unknown"
+    },
+    {
+      "name": "uiReducer",
+      "file": "src/features/UI/index.ts",
+      "line": 4,
+      "kind": "unknown"
+    },
+    {
+      "name": "getUIScroll",
+      "file": "src/features/UI/model/selectors/ui.ts",
+      "line": 4,
+      "kind": "variable"
+    },
+    {
+      "name": "getUIScrollByPath",
+      "file": "src/features/UI/model/selectors/ui.ts",
+      "line": 6,
+      "kind": "variable"
+    },
+    {
+      "name": "uiSlice",
+      "file": "src/features/UI/model/slices/UISlice.ts",
+      "line": 8,
+      "kind": "variable"
+    },
+    {
+      "name": "Theme",
+      "file": "src/index.tsx",
+      "line": 29,
+      "kind": "unknown"
+    },
+    {
+      "name": "AboutPage",
+      "file": "src/pages/AboutPage/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "AdminPanelPage",
+      "file": "src/pages/AdminPanelPage/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "AdminPanelPage",
+      "file": "src/pages/AdminPanelPage/ui/AdminPanelPage.tsx",
+      "line": 11,
+      "kind": "unknown"
+    },
+    {
+      "name": "ForbiddenPage",
+      "file": "src/pages/ForbiddenPage/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "ForbiddenPage",
+      "file": "src/pages/ForbiddenPage/ui/ForbiddenPage.tsx",
+      "line": 15,
+      "kind": "unknown"
+    },
+    {
+      "name": "MainPage",
+      "file": "src/pages/MainPage/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "NotFoundPage",
+      "file": "src/pages/NotFoundPage/index.ts",
+      "line": 3,
+      "kind": "unknown"
+    },
+    {
+      "name": "i18n",
+      "file": "src/shared/config/i18n/i18n.ts",
+      "line": 24,
+      "kind": "unknown"
+    },
+    {
+      "name": "i18n",
+      "file": "src/shared/config/i18n/i18nForTests.ts",
+      "line": 15,
+      "kind": "unknown"
+    },
+    {
+      "name": "LOCAL_STORAGE_THEME_KEY",
+      "file": "src/shared/const/localstorage.ts",
+      "line": 2,
+      "kind": "variable"
+    },
+    {
+      "name": "USER_LOCALSTORAGE_KEY",
+      "file": "src/shared/const/localstorage.ts",
+      "line": 1,
+      "kind": "variable"
+    },
+    {
+      "name": "AppRouteByPathPattern",
+      "file": "src/shared/const/router.ts",
+      "line": 15,
+      "kind": "variable"
+    },
+    {
+      "name": "AppRoutes",
+      "file": "src/shared/const/router.ts",
+      "line": 1,
+      "kind": "enum"
+    },
+    {
+      "name": "getRouteAbout",
+      "file": "src/shared/const/router.ts",
+      "line": 11,
+      "kind": "variable"
+    },
+    {
+      "name": "getRouteForbidden",
+      "file": "src/shared/const/router.ts",
+      "line": 13,
+      "kind": "variable"
+    },
+    {
+      "name": "getRouteMain",
+      "file": "src/shared/const/router.ts",
+      "line": 10,
+      "kind": "variable"
+    },
+    {
+      "name": "Theme",
+      "file": "src/shared/const/theme.ts",
+      "line": 1,
+      "kind": "enum"
+    },
+    {
+      "name": "MainLayout",
+      "file": "src/shared/layouts/MainLayout/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "MainLayout",
+      "file": "src/shared/layouts/MainLayout/MainLayout.tsx",
+      "line": 12,
+      "kind": "variable"
+    },
+    {
+      "name": "classNames",
+      "file": "src/shared/lib/classNames/classNames.ts",
+      "line": 3,
+      "kind": "function"
+    },
+    {
+      "name": "ThemeContext",
+      "file": "src/shared/lib/context/ThemeContext.ts",
+      "line": 9,
+      "kind": "variable"
+    },
+    {
+      "name": "useAppDispatch",
+      "file": "src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts",
+      "line": 4,
+      "kind": "variable"
+    },
+    {
+      "name": "useDebounce",
+      "file": "src/shared/lib/hooks/useDebounce/useDebounce.ts",
+      "line": 8,
+      "kind": "function"
+    },
+    {
+      "name": "useInfiniteScroll",
+      "file": "src/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll.ts",
+      "line": 9,
+      "kind": "function"
+    },
+    {
+      "name": "useInitialEffect",
+      "file": "src/shared/lib/hooks/useInitialEffect/useInitialEffect.ts",
+      "line": 3,
+      "kind": "function"
+    },
+    {
+      "name": "useTheme",
+      "file": "src/shared/lib/hooks/useTheme/useTheme.ts",
+      "line": 10,
+      "kind": "function"
+    },
+    {
+      "name": "useThrottle",
+      "file": "src/shared/lib/hooks/useThrottle/useThrottle.ts",
+      "line": 3,
+      "kind": "function"
+    },
+    {
+      "name": "buildSlice",
+      "file": "src/shared/lib/store/buildSlice.ts",
+      "line": 6,
+      "kind": "function"
+    },
+    {
+      "name": "buildSelector",
+      "file": "src/shared/lib/store/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "buildSlice",
+      "file": "src/shared/lib/store/index.ts",
+      "line": 2,
+      "kind": "unknown"
+    },
+    {
+      "name": "componentRender",
+      "file": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "line": 68,
+      "kind": "function"
+    },
+    {
+      "name": "routerRender",
+      "file": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "line": 76,
+      "kind": "function"
+    },
+    {
+      "name": "TestProvider",
+      "file": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "line": 55,
+      "kind": "function"
+    },
+    {
+      "name": "TestAsyncThunk",
+      "file": "src/shared/lib/tests/TestAsyncThunk/TestAsyncThunk.ts",
+      "line": 13,
+      "kind": "class"
+    },
+    {
+      "name": "addQueryParams",
+      "file": "src/shared/lib/url/addQueryParams/addQueryParams.ts",
+      "line": 15,
+      "kind": "function"
+    },
+    {
+      "name": "getQueryParams",
+      "file": "src/shared/lib/url/addQueryParams/addQueryParams.ts",
+      "line": 1,
+      "kind": "function"
+    },
+    {
+      "name": "AppLink",
+      "file": "src/shared/ui/AppLink/AppLink.tsx",
+      "line": 16,
+      "kind": "variable"
+    },
+    {
+      "name": "*",
+      "file": "src/shared/ui/AppLink/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "*",
+      "file": "src/shared/ui/Button/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "Icon",
+      "file": "src/shared/ui/Icon/Icon.tsx",
+      "line": 23,
+      "kind": "variable"
+    },
+    {
+      "name": "*",
+      "file": "src/shared/ui/Icon/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "*",
+      "file": "src/shared/ui/Input/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "*",
+      "file": "src/shared/ui/Loader/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "Loader",
+      "file": "src/shared/ui/Loader/Loader.tsx",
+      "line": 12,
+      "kind": "variable"
+    },
+    {
+      "name": "*",
+      "file": "src/shared/ui/Skeleton/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "Skeleton",
+      "file": "src/shared/ui/Skeleton/Skeleton.tsx",
+      "line": 12,
+      "kind": "variable"
+    },
+    {
+      "name": "HStack",
+      "file": "src/shared/ui/Stack/HStack/HStack.tsx",
+      "line": 5,
+      "kind": "variable"
+    },
+    {
+      "name": "HStack",
+      "file": "src/shared/ui/Stack/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "VStack",
+      "file": "src/shared/ui/Stack/index.ts",
+      "line": 2,
+      "kind": "unknown"
+    },
+    {
+      "name": "VStack",
+      "file": "src/shared/ui/Stack/VStack/VStack.tsx",
+      "line": 5,
+      "kind": "variable"
+    },
+    {
+      "name": "*",
+      "file": "src/shared/ui/Text/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "ErrorPage",
+      "file": "src/widgets/ErrorPage/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "ErrorPage",
+      "file": "src/widgets/ErrorPage/ui/ErrorPage.tsx",
+      "line": 4,
+      "kind": "variable"
+    },
+    {
+      "name": "Navbar",
+      "file": "src/widgets/Navbar/index.ts",
+      "line": 3,
+      "kind": "unknown"
+    },
+    {
+      "name": "navbarLinks",
+      "file": "src/widgets/Navbar/model/navbarLinks.ts",
+      "line": 13,
+      "kind": "variable"
+    },
+    {
+      "name": "Navbar",
+      "file": "src/widgets/Navbar/ui/Navbar.tsx",
+      "line": 17,
+      "kind": "variable"
+    },
+    {
+      "name": "Page",
+      "file": "src/widgets/Page/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "PAGE_ID",
+      "file": "src/widgets/Page/index.ts",
+      "line": 1,
+      "kind": "unknown"
+    },
+    {
+      "name": "Page",
+      "file": "src/widgets/Page/ui/Page/Page.tsx",
+      "line": 22,
+      "kind": "variable"
+    },
+    {
+      "name": "PAGE_ID",
+      "file": "src/widgets/Page/ui/Page/Page.tsx",
+      "line": 20,
+      "kind": "variable"
+    },
+    {
+      "name": "Sidebar",
+      "file": "src/widgets/SideBar/index.ts",
+      "line": 3,
+      "kind": "unknown"
+    },
+    {
+      "name": "useSidebarItems",
+      "file": "src/widgets/SideBar/model/selectors/getSidebarItems.ts",
+      "line": 12,
+      "kind": "variable"
+    },
+    {
+      "name": "Sidebar",
+      "file": "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx",
+      "line": 16,
+      "kind": "variable"
+    },
+    {
+      "name": "SidebarItem",
+      "file": "src/widgets/SideBar/ui/SidebarItem/SidebarItem.tsx",
+      "line": 14,
+      "kind": "variable"
+    }
+  ],
+  "stats": {
+    "totalRequirements": 72,
+    "linked": 28,
+    "ambiguous": 0,
+    "unmapped": 43,
+    "stale": 1,
+    "notAssessed": 0,
+    "totalExportedFunctions": 131,
+    "coveredFunctions": 24,
+    "orphanCount": 107,
+    "footprintFileCount": 25
+  }
+}

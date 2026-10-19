@@ -1,0 +1,357 @@
+[
+  {
+    "name": "RequireAuth",
+    "file": "src/app/providers/router/ui/RequireAuth.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 12,
+    "props": [
+      {
+        "name": "children",
+        "type": "React.ReactElement",
+        "required": true
+      },
+      {
+        "name": "roles",
+        "type": "UserRole[]",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "StoreProvider",
+    "file": "src/app/providers/StoreProvider/ui/StoreProvider.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 10,
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": false
+      },
+      {
+        "name": "initialState",
+        "type": "StorePreloadedState",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "TestProvider",
+    "file": "src/shared/lib/tests/componentRender/componentRender.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 55,
+    "props": [
+      {
+        "name": "children",
+        "type": "ReactNode",
+        "required": true
+      },
+      {
+        "name": "options",
+        "type": "componentRenderOptions",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "Button",
+    "file": "src/shared/ui/Button/Button.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 48,
+    "props": []
+  },
+  {
+    "name": "Icon",
+    "file": "src/shared/ui/Icon/Icon.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 23,
+    "props": []
+  },
+  {
+    "name": "Input",
+    "file": "src/shared/ui/Input/Input.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 33,
+    "props": []
+  },
+  {
+    "name": "Flex",
+    "file": "src/shared/ui/Stack/Flex/Flex.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 53,
+    "props": []
+  },
+  {
+    "name": "Text",
+    "file": "src/shared/ui/Text/Text.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 36,
+    "props": [
+      {
+        "name": "className",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "title",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "text",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "variant",
+        "type": "TextVariant",
+        "required": false
+      },
+      {
+        "name": "align",
+        "type": "TextAlign",
+        "required": false
+      },
+      {
+        "name": "size",
+        "type": "TextSize",
+        "required": false
+      },
+      {
+        "name": "bold",
+        "type": "boolean",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "Navbar",
+    "file": "src/widgets/Navbar/ui/Navbar.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 17,
+    "props": [
+      {
+        "name": "className",
+        "type": "string",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "Sidebar",
+    "file": "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 16,
+    "props": [
+      {
+        "name": "className",
+        "type": "string",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "LangSwitcher",
+    "file": "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 11,
+    "props": [
+      {
+        "name": "className",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "short",
+        "type": "boolean",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "ThemeSwitcher",
+    "file": "src/features/ThemeSwitcher/ui/ThemeSwitcher.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 10,
+    "props": [
+      {
+        "name": "className",
+        "type": "string",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "NotFoundPage",
+    "file": "src/pages/NotFoundPage/ui/NotFoundPage.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 9,
+    "props": [
+      {
+        "name": "className",
+        "type": "string",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "MainLayout",
+    "file": "src/shared/layouts/MainLayout/MainLayout.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 12,
+    "props": [
+      {
+        "name": "className",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "header",
+        "type": "ReactElement",
+        "required": true
+      },
+      {
+        "name": "content",
+        "type": "ReactElement",
+        "required": true
+      },
+      {
+        "name": "sidebar",
+        "type": "ReactElement",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "AppLink",
+    "file": "src/shared/ui/AppLink/AppLink.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 16,
+    "props": []
+  },
+  {
+    "name": "Loader",
+    "file": "src/shared/ui/Loader/Loader.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 12,
+    "props": [
+      {
+        "name": "className",
+        "type": "string",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "Skeleton",
+    "file": "src/shared/ui/Skeleton/Skeleton.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 12,
+    "props": [
+      {
+        "name": "className",
+        "type": "string",
+        "required": false
+      },
+      {
+        "name": "height",
+        "type": "string | number",
+        "required": false
+      },
+      {
+        "name": "width",
+        "type": "string | number",
+        "required": false
+      },
+      {
+        "name": "border",
+        "type": "string",
+        "required": false
+      }
+    ]
+  },
+  {
+    "name": "HStack",
+    "file": "src/shared/ui/Stack/HStack/HStack.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 5,
+    "props": []
+  },
+  {
+    "name": "VStack",
+    "file": "src/shared/ui/Stack/VStack/VStack.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 5,
+    "props": []
+  },
+  {
+    "name": "Page",
+    "file": "src/widgets/Page/ui/Page/Page.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 22,
+    "props": []
+  },
+  {
+    "name": "SidebarItem",
+    "file": "src/widgets/SideBar/ui/SidebarItem/SidebarItem.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 14,
+    "props": [
+      {
+        "name": "item",
+        "type": "SidebarItemType",
+        "required": true
+      },
+      {
+        "name": "collapsed",
+        "type": "boolean",
+        "required": true
+      }
+    ]
+  },
+  {
+    "name": "BugButton",
+    "file": "src/app/providers/ErrorBoundary/ui/BugButton.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 6,
+    "props": []
+  },
+  {
+    "name": "Counter",
+    "file": "src/entities/Counter/ui/Counter.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 7,
+    "props": []
+  },
+  {
+    "name": "ErrorPage",
+    "file": "src/widgets/ErrorPage/ui/ErrorPage.tsx",
+    "framework": "react",
+    "isDefault": false,
+    "line": 4,
+    "props": []
+  }
+]

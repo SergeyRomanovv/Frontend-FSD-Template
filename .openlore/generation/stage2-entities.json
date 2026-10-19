@@ -1,0 +1,225 @@
+{
+  "stage": "entities",
+  "success": true,
+  "data": [
+    {
+      "name": "StateSchema",
+      "description": "Root schema of the application's global store state. Composes feature slices (counter, user, ui) plus the RTK Query API cache state registered under a dynamic reducerPath key. It also defines the supporting ThunkExtraArg (AxiosInstance api client injected into thunks) and ThunkConfig<T> (typed thunk configuration with state, extra, and rejectValue).",
+      "properties": [
+        {
+          "name": "counter",
+          "type": "CounterSchema",
+          "description": "State slice for the Counter feature",
+          "required": true
+        },
+        {
+          "name": "user",
+          "type": "UserSchema",
+          "description": "State slice for the User feature (imported from @/entities/User)",
+          "required": true
+        },
+        {
+          "name": "ui",
+          "type": "UISchema",
+          "description": "State slice for UI feature state (imported from @/features/UI)",
+          "required": true
+        },
+        {
+          "name": "[rtkApi.reducerPath]",
+          "type": "ReturnType<typeof rtkApi.reducer>",
+          "description": "Dynamic key holding RTK Query API cache state, keyed by the rtkApi reducerPath",
+          "required": true
+        }
+      ],
+      "relationships": [
+        {
+          "targetEntity": "CounterSchema",
+          "type": "has-one",
+          "description": "Global state contains the Counter feature slice"
+        },
+        {
+          "targetEntity": "UserSchema",
+          "type": "has-one",
+          "description": "Global state contains the User feature slice"
+        },
+        {
+          "targetEntity": "UISchema",
+          "type": "has-one",
+          "description": "Global state contains the UI feature slice"
+        },
+        {
+          "targetEntity": "rtkApi",
+          "type": "has-one",
+          "description": "Global state contains RTK Query cache state under the dynamic rtkApi.reducerPath key"
+        }
+      ],
+      "validations": [
+        "State must include the counter, user, and ui feature slices",
+        "API state must be registered under the dynamic key rtkApi.reducerPath so RTK Query caching works",
+        "Thunk extra argument (ThunkExtraArg) must expose an api client of type AxiosInstance",
+        "Thunks using ThunkConfig<T> must supply a typed rejectValue T for rejection handling"
+      ],
+      "scenarios": [
+        {
+          "name": "Store initialization",
+          "given": "Feature reducers for counter, user, and ui plus the rtkApi reducer",
+          "when": "The StoreProvider creates the Redux store",
+          "then": "The resulting store state conforms to StateSchema",
+          "and": [
+            "API cache state is accessible under rtkApi.reducerPath"
+          ]
+        },
+        {
+          "name": "Thunk execution with typed config",
+          "given": "A thunk typed with ThunkConfig<T>",
+          "when": "The thunk is dispatched",
+          "then": "It receives state: StateSchema and extra: ThunkExtraArg containing the AxiosInstance api client",
+          "and": [
+            "It can reject with a typed value of T via rejectValue"
+          ]
+        }
+      ],
+      "location": "src/app/providers/StoreProvider/config/StateSchema.ts"
+    },
+    {
+      "name": "Counter",
+      "description": "Represents a simple counter entity holding a single numeric value, used as the state schema for the Counter feature.",
+      "properties": [
+        {
+          "name": "value",
+          "type": "number",
+          "description": "The current numeric value of the counter",
+          "required": true
+        }
+      ],
+      "relationships": [],
+      "validations": [
+        "value is required and must be of type number"
+      ],
+      "scenarios": [
+        {
+          "name": "Read counter value",
+          "given": "A CounterSchema state exists",
+          "when": "the value field is accessed",
+          "then": "a numeric value is returned"
+        }
+      ],
+      "location": "src/entities/Counter/model/types/counterSchema.ts"
+    },
+    {
+      "name": "User",
+      "description": "Represents the authenticated user of the application. The User type is defined in src/entities/User/model/types/user. Initialization of auth data (fetching the current user on app startup) is currently a stub (placeholder) that is not yet implemented; planned implementations include cookie/session (GET /auth/me), JWT (token check with refresh), or OAuth (code-for-token exchange).",
+      "properties": [],
+      "relationships": [],
+      "validations": [
+        "initAuthData thunk must either resolve with a User object or reject with an error string",
+        "The concrete shape of User properties is not visible in the provided sources and cannot be verified"
+      ],
+      "scenarios": [
+        {
+          "name": "Initialize auth data (stub not implemented)",
+          "given": "Application startup dispatches the user/initAuthData thunk",
+          "when": "the thunk executes in its current stub form",
+          "then": "it rejects with the value 'Не реализовано' (Not implemented)"
+        },
+        {
+          "name": "Auth initialization error handling",
+          "given": "The future real auth initialization request throws an exception",
+          "when": "the initAuthData thunk executes",
+          "then": "it rejects with 'Ошибка инициализации авторизации' (Auth initialization error)"
+        },
+        {
+          "name": "Initialize auth data once implemented",
+          "given": "The thunk is implemented to call GET /auth/me via the injected api",
+          "when": "the request succeeds",
+          "then": "the returned User data is dispatched as the fulfilled payload"
+        }
+      ],
+      "location": "src/entities/Counter/model/types/counterSchema.ts"
+    },
+    {
+      "name": "UISchema",
+      "description": "Represents the UI state schema for the application, tracking scroll positions per page address.",
+      "properties": [
+        {
+          "name": "scroll",
+          "type": "ScrollSchema",
+          "description": "Map of page addresses to their saved scroll positions",
+          "required": true
+        }
+      ],
+      "relationships": [
+        {
+          "targetEntity": "ScrollSchema",
+          "type": "has-one",
+          "description": "UISchema contains a ScrollSchema map under its 'scroll' property"
+        }
+      ],
+      "validations": [
+        "scroll must be a record object mapping page address keys to numeric values",
+        "Each scroll position value must be a number"
+      ],
+      "scenarios": [
+        {
+          "name": "Save scroll position for a page",
+          "given": "A user has scrolled a page to a given offset",
+          "when": "The scroll position is recorded in the UI schema",
+          "then": "The scroll map contains an entry keyed by the page address with the numeric scroll offset as its value"
+        },
+        {
+          "name": "Look up scroll position for a page",
+          "given": "The scroll map contains an entry for a specific page address",
+          "when": "The page address is looked up in the scroll map",
+          "then": "The saved numeric scroll offset for that address is returned"
+        }
+      ],
+      "location": "src/features/UI/model/types/UISchema.ts"
+    },
+    {
+      "name": "ScrollSchema",
+      "description": "A record mapping page addresses (URLs/paths) to their scroll positions expressed as numeric offsets.",
+      "properties": [
+        {
+          "name": "pageAddress",
+          "type": "string",
+          "description": "The page address used as the record key identifying a visited page",
+          "required": true
+        },
+        {
+          "name": "scrollPosition",
+          "type": "number",
+          "description": "The numeric scroll position (offset) associated with the page address",
+          "required": true
+        }
+      ],
+      "relationships": [
+        {
+          "targetEntity": "UISchema",
+          "type": "belongs-to",
+          "description": "ScrollSchema is embedded as the 'scroll' property of UISchema"
+        }
+      ],
+      "validations": [
+        "Keys must be page address strings and unique within the record",
+        "Values must be numbers representing scroll positions"
+      ],
+      "scenarios": [
+        {
+          "name": "Record scroll offset for a page address",
+          "given": "The scroll record for the application UI state",
+          "when": "A page at address '/articles' is scrolled to offset 500",
+          "then": "The ScrollSchema entry maps '/articles' to the number 500"
+        },
+        {
+          "name": "Independent entries per page address",
+          "given": "Scroll positions saved for multiple page addresses",
+          "when": "Each page address is queried in the record",
+          "then": "Each address returns its own independent numeric scroll position"
+        }
+      ],
+      "location": "src/features/UI/model/types/UISchema.ts"
+    }
+  ],
+  "tokens": 13240,
+  "duration": 58291
+}

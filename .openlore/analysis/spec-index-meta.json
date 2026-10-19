@@ -1,0 +1,10 @@
+{
+  "hasEmbeddings": true,
+  "dim": 384,
+  "model": "local:Xenova/all-MiniLM-L6-v2",
+  "builtAt": "2026-10-11T17:56:21.520Z",
+  "schemaVersion": 2,
+  "recordsDigest": "16ac57ed0bc94e8b07c98b39e324c5834ad2c4b6179c458ada74764694cea6d0",
+  "recordCount": 156,
+  "tableDigest": "d8604a7609fd4a6a56d44ac2983feffcf46bbf8b7e5869b8a6bbbc3f489c1fa0"
+}

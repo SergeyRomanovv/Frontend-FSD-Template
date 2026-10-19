@@ -1,0 +1,2530 @@
+{
+  "stage": "services",
+  "success": true,
+  "data": [
+    {
+      "name": "AboutPage",
+      "purpose": "Provides the About page screen of the application. The module acts as the public entry point (barrel) for the About page feature, re-exporting the AboutPage UI component from its ui/ subfolder for consumption by the router/pages layer.",
+      "operations": [
+        {
+          "name": "renderAboutPage",
+          "description": "SHALL render the About page view when the component is mounted by the application router, displaying informational content about the application.",
+          "inputs": [
+            "props: none (or minimal page props)"
+          ],
+          "outputs": [
+            "ReactElement representing the About page UI"
+          ],
+          "scenarios": [
+            {
+              "name": "About page renders successfully",
+              "given": "The application is initialized and the About route is active",
+              "when": "The AboutPage component is mounted",
+              "then": "The About page content is displayed without errors"
+            },
+            {
+              "name": "Snapshot stability",
+              "given": "Unchanged About page implementation",
+              "when": "The component is rendered",
+              "then": "Rendered output matches the expected structure"
+            }
+          ]
+        },
+        {
+          "name": "exportPublicApi",
+          "description": "SHALL expose the default export of ./ui/AboutPage as the named export 'AboutPage', serving as the module's public API so consumers import only from the module root.",
+          "inputs": [
+            "default component from ./ui/AboutPage"
+          ],
+          "outputs": [
+            "named export AboutPage"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Named re-export available",
+              "given": "The ui/AboutPage module has a default export",
+              "when": "A consumer imports { AboutPage } from 'pages/AboutPage'",
+              "then": "The AboutPage component from ./ui/AboutPage is returned"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "./ui/AboutPage (internal ui layer component)"
+      ],
+      "sideEffects": [],
+      "domain": "aboutpage",
+      "locationFile": "src/pages/AboutPage/index.ts"
+    },
+    {
+      "name": "AdminPanelPage",
+      "purpose": "Public API barrel for the Admin Panel page module. It re-exports the AdminPanelPage UI component as the module's public export so the router and other application layers can consume the admin panel page without depending on its internal file structure.",
+      "operations": [
+        {
+          "name": "exposeAdminPanelPage",
+          "description": "The module SHALL re-export the default AdminPanelPage component from './ui/AdminPanelPage' as a named export, establishing the module's public API surface.",
+          "inputs": [
+            "default export of './ui/AdminPanelPage'"
+          ],
+          "outputs": [
+            "AdminPanelPage: React component (named export)"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Barrel re-export resolves",
+              "given": "The UI component exists at './ui/AdminPanelPage' with a default export",
+              "when": "A consumer imports { AdminPanelPage } from 'pages/AdminPanelPage'",
+              "then": "The AdminPanelPage UI component is provided"
+            },
+            {
+              "name": "Internal path hidden",
+              "given": "A consumer imports from the module index",
+              "when": "The import is resolved",
+              "then": "Only the public export surface is exposed and internal file layout is not leaked"
+            }
+          ]
+        },
+        {
+          "name": "render",
+          "description": "The AdminPanelPage component SHALL render the admin panel page UI when mounted, serving as the page-level container for admin panel functionality.",
+          "inputs": [
+            "props: component props"
+          ],
+          "outputs": [
+            "ReactElement representing the admin panel page"
+          ],
+          "scenarios": [
+            {
+              "name": "Page renders on admin route",
+              "given": "The application navigates to the admin panel route",
+              "when": "The AdminPanelPage component is mounted",
+              "then": "Admin panel page content is rendered to the DOM"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "AdminPanelPage UI component (./ui/AdminPanelPage)"
+      ],
+      "sideEffects": [],
+      "domain": "adminpanelpage",
+      "locationFile": "src/pages/AdminPanelPage/index.ts"
+    },
+    {
+      "name": "AppEntry",
+      "purpose": "Static HTML shell of the single-page application. Defines the document structure, provides the #root mount point, and triggers loading of the client application module to bootstrap the UI.",
+      "operations": [
+        {
+          "name": "bootstrapApplication",
+          "description": "SHALL load the application entry module (/src/index.tsx) as an ES module in the browser so the client application can render into the #root container.",
+          "inputs": [
+            "browser document containing #root element"
+          ],
+          "outputs": [
+            "executed application entry module",
+            "rendered application mounted in #root"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Initial page load",
+              "given": "index.html is served to a browser",
+              "when": "The module script /src/index.tsx is fetched and executed",
+              "then": "The application initializes and renders into the #root container"
+            },
+            {
+              "name": "Static shell served",
+              "given": "The application bundle has not yet loaded",
+              "when": "index.html is parsed",
+              "then": "An empty #root element and UTF-8 English document shell are presented with no content"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "/src/index.tsx (application entry module)"
+      ],
+      "sideEffects": [
+        "Browser fetches and executes /src/index.tsx as an ES module",
+        "DOM manipulation into the #root element by the loaded application"
+      ],
+      "domain": "agents",
+      "locationFile": ".gitignore"
+    },
+    {
+      "name": "AppLink",
+      "purpose": "Reusable navigation link component that wraps react-router-dom's NavLink, providing variant-based visual styling (primary/red) and conditional active-state CSS class application for navigation UI.",
+      "operations": [],
+      "dependencies": [
+        "react-router-dom (NavLink, LinkProps)",
+        "classNames utility (src/shared/lib/classNames/classNames)",
+        "AppLink.module.scss (variant styles: primary, red)"
+      ],
+      "sideEffects": [
+        "Triggers client-side route navigation via react-router-dom NavLink when clicked (updates browser URL/history)"
+      ],
+      "domain": "applink",
+      "locationFile": "src/shared/ui/AppLink/AppLink.module.scss"
+    },
+    {
+      "name": "Button",
+      "purpose": "Reusable shared UI button component that renders a native HTML button with configurable visual variant (clear/outline/filled), design-system size (m/l/xl), semantic color (normal/success/error), square/fullWidth layout flags, disabled state, and left/right addon slots; forwards refs and passes through all native button attributes.",
+      "operations": [],
+      "dependencies": [
+        "classNames / Mods from @/shared/lib/classNames",
+        "Button.module.scss style tokens"
+      ],
+      "sideEffects": [],
+      "domain": "button",
+      "locationFile": "src/shared/ui/Button/Button.module.scss"
+    },
+    {
+      "name": "BabelRemovePropsPlugin",
+      "purpose": "Build-time Babel plugin that strips forbidden JSX props (e.g. test-id attributes) from component code during compilation.",
+      "operations": [],
+      "dependencies": [],
+      "sideEffects": [
+        "Mutates Babel AST during build transformation"
+      ],
+      "domain": "config",
+      "locationFile": "config/babel/babelRemovePropsPlugin.ts"
+    },
+    {
+      "name": "JestEmptyComponent",
+      "purpose": "Provides a minimal pass-through div component used as a lightweight mock/stub component inside Jest tests.",
+      "operations": [],
+      "dependencies": [],
+      "sideEffects": [],
+      "domain": "config",
+      "locationFile": "config/babel/babelRemovePropsPlugin.ts"
+    },
+    {
+      "name": "CustomJSDOMEnvironment",
+      "purpose": "Custom Jest test environment that extends the Node environment with a happy-dom Window, exposing browser-like globals (document, location, storage, fetch) to test suites.",
+      "operations": [
+        {
+          "name": "setup",
+          "description": "The environment SHALL initialize the Node environment, create a happy-dom Window (localhost, 1920x1080), and assign browser globals such as window, document, navigator, location, history, Element, HTMLElement, localStorage, sessionStorage, XMLSerializer, fetch, Request, Response, Headers, URL, and DOMException onto the test global object. It SHALL also polyfill TextEncoder/TextDecoder from Node's util when missing.",
+          "inputs": [],
+          "outputs": [
+            "populated this.global with browser-like APIs",
+            "this.window set to the happy-dom Window"
+          ],
+          "functionName": "setup",
+          "scenarios": [
+            {
+              "name": "Browser globals exposed",
+              "given": "The environment is being initialized for a test run",
+              "when": "setup completes",
+              "then": "window, document, navigator, location, history, localStorage, sessionStorage and fetch are defined on the global object",
+              "and": [
+                "The happy-dom Window is configured with url http://localhost and viewport 1920x1080"
+              ]
+            },
+            {
+              "name": "TextEncoder polyfill applied",
+              "given": "global.TextEncoder is undefined",
+              "when": "setup runs",
+              "then": "Node's util TextEncoder is assigned to the global object"
+            },
+            {
+              "name": "Existing globals preserved",
+              "given": "global.TextDecoder is already defined",
+              "when": "setup runs",
+              "then": "The existing TextDecoder implementation is not overwritten"
+            }
+          ]
+        },
+        {
+          "name": "teardown",
+          "description": "The environment SHALL close the happy-dom Window (if present) and then delegate cleanup to the parent Node environment teardown.",
+          "inputs": [],
+          "outputs": [],
+          "functionName": "teardown",
+          "scenarios": [
+            {
+              "name": "Window closed on teardown",
+              "given": "setup has run and a happy-dom window exists",
+              "when": "teardown is called",
+              "then": "window.close() is invoked and the Node environment teardown completes"
+            },
+            {
+              "name": "Teardown tolerates missing window",
+              "given": "The window was never created or is already closed",
+              "when": "teardown is called",
+              "then": "No error is thrown and super teardown still executes"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "jest-environment-node",
+        "happy-dom",
+        "util"
+      ],
+      "sideEffects": [
+        "Creates and disposes a happy-dom Window per test run",
+        "Mutates the Jest global sandbox with browser globals"
+      ],
+      "domain": "config",
+      "locationFile": "config/jest/jsdomEnvironment.js"
+    },
+    {
+      "name": "SetupTests",
+      "purpose": "Global Jest bootstrap module that registers jest-dom DOM matchers on expect and loads the regenerator-runtime polyfill for all test suites.",
+      "operations": [],
+      "dependencies": [
+        "@testing-library/jest-dom",
+        "regenerator-runtime"
+      ],
+      "sideEffects": [
+        "Extends Jest's expect matchers globally for all tests",
+        "Loads regenerator-runtime polyfill into the test runtime"
+      ],
+      "domain": "config",
+      "locationFile": "config/babel/babelRemovePropsPlugin.ts"
+    },
+    {
+      "name": "CounterSlice",
+      "purpose": "Redux slice that owns the counter state (CounterSchema), providing pure state transitions for incrementing and decrementing the counter value.",
+      "operations": [
+        {
+          "name": "increment",
+          "description": "The reducer SHALL increase the counter value by one when the increment action is dispatched.",
+          "inputs": [
+            "state: CounterSchema"
+          ],
+          "outputs": [
+            "state: CounterSchema with value increased by 1"
+          ],
+          "scenarios": [
+            {
+              "name": "Increment from zero",
+              "given": "Counter value is 0",
+              "when": "increment action is dispatched",
+              "then": "Counter value becomes 1"
+            },
+            {
+              "name": "Increment from positive value",
+              "given": "Counter value is 5",
+              "when": "increment action is dispatched",
+              "then": "Counter value becomes 6"
+            }
+          ]
+        },
+        {
+          "name": "decrement",
+          "description": "The reducer SHALL decrease the counter value by one when the decrement action is dispatched.",
+          "inputs": [
+            "state: CounterSchema"
+          ],
+          "outputs": [
+            "state: CounterSchema with value decreased by 1"
+          ],
+          "scenarios": [
+            {
+              "name": "Decrement from positive value",
+              "given": "Counter value is 5",
+              "when": "decrement action is dispatched",
+              "then": "Counter value becomes 4"
+            },
+            {
+              "name": "Decrement below zero",
+              "given": "Counter value is 0",
+              "when": "decrement action is dispatched",
+              "then": "Counter value becomes -1"
+            }
+          ]
+        },
+        {
+          "name": "counterReducer",
+          "description": "The reducer SHALL return the existing state unchanged for unknown actions and SHALL initialize the counter state with a default value when state is undefined.",
+          "inputs": [
+            "state: CounterSchema | undefined",
+            "action: Redux action"
+          ],
+          "outputs": [
+            "state: CounterSchema"
+          ],
+          "scenarios": [
+            {
+              "name": "Unknown action leaves state intact",
+              "given": "Counter value is 3",
+              "when": "An unrelated action is dispatched",
+              "then": "Counter value remains 3"
+            },
+            {
+              "name": "Initial state default",
+              "given": "No counter state exists in the store",
+              "when": "counterReducer initializes",
+              "then": "Counter state is created with a default value"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "CounterSchema",
+        "StateSchema"
+      ],
+      "sideEffects": [
+        "Updates the counter slice in the global Redux store"
+      ],
+      "domain": "counter",
+      "locationFile": "src/entities/Counter/index.ts"
+    },
+    {
+      "name": "Counter",
+      "purpose": "UI component that displays the current counter value and provides increment/decrement controls that dispatch actions to the counter slice.",
+      "operations": [
+        {
+          "name": "render",
+          "description": "The component SHALL read the current counter value from the Redux store and display it.",
+          "inputs": [
+            "counter value from Redux store state"
+          ],
+          "outputs": [
+            "Rendered counter value in the UI"
+          ],
+          "scenarios": [
+            {
+              "name": "Displays current counter value",
+              "given": "Counter state value is 10",
+              "when": "Counter component is rendered",
+              "then": "The value 10 is displayed to the user"
+            }
+          ]
+        },
+        {
+          "name": "increment",
+          "description": "The component SHALL dispatch the increment action when the increment control is activated.",
+          "inputs": [
+            "click/activation event on increment control"
+          ],
+          "outputs": [
+            "Dispatched increment action to Redux store"
+          ],
+          "scenarios": [
+            {
+              "name": "Increment control clicked",
+              "given": "Counter component is rendered",
+              "when": "User activates the increment control",
+              "then": "Increment action is dispatched",
+              "and": [
+                "Displayed counter value increases by 1"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "decrement",
+          "description": "The component SHALL dispatch the decrement action when the decrement control is activated.",
+          "inputs": [
+            "click/activation event on decrement control"
+          ],
+          "outputs": [
+            "Dispatched decrement action to Redux store"
+          ],
+          "scenarios": [
+            {
+              "name": "Decrement control clicked",
+              "given": "Counter component is rendered",
+              "when": "User activates the decrement control",
+              "then": "Decrement action is dispatched",
+              "and": [
+                "Displayed counter value decreases by 1"
+              ]
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "CounterSlice (counterReducer via Redux store)",
+        "Redux store (useDispatch/useSelector)"
+      ],
+      "sideEffects": [
+        "Dispatches Redux actions mutating the counter slice in the global store"
+      ],
+      "domain": "counter",
+      "locationFile": "src/entities/Counter/index.ts"
+    },
+    {
+      "name": "EnLocale",
+      "purpose": "Provides the English (en) translation catalog for the application. It maps Russian source keys to English UI strings across i18n namespaces (translation, about, main), supplying localized text for navigation, pages, error screens, counter controls, and language labels.",
+      "operations": [
+        {
+          "name": "translate",
+          "description": "SHALL resolve a UI string key to its English equivalent within the default 'translation' namespace, covering main page, about, admin panel, error page, not-found page, counter controls, and language labels.",
+          "inputs": [
+            "key: string"
+          ],
+          "outputs": [
+            "translatedText: string"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Page title translation",
+              "given": "Key 'Главная страница' exists in translation.json",
+              "when": "translate is invoked with that key",
+              "then": "Returns 'Main page'"
+            },
+            {
+              "name": "Navigation translation",
+              "given": "Keys 'Главная', 'О сайте', 'Админ панель' exist in translation.json",
+              "when": "translate is invoked for each navigation key",
+              "then": "Returns 'Main', 'About us', and 'Admin panel' respectively"
+            },
+            {
+              "name": "Error screen translations",
+              "given": "Keys 'Произошла непредвиденная ошибка' and 'Обновить страницу' exist",
+              "when": "translate is invoked for the error page",
+              "then": "Returns 'An unexpected error has occurred' and 'Reload page'"
+            },
+            {
+              "name": "Counter control labels",
+              "given": "Keys 'increment', 'decrement', 'add5' exist in translation.json",
+              "when": "translate is invoked with 'increment'",
+              "then": "Returns 'increment' verbatim"
+            },
+            {
+              "name": "Missing key fallback",
+              "given": "A key is not present in translation.json",
+              "when": "translate is invoked with that key",
+              "then": "Returns the key itself as the fallback value"
+            }
+          ]
+        },
+        {
+          "name": "translateAbout",
+          "description": "SHALL resolve keys for the About page within the 'about' namespace, providing translations for the page title, admin panel link, and access-denied message.",
+          "inputs": [
+            "key: string"
+          ],
+          "outputs": [
+            "translatedText: string"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "About page title",
+              "given": "Key 'О сайте' exists in about.json",
+              "when": "translateAbout is invoked with 'О сайте'",
+              "then": "Returns 'About us'"
+            },
+            {
+              "name": "Untranslated key falls back to source",
+              "given": "Keys 'Админ панель' and 'У вас нет доступа к этой странице' map to their Russian source text in about.json",
+              "when": "translateAbout is invoked with those keys",
+              "then": "Returns the original Russian strings unchanged as untranslated placeholders"
+            },
+            {
+              "name": "Namespace fallback to default translations",
+              "given": "A key exists in translation.json but not in about.json",
+              "when": "translateAbout is invoked with that key",
+              "then": "Resolves the value from the default translation namespace"
+            }
+          ]
+        },
+        {
+          "name": "translateMain",
+          "description": "SHALL resolve keys for the Main page within the 'main' namespace; since the namespace is empty, it MUST fall back to the key or the default translation namespace.",
+          "inputs": [
+            "key: string"
+          ],
+          "outputs": [
+            "translatedText: string"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Empty namespace fallback",
+              "given": "main.json contains no entries",
+              "when": "translateMain is invoked with any key",
+              "then": "Falls back to the default translation namespace or returns the key itself"
+            }
+          ]
+        },
+        {
+          "name": "provideLocaleBundle",
+          "description": "SHALL expose the complete English resource bundle (translation, about, main namespaces) for registration with the i18n system and selection via the language switcher.",
+          "inputs": [],
+          "outputs": [
+            "resources: { translation: object, about: object, main: object }"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Bundle includes all namespaces",
+              "given": "The en locale files exist under public/locales/en/",
+              "when": "provideLocaleBundle is called",
+              "then": "Returns a bundle containing the 'translation', 'about', and 'main' namespaces",
+              "and": [
+                "The 'translation' namespace contains 13 key-value pairs",
+                "The 'about' namespace contains 3 key-value pairs",
+                "The 'main' namespace is an empty object"
+              ]
+            },
+            {
+              "name": "Language label identifies locale",
+              "given": "Keys 'Язык' and 'Короткий язык' exist in translation.json",
+              "when": "the language switcher renders using the en bundle",
+              "then": "Displays 'English' as the full label and 'En' as the short label"
+            }
+          ]
+        }
+      ],
+      "dependencies": [],
+      "sideEffects": [
+        "Locale files are served as static assets from public/locales/en/ and fetched over HTTP by the i18n resource loader"
+      ],
+      "domain": "en",
+      "locationFile": "public/locales/en/about.json"
+    },
+    {
+      "name": "ErrorBoundaryPublicApi",
+      "purpose": "Public entry point (index.ts) of the ErrorBoundary provider module; exposes the ErrorBoundary component and BugButton testing utility for app-level composition.",
+      "operations": [
+        {
+          "name": "exportPublicApi",
+          "description": "SHALL expose ErrorBoundary and BugButton as the module's public API surface so consumers import them from a single path.",
+          "inputs": [],
+          "outputs": [
+            "ErrorBoundary: React.Component",
+            "BugButton: React.Component"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Module import",
+              "given": "A consumer needs error-handling components",
+              "when": "The module 'app/providers/ErrorBoundary' is imported",
+              "then": "ErrorBoundary and BugButton are both available for use"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "ErrorBoundary",
+        "BugButton"
+      ],
+      "sideEffects": [],
+      "domain": "errorboundary",
+      "locationFile": "src/app/providers/ErrorBoundary/index.ts"
+    },
+    {
+      "name": "ErrorBoundary",
+      "purpose": "React class-based error boundary component that catches runtime errors anywhere in its child component tree, prevents full application crash, and renders a fallback UI.",
+      "operations": [
+        {
+          "name": "captureChildError",
+          "description": "SHALL capture errors thrown by any descendant component and transition the boundary into an error state.",
+          "inputs": [
+            "error: Error"
+          ],
+          "outputs": [
+            "state: { hasError: boolean }"
+          ],
+          "scenarios": [
+            {
+              "name": "Error in child component",
+              "given": "ErrorBoundary is rendering children normally",
+              "when": "A descendant component throws a rendering error",
+              "then": "Boundary state hasError becomes true and the application does not crash"
+            },
+            {
+              "name": "Healthy render",
+              "given": "Children render without errors",
+              "when": "The component tree renders",
+              "then": "Boundary state hasError remains false"
+            }
+          ]
+        },
+        {
+          "name": "logCaughtError",
+          "description": "SHOULD log the caught error and error info for diagnostics when React invokes the error lifecycle.",
+          "inputs": [
+            "error: Error",
+            "errorInfo: React.ErrorInfo"
+          ],
+          "outputs": [],
+          "scenarios": [
+            {
+              "name": "Error captured",
+              "given": "An error was caught by the boundary",
+              "when": "React invokes the error lifecycle callback",
+              "then": "Error details and component stack are logged to the console"
+            }
+          ]
+        },
+        {
+          "name": "renderFallback",
+          "description": "MUST render a fallback UI when the boundary is in the error state, and render children unchanged otherwise.",
+          "inputs": [
+            "children: ReactNode",
+            "state.hasError: boolean"
+          ],
+          "outputs": [
+            "ReactNode (fallback UI or children)"
+          ],
+          "scenarios": [
+            {
+              "name": "Error state",
+              "given": "state.hasError is true",
+              "when": "render is called",
+              "then": "A fallback error message/page is displayed instead of the crashed subtree"
+            },
+            {
+              "name": "Normal state",
+              "given": "state.hasError is false",
+              "when": "render is called",
+              "then": "Children are rendered as-is"
+            }
+          ]
+        }
+      ],
+      "dependencies": [],
+      "sideEffects": [
+        "Logs caught errors and error info to console"
+      ],
+      "domain": "errorboundary",
+      "locationFile": "src/app/providers/ErrorBoundary/index.ts"
+    },
+    {
+      "name": "BugButton",
+      "purpose": "Developer testing utility button that deliberately throws a runtime error when clicked, used to verify that the ErrorBoundary displays its fallback UI.",
+      "operations": [
+        {
+          "name": "throwTestError",
+          "description": "SHALL throw a runtime error on user click so the wrapping ErrorBoundary can be exercised and verified.",
+          "inputs": [
+            "onClick: user interaction"
+          ],
+          "outputs": [
+            "throws Error"
+          ],
+          "scenarios": [
+            {
+              "name": "Trigger error",
+              "given": "BugButton is rendered inside an ErrorBoundary",
+              "when": "User clicks the bug button",
+              "then": "An error is thrown and the boundary switches to its fallback UI"
+            },
+            {
+              "name": "Idle state",
+              "given": "The button has not been clicked",
+              "when": "The component renders",
+              "then": "No error is thrown and the button is displayed normally"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Button (shared/ui)",
+        "ErrorBoundary"
+      ],
+      "sideEffects": [
+        "Throws a deliberate runtime error to trigger the error boundary"
+      ],
+      "domain": "errorboundary",
+      "locationFile": "src/app/providers/ErrorBoundary/index.ts"
+    },
+    {
+      "name": "ErrorPage",
+      "purpose": "Renders a fallback error page UI when the application encounters an unhandled error, informing the user that something went wrong and offering an action to reload the page and recover application state.",
+      "operations": [
+        {
+          "name": "renderErrorPage",
+          "description": "SHALL render a localized error message and a reload action button whenever the error page is displayed as a result of an unhandled application error.",
+          "inputs": [],
+          "outputs": [
+            "ReactElement (error page UI with message and reload button)"
+          ],
+          "scenarios": [
+            {
+              "name": "Error page displayed",
+              "given": "The application encountered an unhandled error and the error page is shown",
+              "when": "ErrorPage is rendered",
+              "then": "A localized 'Something went wrong' message is displayed",
+              "and": [
+                "A reload action button is presented to the user",
+                "The rendered output is a valid React element"
+              ]
+            },
+            {
+              "name": "Localized content",
+              "given": "The active application language is set (e.g., en or ru)",
+              "when": "ErrorPage is rendered",
+              "then": "The error message and button label are shown in the active language"
+            }
+          ]
+        },
+        {
+          "name": "reloadPage",
+          "description": "SHALL reload the current browser page when the user activates the reload action, resetting the application to a clean state.",
+          "inputs": [],
+          "outputs": [
+            "void (triggers full page reload)"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "User triggers reload",
+              "given": "The error page is displayed with the reload button visible",
+              "when": "The user clicks the reload button",
+              "then": "The browser reloads the current page",
+              "and": [
+                "Application state is reinitialized on reload",
+                "The user is returned to the application entry state"
+              ]
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Button (shared/ui)",
+        "react-i18next (translation)"
+      ],
+      "sideEffects": [
+        "Reloads the browser page via location.reload() when the reload action is triggered"
+      ],
+      "domain": "errorpage",
+      "locationFile": "src/widgets/ErrorPage/index.ts"
+    },
+    {
+      "name": "ForbiddenPage",
+      "purpose": "Public API module for the Forbidden page; encapsulates presentation of the '403 Forbidden / access denied' screen shown when a user attempts to reach a resource without sufficient permissions, and exposes the ForbiddenPage UI component as the module's public entry point.",
+      "operations": [
+        {
+          "name": "renderForbiddenPage",
+          "description": "Renders the forbidden-access page UI. When routed to a restricted location without authorization, the component SHALL display a page communicating that access is forbidden.",
+          "inputs": [],
+          "outputs": [
+            "ReactElement representing the Forbidden page"
+          ],
+          "scenarios": [
+            {
+              "name": "Unauthorized access",
+              "given": "A user navigates to a protected route without permission",
+              "when": "The router mounts the ForbiddenPage component",
+              "then": "A page indicating that access is forbidden is displayed to the user"
+            },
+            {
+              "name": "Independent of auth state shape",
+              "given": "Any application StateSchema state",
+              "when": "ForbiddenPage renders",
+              "then": "It renders deterministically without requiring user-specific data"
+            }
+          ]
+        },
+        {
+          "name": "exportPublicApi",
+          "description": "Re-exports the ForbiddenPage component as a named export from the module barrel (src/pages/ForbiddenPage/index.ts), so consumers MUST import it via the public API rather than internal paths.",
+          "inputs": [],
+          "outputs": [
+            "ForbiddenPage component as named export"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Barrel export availability",
+              "given": "The ForbiddenPage module exists with its UI component as default export of ./ui/ForbiddenPage",
+              "when": "A consumer imports { ForbiddenPage } from 'pages/ForbiddenPage'",
+              "then": "The ForbiddenPage UI component is resolved as a named export"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "shared/ui components (page layout)"
+      ],
+      "sideEffects": [],
+      "domain": "forbiddenpage",
+      "locationFile": "src/pages/ForbiddenPage/index.ts"
+    },
+    {
+      "name": "Icon",
+      "purpose": "Shared UI component that renders SVG icons with consistent styling and dimensions, supporting both static display and clickable (button-wrapped) interaction modes.",
+      "operations": [],
+      "dependencies": [
+        "classNames (shared/lib/classNames)",
+        "Icon.module.scss styles",
+        "React"
+      ],
+      "sideEffects": [],
+      "domain": "icon",
+      "locationFile": "src/shared/ui/Icon/Icon.module.scss"
+    },
+    {
+      "name": "Input",
+      "purpose": "Reusable shared UI text input component that renders a styled, theme-aware input field with optional label, left/right addons, size variants, autofocus, readonly mode, and focus-state styling.",
+      "operations": [],
+      "dependencies": [
+        "classNames (shared/lib/classNames)",
+        "HStack (shared/ui/Stack)",
+        "Text (shared/ui/Text)",
+        "Input.module.scss styles"
+      ],
+      "sideEffects": [
+        "Manipulates browser DOM focus state on the input element",
+        "Renders to the browser DOM"
+      ],
+      "domain": "input",
+      "locationFile": "src/shared/ui/Input/index.ts"
+    },
+    {
+      "name": "LangSwitcher",
+      "purpose": "UI feature component that lets the user switch the application's interface language (English/Russian) by toggling the active i18n locale and displaying a localized trigger button.",
+      "operations": [
+        {
+          "name": "render",
+          "description": "SHALL render a clickable switcher control labeled with the translated language caption, optionally in an abbreviated (short) form.",
+          "inputs": [
+            "className?: string",
+            "short?: boolean"
+          ],
+          "outputs": [
+            "JSX.Element (language switch button)"
+          ],
+          "scenarios": [
+            {
+              "name": "Full label rendering",
+              "given": "Component rendered without short flag",
+              "when": "The switcher is displayed",
+              "then": "The full translated language label is shown on the button",
+              "and": [
+                "Clicking the button triggers language toggling"
+              ]
+            },
+            {
+              "name": "Short label rendering",
+              "given": "Component rendered with short = true",
+              "when": "The switcher is displayed",
+              "then": "An abbreviated language label is shown to save space"
+            },
+            {
+              "name": "Custom styling",
+              "given": "A className is provided",
+              "when": "The switcher is displayed",
+              "then": "The custom class is applied to the component root alongside base styles"
+            }
+          ]
+        },
+        {
+          "name": "toggleLanguage",
+          "description": "MUST toggle the active interface language between the supported locales (en/ru) when the switcher is activated, causing all translated content to re-render.",
+          "inputs": [
+            "currentLanguage: string (from i18n)"
+          ],
+          "outputs": [
+            "void (new locale applied via i18n)"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Switch Russian to English",
+              "given": "Current i18n language is 'ru'",
+              "when": "The switcher is clicked",
+              "then": "Interface language changes to 'en' and translated UI text updates"
+            },
+            {
+              "name": "Switch English to Russian",
+              "given": "Current i18n language is 'en'",
+              "when": "The switcher is clicked",
+              "then": "Interface language changes to 'ru' and translated UI text updates"
+            },
+            {
+              "name": "Repeated toggling",
+              "given": "User clicks the switcher multiple times",
+              "when": "Each click occurs",
+              "then": "Language alternates between the supported locales without error"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "button",
+        "en",
+        "ru",
+        "store"
+      ],
+      "sideEffects": [
+        "Changes the active i18n locale, causing re-render of all translated UI content",
+        "May persist the selected locale to localStorage via i18n language detection"
+      ],
+      "domain": "langswitcher",
+      "locationFile": "src/features/LangSwitcher/index.ts"
+    },
+    {
+      "name": "Loader",
+      "purpose": "Presents an animated ellipsis loading indicator (four CSS-animated dots) to signal that asynchronous content is being loaded. Marked as deprecated in favor of the redesigned UI components.",
+      "operations": [
+        {
+          "name": "render",
+          "description": "Renders the loading indicator: a container div carrying the base 'lds-ellipsis' class with four child divs that are animated via the imported SCSS keyframes.",
+          "inputs": [
+            "className?: string"
+          ],
+          "outputs": [
+            "ReactElement - div.lds-ellipsis containing four animated child divs"
+          ],
+          "scenarios": [
+            {
+              "name": "Default render",
+              "given": "Loader is rendered without a className prop",
+              "when": "Loader is invoked",
+              "then": "A container div with the 'lds-ellipsis' base class is rendered containing exactly four child divs"
+            },
+            {
+              "name": "Custom className applied",
+              "given": "A custom className prop is provided",
+              "when": "Loader is invoked",
+              "then": "The resulting container includes both the base 'lds-ellipsis' class and the provided custom class",
+              "and": [
+                "The base class 'lds-ellipsis' is never removed by the custom className"
+              ]
+            },
+            {
+              "name": "Animation visible while loading",
+              "given": "The Loader.scss styles are loaded",
+              "when": "The component is mounted in the DOM",
+              "then": "The four dots animate via the lds-ellipsis1/2/3 keyframes to visually indicate ongoing loading"
+            },
+            {
+              "name": "Theme-aware dot color",
+              "given": "A theme defining --inverted-bg-color is active",
+              "when": "Loader is rendered",
+              "then": "Dots use the theme's inverted background color so the loader adapts to light/dark themes"
+            }
+          ]
+        },
+        {
+          "name": "deprecationMarker",
+          "description": "Documents that the component is deprecated; consumers should migrate to the new components from the redesigned folder.",
+          "inputs": [],
+          "outputs": [
+            "JSDoc @deprecated annotation on the Loader export"
+          ],
+          "scenarios": [
+            {
+              "name": "Deprecation is signaled to consumers",
+              "given": "The Loader module is inspected or imported in an IDE",
+              "when": "The exported Loader symbol is referenced",
+              "then": "Tooling surfaces the @deprecated warning directing consumers to the redesigned components folder"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "classNames (shared/lib/classNames/classNames)"
+      ],
+      "sideEffects": [
+        "Imports Loader.scss stylesheet as a CSS side-effect when the module is loaded"
+      ],
+      "domain": "loader",
+      "locationFile": "src/shared/ui/Loader/index.ts"
+    },
+    {
+      "name": "MainLayout",
+      "purpose": "Presentational layout component that arranges application pages into a CSS grid structure with three named regions: header (top full width), sidebar (left, sticky), and content (main area, centered with max width).",
+      "operations": [],
+      "dependencies": [
+        "classNames (shared/lib/classNames)"
+      ],
+      "sideEffects": [],
+      "domain": "mainlayout",
+      "locationFile": "src/shared/layouts/MainLayout/index.ts"
+    },
+    {
+      "name": "MainPage",
+      "purpose": "Barrel module for the main page of the application. It exposes the MainPage UI component (default export of './ui/MainPage') as the public API of the pages/MainPage module, allowing consumers to import MainPage without knowing its internal file structure. The main page itself serves as the primary landing screen rendered by the router.",
+      "operations": [
+        {
+          "name": "exportMainPageComponent",
+          "description": "The module SHALL re-export the default export of './ui/MainPage' as the named export 'MainPage', providing a stable public entry point for the main page component.",
+          "inputs": [],
+          "outputs": [
+            "MainPage: React component (default export of ./ui/MainPage)"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Re-export resolution",
+              "given": "The './ui/MainPage' module exists and provides a default export",
+              "when": "A consumer imports { MainPage } from the pages/MainPage barrel",
+              "then": "The import resolves to the default component exported by './ui/MainPage'"
+            },
+            {
+              "name": "Missing default export",
+              "given": "'./ui/MainPage' does not provide a default export",
+              "when": "The barrel module is loaded",
+              "then": "The build/bundling process fails with a resolution error indicating the default export is undefined"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "./ui/MainPage (MainPage UI component)"
+      ],
+      "sideEffects": [],
+      "domain": "mainpage",
+      "locationFile": "src/pages/MainPage/index.ts"
+    },
+    {
+      "name": "NavbarWidgetPublicApi",
+      "purpose": "Public entry point (barrel module) of the Navbar widget; exposes the Navbar UI component to the rest of the application as the widget's single import surface.",
+      "operations": [
+        {
+          "name": "exportNavbar",
+          "description": "The module SHALL re-export the Navbar component from './ui/Navbar' so that consumers can import the Navbar widget via its root module (src/widgets/Navbar) without reaching into internal UI files.",
+          "inputs": [],
+          "outputs": [
+            "Navbar: component re-exported from ./ui/Navbar"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Navbar is importable from widget root",
+              "given": "The './ui/Navbar' module defines and exports the Navbar component",
+              "when": "A consumer imports { Navbar } from 'src/widgets/Navbar'",
+              "then": "The Navbar component is resolved and available for use",
+              "and": [
+                "Consumers do not need to know the internal file layout of the widget",
+                "The internal module path './ui/Navbar' remains encapsulated behind the public API"
+              ]
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "./ui/Navbar (Navbar UI component)"
+      ],
+      "sideEffects": [],
+      "domain": "navbar",
+      "locationFile": "src/widgets/Navbar/index.ts"
+    },
+    {
+      "name": "NotFoundPage",
+      "purpose": "Page module that renders the '404 Page Not Found' screen shown when a user navigates to a route that does not match any configured route; exposes the NotFoundPage component as the module's public API.",
+      "operations": [
+        {
+          "name": "render",
+          "description": "Renders the Not Found page UI, informing the user that the requested page does not exist. The component MUST display a not-found message whenever the router hands off an unmatched route to this page.",
+          "inputs": [],
+          "outputs": [
+            "JSX.Element (not-found page view)"
+          ],
+          "scenarios": [
+            {
+              "name": "Unmatched route",
+              "given": "The current URL does not match any configured application route",
+              "when": "The router renders the NotFoundPage component",
+              "then": "A 'page not found' (404) view is displayed to the user"
+            },
+            {
+              "name": "Standalone rendering",
+              "given": "The NotFoundPage component is rendered directly",
+              "when": "The component mounts",
+              "then": "It renders without throwing and shows not-found content"
+            }
+          ]
+        },
+        {
+          "name": "exportPublicApi",
+          "description": "Re-exports the NotFoundPage component from './ui/NotFoundPage' as the module's public entry point, so consumers SHALL import only via the module root (src/pages/NotFoundPage).",
+          "inputs": [],
+          "outputs": [
+            "NotFoundPage component (re-exported)"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Barrel export available",
+              "given": "The module's index.ts exists",
+              "when": "A consumer imports { NotFoundPage } from the NotFoundPage module root",
+              "then": "The UI component is resolved and returned"
+            },
+            {
+              "name": "Encapsulation",
+              "given": "Internal files under ./ui are implementation details",
+              "when": "Consumers use only the public export",
+              "then": "Internal module structure can change without breaking consumers"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "router",
+        "ui",
+        "shared"
+      ],
+      "sideEffects": [
+        "Renders DOM elements for the not-found page view"
+      ],
+      "domain": "notfoundpage",
+      "locationFile": "src/pages/NotFoundPage/index.ts"
+    },
+    {
+      "name": "Page",
+      "purpose": "Reusable page-level UI widget that renders page content inside a full-height scrollable container identified by PAGE_ID, and manages per-route scroll behavior (saving and restoring scroll position stored in the application's ScrollSchema state).",
+      "operations": [
+        {
+          "name": "renderPageContent",
+          "description": "The Page component MUST render its children inside a scrollable page container element tagged with the PAGE_ID identifier (for DOM targeting and e2e tests), merging any custom className with default page styles.",
+          "inputs": [
+            "children: ReactNode",
+            "className?: string"
+          ],
+          "outputs": [
+            "Rendered <main> scroll container containing children, tagged with PAGE_ID"
+          ],
+          "scenarios": [
+            {
+              "name": "Render children",
+              "given": "Arbitrary page children are passed to Page",
+              "when": "Page is rendered",
+              "then": "Children appear inside the scrollable page container",
+              "and": [
+                "The container exposes the PAGE_ID identifier"
+              ]
+            },
+            {
+              "name": "Custom className",
+              "given": "A custom className prop is provided",
+              "when": "Page is rendered",
+              "then": "The custom class is merged with the default page styles"
+            }
+          ]
+        },
+        {
+          "name": "exposePageId",
+          "description": "The module MUST export the PAGE_ID constant so tests, tooling, and other modules can reliably locate the page scroll container in the DOM.",
+          "inputs": [],
+          "outputs": [
+            "PAGE_ID: string"
+          ],
+          "scenarios": [
+            {
+              "name": "Stable identifier",
+              "given": "The widget barrel file is imported",
+              "when": "PAGE_ID is accessed",
+              "then": "A stable string identifier for the page container is returned"
+            }
+          ]
+        },
+        {
+          "name": "saveScrollPosition",
+          "description": "As the user scrolls the page container, the widget SHOULD capture the container's scroll position (throttled) and persist it in the store under the current route path (ScrollSchema).",
+          "inputs": [
+            "scroll position from scroll event",
+            "current route path from router location"
+          ],
+          "outputs": [
+            "Dispatched action storing scroll position per route path"
+          ],
+          "scenarios": [
+            {
+              "name": "User scrolls page",
+              "given": "User is on route /articles and scrolls the container to 500px",
+              "when": "The throttled scroll handler fires",
+              "then": "Scroll position 500 is saved in the store under the /articles path"
+            },
+            {
+              "name": "No scrolling",
+              "given": "The container is not scrolled",
+              "when": "The page is displayed",
+              "then": "No scroll-position write is dispatched"
+            }
+          ]
+        },
+        {
+          "name": "restoreScrollPosition",
+          "description": "When the page mounts or the active route changes, the widget SHOULD restore the previously saved scroll position for that route path from the store, defaulting to the top when no position was saved.",
+          "inputs": [
+            "saved scroll position for current path (from ScrollSchema)",
+            "current route path"
+          ],
+          "outputs": [
+            "Container scrollTop set to restored position"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Return to visited route",
+              "given": "Scroll position 800 was previously saved for /articles",
+              "when": "User navigates back to /articles and the page mounts",
+              "then": "The container's scrollTop is set to 800"
+            },
+            {
+              "name": "First visit to a route",
+              "given": "No scroll position saved for the current path",
+              "when": "The page mounts",
+              "then": "The container remains scrolled to the top (position 0)"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "store (StateSchema / ScrollSchema scroll state)",
+        "shared (classNames utility, throttle hook)",
+        "react-router-dom (useLocation for current path)"
+      ],
+      "sideEffects": [
+        "Dispatches Redux actions persisting scroll position per route path",
+        "Mutates DOM scrollTop of the page container",
+        "Subscribes to router location changes to trigger scroll restoration"
+      ],
+      "domain": "page",
+      "locationFile": "src/widgets/Page/index.ts"
+    },
+    {
+      "name": "AboutPage",
+      "purpose": "Renders the 'About' route of the application, displaying localized about-site content inside the standard Page widget.",
+      "operations": [
+        {
+          "name": "renderAboutPage",
+          "description": "The page SHALL render the localized 'О сайте' (About) text using the 'about' translation namespace within the shared Page widget.",
+          "inputs": [],
+          "outputs": [
+            "ReactElement: the About page view"
+          ],
+          "scenarios": [
+            {
+              "name": "Localized content rendering",
+              "given": "The application i18n is initialized with the 'about' namespace",
+              "when": "AboutPage is rendered",
+              "then": "The translated 'О сайте' text is displayed inside the Page widget",
+              "and": [
+                "The root element exposes data-testid='AboutPage' for test targeting"
+              ]
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Page (widgets/Page)",
+        "react-i18next"
+      ],
+      "sideEffects": [],
+      "domain": "pages",
+      "locationFile": "src/pages/AboutPage/ui/AboutPage.tsx"
+    },
+    {
+      "name": "AdminPanelPage",
+      "purpose": "Renders the Admin Panel route of the application, providing the localized admin panel shell within the standard Page widget.",
+      "operations": [
+        {
+          "name": "renderAdminPanelPage",
+          "description": "The page SHALL render the localized 'Админ панель' (Admin panel) title using the default translation namespace within the shared Page widget.",
+          "inputs": [],
+          "outputs": [
+            "ReactElement: the Admin Panel page view"
+          ],
+          "scenarios": [
+            {
+              "name": "Admin panel shell rendering",
+              "given": "The user navigates to the admin panel route",
+              "when": "AdminPanelPage is rendered",
+              "then": "The translated 'Админ панель' title is displayed inside the Page widget",
+              "and": [
+                "The root element exposes data-testid='AdminPanelPage' for test targeting"
+              ]
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Page (widgets/Page)",
+        "react-i18next"
+      ],
+      "sideEffects": [],
+      "domain": "pages",
+      "locationFile": "src/pages/AboutPage/ui/AboutPage.tsx"
+    },
+    {
+      "name": "ForbiddenPage",
+      "purpose": "Renders the access-denied (403) page, informing users that they do not have permission to view the requested page.",
+      "operations": [
+        {
+          "name": "renderForbiddenPage",
+          "description": "The page SHALL render a localized 'no access' notice ('У вас нет доступа к этой странице') when a user attempts to view a page they are not authorized for.",
+          "inputs": [],
+          "outputs": [
+            "ReactElement: the forbidden/access-denied page view"
+          ],
+          "scenarios": [
+            {
+              "name": "Access denied message",
+              "given": "A user without the required permissions requests a protected page",
+              "when": "ForbiddenPage is rendered",
+              "then": "The localized 'У вас нет доступа к этой странице' message is displayed inside the Page widget",
+              "and": [
+                "The root element exposes data-testid='ForbiddenPage' for test targeting"
+              ]
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Page (widgets/Page)",
+        "react-i18next"
+      ],
+      "sideEffects": [],
+      "domain": "pages",
+      "locationFile": "src/pages/AboutPage/ui/AboutPage.tsx"
+    },
+    {
+      "name": "MainPage",
+      "purpose": "Renders the application home route, showing the localized main page heading and embedding the Counter entity feature.",
+      "operations": [
+        {
+          "name": "renderMainPage",
+          "description": "The page SHALL render the localized 'Главная страница' (Main page) title and MUST embed the Counter entity component so users can interact with the counter on the home screen.",
+          "inputs": [],
+          "outputs": [
+            "ReactElement: the main page view including the Counter"
+          ],
+          "scenarios": [
+            {
+              "name": "Main page with counter",
+              "given": "The application i18n is initialized with the default namespace",
+              "when": "MainPage is rendered",
+              "then": "The translated 'Главная страница' title is displayed inside the Page widget",
+              "and": [
+                "The Counter entity component is mounted within the page content",
+                "The root element exposes data-testid='MainPage' for test targeting"
+              ]
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Page (widgets/Page)",
+        "Counter (entities/Counter)",
+        "react-i18next"
+      ],
+      "sideEffects": [],
+      "domain": "pages",
+      "locationFile": "src/pages/AboutPage/ui/AboutPage.tsx"
+    },
+    {
+      "name": "NotFoundPage",
+      "purpose": "Renders the 404 (page not found) view with centered styling and a localized 'page not found' message for unknown routes.",
+      "operations": [
+        {
+          "name": "renderNotFoundPage",
+          "description": "The page SHALL render a centered, localized 'Страница не найдена' (Page not found) message and SHOULD merge any caller-provided className onto the base styles via the classNames helper.",
+          "inputs": [
+            "className?: string (additional CSS class)"
+          ],
+          "outputs": [
+            "ReactElement: the 404 not-found view"
+          ],
+          "scenarios": [
+            {
+              "name": "Unknown route rendering",
+              "given": "A user navigates to a route that does not match any configured route",
+              "when": "NotFoundPage is rendered",
+              "then": "The localized 'Страница не найдена' message is displayed, centered both horizontally and vertically using the module styles",
+              "and": [
+                "The root element exposes data-testid='NotFoundPage' for test targeting"
+              ]
+            },
+            {
+              "name": "Custom className merging",
+              "given": "NotFoundPage is rendered with a className prop",
+              "when": "The component builds its root element classes",
+              "then": "The provided className is appended to the base NotFoundPage style class via classNames, preserving both"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "classNames (shared/lib/classNames)",
+        "react-i18next",
+        "NotFoundPage.module.scss styles"
+      ],
+      "sideEffects": [],
+      "domain": "pages",
+      "locationFile": "src/pages/AboutPage/ui/AboutPage.tsx"
+    },
+    {
+      "name": "PublicIndexHtml",
+      "purpose": "Static HTML entry document (application shell) for the SPA: declares document metadata and language, preconnects and loads web fonts, and provides the #root mount point into which the client-side application renders.",
+      "operations": [
+        {
+          "name": "provisionRootMountPoint",
+          "description": "SHALL provide an empty div element with id 'root' in the document body as the sole mount point for client-side application rendering.",
+          "inputs": [],
+          "outputs": [
+            "rootElement: HTMLElement with id='root'"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Root element present on load",
+              "given": "The browser requests the application entry document",
+              "when": "index.html is parsed",
+              "then": "A <div id=\"root\"> element exists in the document body",
+              "and": [
+                "The element contains no children so the client application can attach and render into it"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "loadWebFonts",
+          "description": "MUST preconnect to Google Fonts hosts and load the Nunito Sans (weights 400, 700) and Roboto (weights 400, 500, 700) font families via the Google Fonts CSS2 API with display=swap.",
+          "inputs": [],
+          "outputs": [
+            "Loaded font families: Nunito Sans 400/700, Roboto 400/500/700"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Preconnect hints processed",
+              "given": "The document head is being parsed",
+              "when": "The browser encounters the preconnect link elements",
+              "then": "Early connections to https://fonts.googleapis.com and https://fonts.gstatic.com (with crossorigin) are pre-established"
+            },
+            {
+              "name": "Font stylesheet fetched",
+              "given": "Preconnects are established",
+              "when": "The stylesheet link to the Google Fonts CSS2 API is processed",
+              "then": "Nunito Sans 400/700 and Roboto 400/500/700 become available for text rendering with swap display behavior"
+            }
+          ]
+        },
+        {
+          "name": "declareDocumentMetadata",
+          "description": "SHALL declare core document metadata: language 'ru', UTF-8 charset, fixed-scale viewport (device-width, initial-scale 1.0, user scaling disabled), IE compatibility mode hint, and the document title.",
+          "inputs": [],
+          "outputs": [
+            "Document metadata: lang, charset, viewport, X-UA-Compatible, title"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Language declared as Russian",
+              "given": "index.html is served to the browser",
+              "when": "The document is parsed",
+              "then": "The html element's lang attribute is set to 'ru'"
+            },
+            {
+              "name": "Character encoding is UTF-8",
+              "given": "index.html is served",
+              "when": "The document is parsed",
+              "then": "The charset meta declares UTF-8 so localized Cyrillic content renders correctly"
+            },
+            {
+              "name": "Viewport disables user scaling",
+              "given": "index.html is served",
+              "when": "The viewport meta is evaluated",
+              "then": "Width is device-width, initial-scale is 1.0, and user-scalable=no with maximum-scale and minimum-scale of 1.0"
+            },
+            {
+              "name": "Legacy compatibility hint present",
+              "given": "index.html is served",
+              "when": "The document is parsed",
+              "then": "The X-UA-Compatible meta instructs IE to use the latest rendering engine (ie=edge)"
+            }
+          ]
+        }
+      ],
+      "dependencies": [],
+      "sideEffects": [
+        "Network request to https://fonts.googleapis.com to fetch the font stylesheet",
+        "DNS/TLS preconnect to https://fonts.gstatic.com for font file downloads",
+        "Served as the static entry document by the web server for every application route"
+      ],
+      "domain": "public",
+      "locationFile": "public/index.html"
+    },
+    {
+      "name": "Router",
+      "purpose": "Defines and exposes the application's router configuration, mapping URL paths to application pages (including lazy-loaded pages and fallback error/404 routes) and providing the single router instance consumed by the app providers.",
+      "operations": [
+        {
+          "name": "provideRouter",
+          "description": "Builds and exposes the application router instance from the central route configuration so the rest of the app can render the correct page for the current URL.",
+          "inputs": [],
+          "outputs": [
+            "router: Router instance (route configuration wrapped in a router object)"
+          ],
+          "scenarios": [
+            {
+              "name": "Router instance available",
+              "given": "The app providers initialize",
+              "when": "The router is imported from the router module",
+              "then": "A fully configured router instance is returned and can be mounted by the application",
+              "and": [
+                "The same router configuration is used everywhere it is imported (single source of truth)"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "resolveRoutes",
+          "description": "The route configuration SHALL map every supported URL path to its corresponding page component, covering the main, about, admin panel, and fallback pages.",
+          "inputs": [],
+          "outputs": [
+            "routes: RouteDefinition[] (path to page component mappings)"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Main page route",
+              "given": "The route configuration is defined",
+              "when": "The user navigates to '/'",
+              "then": "The MainPage is rendered"
+            },
+            {
+              "name": "About page route",
+              "given": "The route configuration is defined",
+              "when": "The user navigates to '/about'",
+              "then": "The AboutPage is rendered"
+            },
+            {
+              "name": "Admin panel route",
+              "given": "The route configuration is defined",
+              "when": "The user navigates to the admin panel path",
+              "then": "The AdminPanelPage is rendered"
+            },
+            {
+              "name": "Unknown path falls back to 404",
+              "given": "A route for the requested path does not exist",
+              "when": "The user navigates to an unmapped path",
+              "then": "The NotFoundPage is rendered"
+            },
+            {
+              "name": "Forbidden access fallback",
+              "given": "A page is accessible only to authorized users",
+              "when": "An unauthorized user attempts to reach it",
+              "then": "The ForbiddenPage (403) is rendered"
+            }
+          ]
+        },
+        {
+          "name": "lazyLoadPages",
+          "description": "Page components SHOULD be lazily loaded via dynamic imports so that each page's code is only fetched when its route is first visited, with a loading fallback shown meanwhile.",
+          "inputs": [],
+          "outputs": [
+            "lazyPageComponents: dynamically imported page components"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Lazy chunk loaded on first visit",
+              "given": "A page route is configured with a lazy component",
+              "when": "The user navigates to that route for the first time",
+              "then": "The page's JavaScript chunk is fetched and the page is rendered",
+              "and": [
+                "A loading fallback (e.g., skeleton/loader) is displayed while the chunk loads"
+              ]
+            },
+            {
+              "name": "Subsequent visits use cached chunk",
+              "given": "The page chunk has already been loaded",
+              "when": "The user navigates to the same route again",
+              "then": "The page renders immediately without re-fetching the chunk"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "pages (MainPage, AboutPage, AdminPanelPage, NotFoundPage, ForbiddenPage)",
+        "Loader/Skeleton UI components for lazy-loading fallbacks"
+      ],
+      "sideEffects": [
+        "Reads and updates browser URL/history during navigation",
+        "Triggers network requests to fetch lazily loaded page code chunks",
+        "Renders page components into the DOM"
+      ],
+      "domain": "router",
+      "locationFile": "src/app/providers/router/index.ts"
+    },
+    {
+      "name": "RuLocaleCatalog",
+      "purpose": "Provides the Russian (ru) localized string resources for the application: the global translation namespace, the about-page namespace, and the (currently empty) main-page namespace, keyed for i18n runtime consumption.",
+      "operations": [
+        {
+          "name": "resolveGlobalTranslation",
+          "description": "SHALL resolve global UI translation keys to their Russian string values from the translation.json namespace, covering navigation, error/404 pages, language switcher labels, and counter control labels.",
+          "inputs": [
+            "key: string (e.g. 'Главная страница', 'Язык', 'increment')"
+          ],
+          "outputs": [
+            "russianText: string"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Known navigation key",
+              "given": "translation.json contains the key 'Главная страница'",
+              "when": "the key is resolved in the ru locale",
+              "then": "the Russian value 'Главная страница' is returned"
+            },
+            {
+              "name": "Language switcher labels",
+              "given": "the keys 'Язык' and 'Короткий язык' exist in translation.json",
+              "when": "they are resolved",
+              "then": "'Русский' and 'Ru' are returned for the full and short language labels",
+              "and": [
+                "Short label 'Ru' is used for compact switcher UI"
+              ]
+            },
+            {
+              "name": "Error page strings",
+              "given": "keys 'Страница не найдена', 'Произошла непредвиденная ошибка' and 'Обновить страницу' exist",
+              "when": "the 404 or error page renders in Russian",
+              "then": "the corresponding Russian messages and the 'Обновить страницу' reload button label are returned"
+            },
+            {
+              "name": "Technical labels kept as-is",
+              "given": "keys 'throw error', 'increment', 'decrement', 'add5' are technical/UI action labels",
+              "when": "they are resolved in ru",
+              "then": "the untranslated literals are returned, while 'add5' maps to the Russian label 'добавить 5'"
+            }
+          ]
+        },
+        {
+          "name": "resolveAboutPageTranslation",
+          "description": "SHALL resolve about-section translation keys to Russian values from the about.json namespace, including the page title, admin panel link label, and access-denied message.",
+          "inputs": [
+            "key: string (e.g. 'О сайте', 'Админ панель', 'У вас нет доступа к этой странице')"
+          ],
+          "outputs": [
+            "russianText: string"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "About page title",
+              "given": "about.json contains the key 'О сайте'",
+              "when": "the about page is opened in Russian",
+              "then": "the title 'О сайте' is returned"
+            },
+            {
+              "name": "Access denied message",
+              "given": "a user without permissions opens a restricted page",
+              "when": "the key 'У вас нет доступа к этой странице' is resolved",
+              "then": "the Russian forbidden-page message is displayed",
+              "and": [
+                "The 'Админ панель' label is available for the admin navigation link"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "provideMainPageNamespace",
+          "description": "SHALL expose the main.json namespace for the main page. The namespace is currently empty, so it MUST load successfully with zero entries and allow fallback to the global translation namespace.",
+          "inputs": [],
+          "outputs": [
+            "entries: key/value map (currently empty)"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Empty namespace loads without error",
+              "given": "main.json contains no entries",
+              "when": "the main namespace is loaded for ru",
+              "then": "loading completes successfully with zero translation entries"
+            },
+            {
+              "name": "Fallback to global namespace",
+              "given": "the main namespace has no entry for a key present in translation.json",
+              "when": "a main-page string is resolved",
+              "then": "the value falls back to the global translation.json namespace"
+            }
+          ]
+        },
+        {
+          "name": "registerRuLocale",
+          "description": "SHALL register all three namespaces (translation, about, main) under the 'ru' language code so the i18n runtime can activate Russian as a selectable language.",
+          "inputs": [
+            "languageCode: 'ru'"
+          ],
+          "outputs": [
+            "registeredNamespaces: string[]"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Locale registration",
+              "given": "the ru resource files exist under public/locales/ru",
+              "when": "the locale catalog is registered",
+              "then": "the namespaces 'translation', 'about' and 'main' are available under language code 'ru'"
+            }
+          ]
+        }
+      ],
+      "dependencies": [],
+      "sideEffects": [
+        "Translation files are served as static assets from public/locales/ru and fetched over HTTP by the i18n runtime at locale activation"
+      ],
+      "domain": "ru",
+      "locationFile": "public/locales/ru/about.json"
+    },
+    {
+      "name": "SideBar",
+      "purpose": "Application sidebar navigation widget: renders navigation links to app pages, language and theme switchers, and supports collapsing/expanding with persisted UI state.",
+      "operations": [
+        {
+          "name": "renderSidebar",
+          "description": "The widget SHALL render the sidebar panel containing navigation links (e.g., main page, about page) and control widgets (language switcher, theme switcher), adapting layout/labels to the current collapsed state.",
+          "inputs": [
+            "collapsed: boolean (from UI state)",
+            "activeLink: string (current route)"
+          ],
+          "outputs": [
+            "JSX.Element: rendered sidebar"
+          ],
+          "scenarios": [
+            {
+              "name": "Expanded state renders full sidebar",
+              "given": "Sidebar is in expanded state and user is on the main page",
+              "when": "Sidebar is rendered",
+              "then": "Navigation links with visible text labels are displayed",
+              "and": [
+                "Link to the main page is marked as active",
+                "Language and theme switchers are rendered inside the sidebar"
+              ]
+            },
+            {
+              "name": "Collapsed state renders compact sidebar",
+              "given": "Sidebar is in collapsed state",
+              "when": "Sidebar is rendered",
+              "then": "Sidebar renders in compact width with the expand control available"
+            }
+          ]
+        },
+        {
+          "name": "toggleCollapsed",
+          "description": "The widget SHALL toggle the sidebar between collapsed and expanded states and persist the new state so it survives page reloads.",
+          "inputs": [
+            "collapsed: boolean (current state)"
+          ],
+          "outputs": [
+            "updated UI state (sidebarCollapsed)"
+          ],
+          "scenarios": [
+            {
+              "name": "Collapse expanded sidebar",
+              "given": "Sidebar is expanded",
+              "when": "The collapse toggle is triggered",
+              "then": "Sidebar state becomes collapsed and the new state is persisted"
+            },
+            {
+              "name": "Expand collapsed sidebar",
+              "given": "Sidebar is collapsed",
+              "when": "The expand toggle is triggered",
+              "then": "Sidebar state becomes expanded and the new state is persisted"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "shared/ui (Button, AppLink, Stack, Icon, Text)",
+        "features/LangSwitcher",
+        "features/ThemeSwitcher",
+        "store (StateSchema / UISchema selectors and dispatch)",
+        "router (route paths)"
+      ],
+      "sideEffects": [
+        "Dispatches Redux action updating UI state (sidebar collapsed flag)",
+        "Persists sidebar collapsed state to localStorage via UI state persistence"
+      ],
+      "domain": "sidebar",
+      "locationFile": "src/widgets/SideBar/index.ts"
+    },
+    {
+      "name": "Skeleton",
+      "purpose": "Presentational shared UI component that renders an animated placeholder (shimmer effect) used to indicate loading state of content, with customizable dimensions and border radius.",
+      "operations": [],
+      "dependencies": [
+        "classNames (src/shared/lib/classNames/classNames)"
+      ],
+      "sideEffects": [],
+      "domain": "skeleton",
+      "locationFile": "src/shared/ui/Skeleton/index.ts"
+    },
+    {
+      "name": "Stack",
+      "purpose": "Barrel module of the Stack UI kit in src/shared/ui/Stack; exposes the HStack and VStack layout primitives as the module's public API.",
+      "operations": [
+        {
+          "name": "exportStackComponents",
+          "description": "SHALL re-export HStack (from ./HStack/HStack) and VStack (from ./VStack/VStack) so consumers can import both layout primitives from '@/shared/ui/Stack'.",
+          "inputs": [],
+          "outputs": [
+            "HStack: ComponentType",
+            "VStack: ComponentType"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Barrel re-export",
+              "given": "HStack exists in ./HStack/HStack and VStack exists in ./VStack/VStack",
+              "when": "A consumer imports from '@/shared/ui/Stack'",
+              "then": "Both HStack and VStack resolve as valid components",
+              "and": [
+                "No circular or broken imports are introduced"
+              ]
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "HStack",
+        "VStack"
+      ],
+      "sideEffects": [],
+      "domain": "stack",
+      "locationFile": "src/shared/ui/Stack/index.ts"
+    },
+    {
+      "name": "HStack",
+      "purpose": "Horizontal layout primitive that arranges child elements in a flex row with configurable gap, alignment, and sizing.",
+      "operations": [
+        {
+          "name": "HStack",
+          "description": "Renders children inside a horizontal (row-direction) flex container. MUST default cross-axis alignment to 'center' and forward standard flex props (gap, justify, wrap, grow, shrink, maxWidth) to the underlying Flex component.",
+          "inputs": [
+            "children: ReactNode",
+            "align?: FlexAlign (default 'center')",
+            "justify?: FlexJustify",
+            "gap?: string",
+            "wrap?: FlexWrap",
+            "grow?: boolean",
+            "shrink?: boolean",
+            "maxWidth?: string | number",
+            "className?: string"
+          ],
+          "outputs": [
+            "JSX.Element rendered as a horizontal flex row"
+          ],
+          "scenarios": [
+            {
+              "name": "Horizontal arrangement",
+              "given": "Multiple child elements",
+              "when": "HStack renders",
+              "then": "Children are laid out side by side with flexDirection 'row'"
+            },
+            {
+              "name": "Default alignment",
+              "given": "No align prop provided",
+              "when": "HStack renders",
+              "then": "Cross-axis alignment defaults to 'center'",
+              "and": [
+                "alignItems style resolves to 'center'"
+              ]
+            },
+            {
+              "name": "Prop forwarding",
+              "given": "gap='16' and justify='between'",
+              "when": "HStack renders",
+              "then": "Gap and justify-content styles are applied to the row container",
+              "and": [
+                "The direction is fixed to 'row' and cannot be overridden by callers"
+              ]
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Flex"
+      ],
+      "sideEffects": [],
+      "domain": "stack",
+      "locationFile": "src/shared/ui/Stack/index.ts"
+    },
+    {
+      "name": "VStack",
+      "purpose": "Vertical layout primitive that arranges child elements in a flex column with configurable gap, alignment, and sizing.",
+      "operations": [
+        {
+          "name": "VStack",
+          "description": "Renders children inside a vertical (column-direction) flex container. MUST default cross-axis alignment to 'start' and forward standard flex props (gap, justify, wrap, grow, shrink, maxWidth) to the underlying Flex component.",
+          "inputs": [
+            "children: ReactNode",
+            "align?: FlexAlign (default 'start')",
+            "justify?: FlexJustify",
+            "gap?: string",
+            "wrap?: FlexWrap",
+            "grow?: boolean",
+            "shrink?: boolean",
+            "maxWidth?: string | number",
+            "className?: string"
+          ],
+          "outputs": [
+            "JSX.Element rendered as a vertical flex column"
+          ],
+          "scenarios": [
+            {
+              "name": "Vertical arrangement",
+              "given": "Multiple child elements",
+              "when": "VStack renders",
+              "then": "Children are stacked top-to-bottom with flexDirection 'column'"
+            },
+            {
+              "name": "Default alignment",
+              "given": "No align prop provided",
+              "when": "VStack renders",
+              "then": "Cross-axis alignment defaults to 'start'",
+              "and": [
+                "alignItems style resolves to 'flex-start'"
+              ]
+            },
+            {
+              "name": "Prop forwarding",
+              "given": "gap='8' and maxWidth={300}",
+              "when": "VStack renders",
+              "then": "Gap and max-width styles are applied to the column container",
+              "and": [
+                "The direction is fixed to 'column' and cannot be overridden by callers"
+              ]
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Flex"
+      ],
+      "sideEffects": [],
+      "domain": "stack",
+      "locationFile": "src/shared/ui/Stack/index.ts"
+    },
+    {
+      "name": "SliceBuilder",
+      "purpose": "Factory utility around Redux Toolkit's createSlice that produces a standard slice and augments it with a useActions React hook, giving components memoized, dispatch-bound action creators.",
+      "operations": [],
+      "dependencies": [
+        "Redux Toolkit (createSlice, bindActionCreators)",
+        "React Redux (useDispatch)",
+        "React (useMemo)"
+      ],
+      "sideEffects": [
+        "Dispatches actions to the global Redux store when bound action creators are called"
+      ],
+      "domain": "store",
+      "locationFile": "src/shared/lib/store/buildSelector.ts"
+    },
+    {
+      "name": "SelectorBuilder",
+      "purpose": "Wraps a Redux selector over the typed StateSchema root state into a ready-to-use React hook, returning both the hook and the raw selector for reuse (e.g., in tests or middleware).",
+      "operations": [
+        {
+          "name": "buildSelector",
+          "description": "The module SHALL wrap a selector function into a tuple of [React hook, original selector], where the hook reads from StateSchema via useSelector and forwards any extra arguments to the selector.",
+          "inputs": [
+            "selector: (state: StateSchema, ...args: Args) => T"
+          ],
+          "outputs": [
+            "useSelectorHook: (...args: Args) => T",
+            "selector: the original selector function, returned unchanged for standalone use"
+          ],
+          "functionName": "buildSelector",
+          "scenarios": [
+            {
+              "name": "Returns hook and selector pair",
+              "given": "A selector function defined over StateSchema",
+              "when": "buildSelector is called",
+              "then": "It returns a tuple whose first element is a React hook and whose second element is the original selector, usable directly with a state object"
+            },
+            {
+              "name": "Hook reads current state",
+              "given": "A component rendered inside a Redux Provider with populated state",
+              "when": "The returned hook is invoked",
+              "then": "It returns the value computed by the selector against the current store state via useSelector"
+            },
+            {
+              "name": "Hook forwards selector arguments",
+              "given": "A selector accepting additional arguments (e.g., an id)",
+              "when": "The hook is called with those arguments",
+              "then": "The arguments are passed through to the selector during state selection and the correct derived value is returned"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "React Redux (useSelector)",
+        "StoreProvider (StateSchema root state type)"
+      ],
+      "sideEffects": [
+        "Subscribes the calling component to Redux store updates via useSelector, causing re-renders when selected state changes"
+      ],
+      "domain": "store",
+      "locationFile": "src/shared/lib/store/buildSelector.ts"
+    },
+    {
+      "name": "StoreProvider",
+      "purpose": "React context provider component that instantiates (or accepts) the Redux store and supplies it to the application component tree, enabling descendants to read state and dispatch actions.",
+      "operations": [
+        {
+          "name": "provideStore",
+          "description": "SHALL render children inside a Redux Provider bound to a store created from optional preloaded state, so any descendant component can access state and dispatch via store hooks.",
+          "inputs": [
+            "children: ReactNode",
+            "initialState?: StateSchema (preloaded store state)"
+          ],
+          "outputs": [
+            "ReactElement wrapping children with the Redux store context"
+          ],
+          "scenarios": [
+            {
+              "name": "Provide store to children",
+              "given": "StoreProvider is rendered with children",
+              "when": "The component mounts",
+              "then": "Children are rendered within the Redux Provider",
+              "and": [
+                "Descendant components can read state via useSelector-like hooks",
+                "Descendant components can dispatch actions via useDispatch-like hooks"
+              ]
+            },
+            {
+              "name": "Hydrate from preloaded state",
+              "given": "An initialState is supplied (e.g. from server-side rendering or tests)",
+              "when": "StoreProvider creates its internal store",
+              "then": "The store state is initialized with the provided preloaded slices"
+            },
+            {
+              "name": "Default initialization",
+              "given": "No initialState is supplied",
+              "when": "StoreProvider creates its internal store",
+              "then": "The store initializes with each feature reducer's default state (counter, user, ui, scroll)"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "react-redux Provider",
+        "createReduxStore",
+        "StateSchema"
+      ],
+      "sideEffects": [],
+      "domain": "storeprovider",
+      "locationFile": "src/app/providers/StoreProvider/index.ts"
+    },
+    {
+      "name": "createReduxStore",
+      "purpose": "Store factory that assembles the application Redux store: combines feature reducers (counter, user, ui, scroll), applies thunk middleware with a typed extra argument, and enables Redux DevTools in development mode. Also exports AppDispatch, RootState, and StorePreloadedState types.",
+      "operations": [
+        {
+          "name": "createReduxStore",
+          "description": "SHALL create a fully configured Redux store by combining all feature reducers, applying thunk middleware with extra argument, and conditionally enabling DevTools composition in development.",
+          "inputs": [
+            "preloadedState?: StorePreloadedState (partial StateSchema)"
+          ],
+          "outputs": [
+            "store: EnhancedStore<StateSchema, AnyAction> exposing getState, dispatch, and subscribe"
+          ],
+          "scenarios": [
+            {
+              "name": "Create store with defaults",
+              "given": "createReduxStore is called without arguments",
+              "when": "The store is constructed",
+              "then": "A store containing all combined feature reducers is returned",
+              "and": [
+                "Each slice (counter, user, ui, scroll) starts at its reducer-defined initial value"
+              ]
+            },
+            {
+              "name": "Create store with preloaded state",
+              "given": "A partial preloaded state is provided (e.g. only a counter slice)",
+              "when": "createReduxStore is called",
+              "then": "The returned store's state is hydrated with the provided slices while unspecified slices fall back to reducer defaults"
+            },
+            {
+              "name": "Thunk extra argument availability",
+              "given": "Thunk middleware is configured with a ThunkExtraArg",
+              "when": "An async thunk is dispatched",
+              "then": "The thunk API exposes the configured extra argument (thunkAPI.extra) for use by features"
+            },
+            {
+              "name": "DevTools enabled in development",
+              "given": "The app runs in development mode (__IS_DEV__)",
+              "when": "createReduxStore composes enhancers",
+              "then": "Redux DevTools instrumentation is enabled"
+            },
+            {
+              "name": "DevTools disabled in production",
+              "given": "The app runs in production mode",
+              "when": "createReduxStore composes enhancers",
+              "then": "DevTools instrumentation is not applied to the store"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "@reduxjs/toolkit",
+        "StateSchema",
+        "counter reducer",
+        "user reducer",
+        "ui reducer",
+        "scroll reducer"
+      ],
+      "sideEffects": [],
+      "domain": "storeprovider",
+      "locationFile": "src/app/providers/StoreProvider/index.ts"
+    },
+    {
+      "name": "StateSchema",
+      "purpose": "Type-level contract defining the shape of the application root Redux state (counter, user, ui, scroll slices) and the typed ThunkConfig (state + extra argument) used by createAsyncThunk across features.",
+      "operations": [
+        {
+          "name": "defineRootStateContract",
+          "description": "SHALL define StateSchema/RootState as the aggregate of feature slices: counter (Counter), user (User), ui (UISchema), and scroll (ScrollSchema), all optional to support partial preloading.",
+          "inputs": [
+            "Counter state type",
+            "User state type",
+            "UISchema",
+            "ScrollSchema"
+          ],
+          "outputs": [
+            "StateSchema type used by store creation and selectors"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "State slices typed",
+              "given": "StateSchema is referenced by the created store",
+              "when": "State is read via getState or typed hooks",
+              "then": "The counter, user, ui, and scroll slices are accessible with correct types"
+            },
+            {
+              "name": "Partial state hydration support",
+              "given": "Slices in StateSchema are optional",
+              "when": "A partial StorePreloadedState is passed to store creation",
+              "then": "Type-checking permits hydrating only a subset of slices"
+            }
+          ]
+        },
+        {
+          "name": "defineThunkConfig",
+          "description": "SHALL define ThunkConfig binding the thunk state to RootState and the extra argument to ThunkExtraArg so feature thunks receive fully typed rejectWithValue and thunkAPI.extra.",
+          "inputs": [
+            "RootState",
+            "ThunkExtraArg"
+          ],
+          "outputs": [
+            "ThunkConfig type consumed by createAsyncThunk in features"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Typed thunk usage",
+              "given": "A feature thunk is declared with ThunkConfig",
+              "when": "The thunk accesses thunkAPI.getState, rejectWithValue, or extra",
+              "then": "All thunk API members are correctly typed against RootState and ThunkExtraArg"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "Counter",
+        "User",
+        "UISchema",
+        "ScrollSchema"
+      ],
+      "sideEffects": [],
+      "domain": "storeprovider",
+      "locationFile": "src/app/providers/StoreProvider/index.ts"
+    },
+    {
+      "name": "Text",
+      "purpose": "Shared presentational UI component that renders styled text content — an optional title and/or paragraph — with support for color variants (primary/error/accent), horizontal alignment, three size tiers (mapped to h3/h2/h1 header tags), and bold weight.",
+      "operations": [],
+      "dependencies": [
+        "classNames (shared/lib/classNames)",
+        "Text.module.scss styles"
+      ],
+      "sideEffects": [],
+      "domain": "text",
+      "locationFile": "src/shared/ui/Text/index.ts"
+    },
+    {
+      "name": "ThemeProvider",
+      "purpose": "Application-level provider that supplies the active UI theme (light/dark) to the component tree and applies it to the document, acting as the single source of theme context for the app.",
+      "operations": [
+        {
+          "name": "ThemeProvider",
+          "description": "Wraps the application tree with theme context so all descendants can consume the current theme; re-exports the default provider implementation from './ui/ThemeProvider' as the module's public API.",
+          "inputs": [
+            "children: ReactNode",
+            "theme?: Theme (initial theme, otherwise resolved from stored UI state)"
+          ],
+          "outputs": [
+            "JSX.Element: themed provider subtree"
+          ],
+          "scenarios": [
+            {
+              "name": "Provides theme context to children",
+              "given": "The application root is wrapped in ThemeProvider",
+              "when": "Any child component renders",
+              "then": "The current theme is accessible via theme context to all descendants",
+              "and": [
+                "Rendered children appear unchanged inside the provider"
+              ]
+            },
+            {
+              "name": "Applies stored theme on mount",
+              "given": "A theme value persisted in the UI state (UISchema)",
+              "when": "ThemeProvider mounts",
+              "then": "The stored theme is applied to the document root"
+            },
+            {
+              "name": "Falls back to default theme",
+              "given": "No theme has been stored or selected",
+              "when": "ThemeProvider mounts",
+              "then": "The default (light) theme is applied"
+            },
+            {
+              "name": "Re-renders on theme change",
+              "given": "ThemeProvider is mounted with a child tree",
+              "when": "The active theme value changes",
+              "then": "The document is updated to the new theme and children re-render with the new theme context"
+            }
+          ]
+        },
+        {
+          "name": "applyTheme",
+          "description": "SHOULD propagate the resolved theme onto the document (e.g., theme class or attribute on the root element) so global styles reflect the active theme.",
+          "inputs": [
+            "theme: Theme"
+          ],
+          "outputs": [
+            "Document root element updated with active theme class/attribute"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Theme applied to document",
+              "given": "ThemeProvider has resolved the active theme",
+              "when": "The theme is applied",
+              "then": "The document root carries the theme class/attribute and global theme styles take effect"
+            },
+            {
+              "name": "Theme switch updates document",
+              "given": "The app is rendered with the light theme",
+              "when": "Theme is switched to dark",
+              "then": "The document root class/attribute changes and dark styles render without remounting children"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "ui/ThemeProvider implementation (default export re-exported as public API)",
+        "store (UI state / UISchema theme value)"
+      ],
+      "sideEffects": [
+        "Reads persisted theme from UI state/localStorage",
+        "Mutates document root element class/attribute to apply theme"
+      ],
+      "domain": "themeprovider",
+      "locationFile": "src/app/providers/ThemeProvider/index.ts"
+    },
+    {
+      "name": "ThemeSwitcher",
+      "purpose": "Feature module exposing the ThemeSwitcher UI component as the public API of the theme-switching feature, letting users toggle the application's visual theme.",
+      "operations": [
+        {
+          "name": "exportPublicApi",
+          "description": "The module SHALL re-export the ThemeSwitcher component from its ui implementation (ui/ThemeSwitcher) as the sole public export of the feature, so consumers import only from the feature barrel.",
+          "inputs": [],
+          "outputs": [
+            "ThemeSwitcher: React component exported from ui/ThemeSwitcher"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Import via feature barrel",
+              "given": "The ui/ThemeSwitcher module exports a ThemeSwitcher component",
+              "when": "A consumer imports { ThemeSwitcher } from 'features/ThemeSwitcher'",
+              "then": "The same component exported by ui/ThemeSwitcher is resolved"
+            },
+            {
+              "name": "Encapsulated internals",
+              "given": "The feature barrel file is inspected",
+              "when": "Its export list is enumerated",
+              "then": "Only the ThemeSwitcher component is exposed and internal implementation files remain hidden"
+            },
+            {
+              "name": "Missing implementation export",
+              "given": "ui/ThemeSwitcher does not export a ThemeSwitcher binding",
+              "when": "The feature barrel module is compiled",
+              "then": "A build/resolve error is surfaced rather than an undefined export"
+            }
+          ]
+        },
+        {
+          "name": "toggleTheme",
+          "description": "The ThemeSwitcher component SHOULD toggle the active application theme (e.g., light/dark) when the user activates it, delegating theme state changes to the theme context/provider. (Inferred from the feature's purpose; implementation lives in ui/ThemeSwitcher which is not included in the provided data.)",
+          "inputs": [
+            "onClick / user activation event"
+          ],
+          "outputs": [
+            "Updated theme value applied to the application"
+          ],
+          "functionName": "",
+          "scenarios": [
+            {
+              "name": "Switch to dark theme",
+              "given": "The application is currently in the light theme",
+              "when": "The user activates the ThemeSwitcher",
+              "then": "The application theme changes to dark"
+            },
+            {
+              "name": "Switch back to light theme",
+              "given": "The application is currently in the dark theme",
+              "when": "The user activates the ThemeSwitcher",
+              "then": "The application theme changes to light"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "ThemeProvider / theme context (useTheme)",
+        "Shared UI kit components (Button, Icon) used by ui/ThemeSwitcher"
+      ],
+      "sideEffects": [
+        "Updates the application theme (root element classes/CSS variables) via the theme provider",
+        "May persist the selected theme choice (delegated to the theme provider)"
+      ],
+      "domain": "themeswitcher",
+      "locationFile": "src/features/ThemeSwitcher/index.tsx"
+    },
+    {
+      "name": "UISlice",
+      "purpose": "Encapsulates UI runtime state in the Redux store (primarily per-page scroll positions) and exposes the feature's public API: the UISchema type, the uiReducer, uiActions action creators, and the getUIScrollByPath selector.",
+      "operations": [
+        {
+          "name": "setScrollPosition",
+          "description": "Redux action creator exposed via uiActions; the reducer MUST record the scroll position for a given route path so pages can restore scroll position when the user returns.",
+          "inputs": [
+            "path: string",
+            "position: number"
+          ],
+          "outputs": [
+            "Redux action ui/setScrollPosition with payload { path, position }"
+          ],
+          "scenarios": [
+            {
+              "name": "Record scroll for a new path",
+              "given": "UI state has no scroll entry for path '/articles'",
+              "when": "setScrollPosition is dispatched with { path: '/articles', position: 250 }",
+              "then": "state.ui.scroll['/articles'] equals 250"
+            },
+            {
+              "name": "Overwrite existing scroll position",
+              "given": "UI state has scroll['/articles'] = 100",
+              "when": "setScrollPosition is dispatched with { path: '/articles', position: 400 }",
+              "then": "state.ui.scroll['/articles'] equals 400"
+            }
+          ]
+        },
+        {
+          "name": "getUIScrollByPath",
+          "description": "Selector that SHALL return the saved scroll position for a given path from the root StateSchema, defaulting to 0 when no position has been recorded.",
+          "inputs": [
+            "state: StateSchema",
+            "path: string"
+          ],
+          "outputs": [
+            "scrollPosition: number"
+          ],
+          "scenarios": [
+            {
+              "name": "Path with saved scroll position",
+              "given": "Root state contains ui.scroll['/about'] = 320",
+              "when": "getUIScrollByPath(state, '/about') is called",
+              "then": "returns 320"
+            },
+            {
+              "name": "Path without saved scroll position",
+              "given": "Root state has no scroll entry for '/unknown'",
+              "when": "getUIScrollByPath(state, '/unknown') is called",
+              "then": "returns 0"
+            }
+          ]
+        },
+        {
+          "name": "uiReducer",
+          "description": "Redux slice reducer that MUST apply UI actions to the UISchema state, producing the next immutable state and leaving state unchanged for unknown actions.",
+          "inputs": [
+            "state: UISchema",
+            "action: Redux action"
+          ],
+          "outputs": [
+            "nextState: UISchema"
+          ],
+          "scenarios": [
+            {
+              "name": "Applies scroll position action",
+              "given": "Initial UI state with empty scroll map (ScrollSchema)",
+              "when": "reducer receives setScrollPosition { path, position }",
+              "then": "returns a new state where scroll[path] = position",
+              "and": [
+                "the previous state object is not mutated"
+              ]
+            },
+            {
+              "name": "Ignores unrelated actions",
+              "given": "Any UI slice state",
+              "when": "reducer receives an unknown/unrelated action type",
+              "then": "returns the same state unchanged"
+            }
+          ]
+        }
+      ],
+      "dependencies": [
+        "StateSchema (root Redux store schema)",
+        "Redux store / storeprovider",
+        "ScrollSchema type module"
+      ],
+      "sideEffects": [
+        "Writes UI slice state (scroll positions per path) to the in-memory Redux store"
+      ],
+      "domain": "ui",
+      "locationFile": "src/features/UI/index.ts"
+    },
+    {
+      "name": "Sidebar",
+      "purpose": "Application navigation sidebar widget that renders navigation links, supports collapse/expand toggling, and hosts the theme and language switchers.",
+      "operations": [],
+      "dependencies": [
+        "ThemeSwitcher",
+        "LangSwitcher",
+        "useSidebarItems",
+        "SidebarItem",
+        "Icon",
+        "VStack",
+        "classNames"
+      ],
+      "sideEffects": [
+        "Updates local component state (collapsed) on user interaction",
+        "Triggers DOM class changes on the sidebar element"
+      ],
+      "domain": "widgets",
+      "locationFile": "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx"
+    },
+    {
+      "name": "SidebarItem",
+      "purpose": "Renders a single navigation link in the sidebar with an icon and translated label, adapting its appearance to the sidebar's collapsed state and highlighting the active route.",
+      "operations": [],
+      "dependencies": [
+        "AppLink",
+        "Icon",
+        "useTranslation (react-i18next)",
+        "classNames"
+      ],
+      "sideEffects": [
+        "Triggers client-side navigation when the link is clicked"
+      ],
+      "domain": "widgets",
+      "locationFile": "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx"
+    }
+  ],
+  "tokens": 183309,
+  "duration": 1356786
+}

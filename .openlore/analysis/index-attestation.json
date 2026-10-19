@@ -1,0 +1,11 @@
+{
+  "attestationVersion": 1,
+  "schemaVersion": 12,
+  "committed": {
+    "files": 41,
+    "functions": 59,
+    "edges": 86,
+    "classes": 45
+  },
+  "digest": "5521d0fab06a13e3fb036c580e98c83e43d377898e38e34aafce28b5aa6c3de6"
+}

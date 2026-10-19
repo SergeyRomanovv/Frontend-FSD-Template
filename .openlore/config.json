@@ -1,0 +1,26 @@
+{
+  "version": "1.2.0",
+  "projectType": "nodejs",
+  "openspecPath": "./openspec",
+  "analysis": {
+    "maxFiles": 100000,
+    "includePatterns": [],
+    "excludePatterns": []
+  },
+  "generation": {
+    "model": "GLM-5.2",
+    "domains": "auto"
+  },
+  "panicResponse": {
+    "mode": "off"
+  },
+  "createdAt": "2026-10-11T13:59:20.204Z",
+  "lastRun": null,
+  "governance": {
+    "autopilot": true
+  },
+  "embedding": {
+    "provider": "local",
+    "model": "Xenova/all-MiniLM-L6-v2"
+  }
+}

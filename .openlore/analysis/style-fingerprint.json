@@ -1,0 +1,2804 @@
+{
+  "schemaVersion": 1,
+  "evidenceFloor": 12,
+  "byLanguage": [
+    {
+      "language": "JavaScript",
+      "idioms": {
+        "functionForm": {
+          "signal": null,
+          "reason": "below_floor"
+        },
+        "binding": {
+          "signal": null,
+          "reason": "below_floor"
+        },
+        "conditionalForm": {
+          "signal": null,
+          "reason": "below_floor"
+        },
+        "asyncForm": {
+          "signal": null,
+          "reason": "below_floor"
+        },
+        "stringForm": {
+          "signal": null,
+          "reason": "below_floor"
+        },
+        "functionNaming": {
+          "signal": null,
+          "reason": "below_floor"
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "language": "TypeScript",
+      "idioms": {
+        "functionForm": {
+          "dominant": "arrow",
+          "ratio": 0.5625,
+          "samples": 64,
+          "options": {
+            "arrow": 36,
+            "declaration": 19,
+            "function": 1,
+            "method": 8
+          }
+        },
+        "binding": {
+          "dominant": "const",
+          "ratio": 0.9952,
+          "samples": 210,
+          "options": {
+            "const": 209,
+            "let": 1
+          }
+        },
+        "conditionalForm": {
+          "dominant": "if",
+          "ratio": 0.8276,
+          "samples": 29,
+          "options": {
+            "if": 24,
+            "ternary": 5
+          }
+        },
+        "asyncForm": {
+          "signal": null,
+          "reason": "below_floor"
+        },
+        "stringForm": {
+          "signal": null,
+          "reason": "below_floor"
+        },
+        "functionNaming": {
+          "dominant": "camelCase",
+          "ratio": 0.7273,
+          "samples": 77,
+          "options": {
+            "PascalCase": 21,
+            "camelCase": 56
+          }
+        }
+      },
+      "functionsSampled": 81
+    }
+  ],
+  "regions": [
+    {
+      "communityId": "config/babel/babelRemovePropsPlugin.ts::JSXIdentifier",
+      "label": "JSXIdentifier",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 2
+        }
+      ]
+    },
+    {
+      "communityId": "config/jest/jestEmptyComponent.tsx::jestEmptyComponent",
+      "label": "jestEmptyComponent",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "config/jest/jsdomEnvironment.js::CustomJSDOMEnvironment.setup",
+      "label": "setup",
+      "byLanguage": [
+        {
+          "language": "JavaScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 2
+        }
+      ]
+    },
+    {
+      "communityId": "src/app/providers/ErrorBoundary/ui/BugButton.tsx::BugButton",
+      "label": "BugButton",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 2
+        }
+      ]
+    },
+    {
+      "communityId": "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx::ErrorBoundary.componentDidCatch",
+      "label": "componentDidCatch",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 4
+        }
+      ]
+    },
+    {
+      "communityId": "src/app/providers/StoreProvider/ui/StoreProvider.tsx::StoreProvider",
+      "label": "createReduxStore",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 3
+        }
+      ]
+    },
+    {
+      "communityId": "src/app/providers/ThemeProvider/ui/ThemeProvider.tsx::ThemeProvider",
+      "label": "ThemeProvider",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/app/providers/router/config/router.tsx::buildRouteObjects",
+      "label": "buildRouteObjects",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 2
+        }
+      ]
+    },
+    {
+      "communityId": "src/entities/Counter/model/selectors/getCounter/getCounter.ts::getCounter",
+      "label": "getCounter",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/entities/Counter/ui/Counter.tsx::Counter",
+      "label": "Counter",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 4
+        }
+      ]
+    },
+    {
+      "communityId": "src/entities/User/model/selectors/getUserAuthData/getUserAuthData.ts::getUserAuthData",
+      "label": "getUserAuthData",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/entities/User/model/selectors/roleSelectors.ts::getUserRoles",
+      "label": "getUserRoles",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx::toggle",
+      "label": "toggle",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/features/UI/model/selectors/ui.ts::getUIScroll",
+      "label": "getUIScroll",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/pages/AboutPage/ui/AboutPage.tsx::AboutPage",
+      "label": "AboutPage",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/pages/AdminPanelPage/ui/AdminPanelPage.tsx::AdminPanelPage",
+      "label": "AdminPanelPage",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/pages/ForbiddenPage/ui/ForbiddenPage.tsx::ForbiddenPage",
+      "label": "ForbiddenPage",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/pages/MainPage/ui/MainPage.tsx::MainPage",
+      "label": "MainPage",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/const/router.ts::getRouteForbidden",
+      "label": "getRouteMain",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 6
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/lib/classNames/classNames.ts::classNames",
+      "label": "classNames",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 5
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts::useAppDispatch",
+      "label": "useAppDispatch",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/lib/hooks/useDebounce/useDebounce.ts::useDebounce",
+      "label": "useDebounce",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 2
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll.ts::useInfiniteScroll",
+      "label": "useInfiniteScroll",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 2
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/lib/hooks/useInitialEffect/useInitialEffect.ts::useInitialEffect",
+      "label": "useInitialEffect",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 2
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/lib/hooks/useTheme/useTheme.ts::toggleTheme",
+      "label": "toggleTheme",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 3
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/lib/hooks/useThrottle/useThrottle.ts::useThrottle",
+      "label": "useThrottle",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 2
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/lib/store/buildSelector.ts::buildSelector",
+      "label": "buildSelector",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 3
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/lib/store/buildSlice.ts::buildSlice",
+      "label": "buildSlice",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 3
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/lib/url/addQueryParams/addQueryParams.ts::getQueryParams",
+      "label": "getQueryParams",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 4
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/ui/Input/Input.tsx::onBlur",
+      "label": "onBlur",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 3
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/ui/Stack/HStack/HStack.tsx::HStack",
+      "label": "HStack",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/shared/ui/Stack/VStack/VStack.tsx::VStack",
+      "label": "VStack",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/widgets/ErrorPage/ui/ErrorPage.tsx::ErrorPage",
+      "label": "ErrorPage",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/widgets/SideBar/model/selectors/getSidebarItems.ts::useSidebarItems",
+      "label": "getRouteAbout",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx::onToggle",
+      "label": "onToggle",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    },
+    {
+      "communityId": "webpack.config.ts::getApiUrl",
+      "label": "getApiUrl",
+      "byLanguage": [
+        {
+          "language": "TypeScript",
+          "idioms": {
+            "functionForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "binding": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "conditionalForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "asyncForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "stringForm": {
+              "signal": null,
+              "reason": "below_floor"
+            },
+            "functionNaming": {
+              "signal": null,
+              "reason": "below_floor"
+            }
+          },
+          "functionsSampled": 1
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "filePath": "config/babel/babelRemovePropsPlugin.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 2
+        },
+        "functionForm": {
+          "method": 2
+        },
+        "binding": {
+          "const": 2
+        },
+        "conditionalForm": {
+          "if": 1
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "config/jest/jest.config.mjs",
+      "language": "JavaScript",
+      "counters": {
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "config/jest/jestEmptyComponent.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 1
+        },
+        "functionForm": {
+          "function": 1
+        },
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "config/jest/jsdomEnvironment.js",
+      "language": "JavaScript",
+      "counters": {
+        "functionForm": {
+          "method": 2
+        },
+        "binding": {
+          "const": 4
+        },
+        "conditionalForm": {
+          "if": 2
+        },
+        "asyncForm": {
+          "await": 2
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "config/jest/setupTests.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "eslint.config.mjs",
+      "language": "JavaScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/app/App.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/app/providers/ErrorBoundary/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/app/providers/ErrorBoundary/ui/BugButton.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1,
+          "camelCase": 1
+        },
+        "functionForm": {
+          "arrow": 2
+        },
+        "binding": {
+          "const": 4
+        },
+        "conditionalForm": {
+          "if": 1
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 2
+        },
+        "functionForm": {
+          "method": 4
+        },
+        "binding": {
+          "const": 2
+        },
+        "conditionalForm": {
+          "if": 1
+        }
+      },
+      "functionsSampled": 4
+    },
+    {
+      "filePath": "src/app/providers/StoreProvider/config/StateSchema.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/app/providers/StoreProvider/config/store.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 2
+        },
+        "functionForm": {
+          "declaration": 1
+        },
+        "binding": {
+          "const": 4
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "src/app/providers/StoreProvider/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/app/providers/StoreProvider/ui/StoreProvider.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 3
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/app/providers/ThemeProvider/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/app/providers/ThemeProvider/ui/ThemeProvider.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 7
+        },
+        "conditionalForm": {
+          "ternary": 1,
+          "if": 1
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/app/providers/router/config/routeConfig.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 4
+        },
+        "asyncForm": {
+          "await": 3
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/app/providers/router/config/router.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 2
+        },
+        "functionForm": {
+          "declaration": 1
+        },
+        "binding": {
+          "const": 1
+        },
+        "conditionalForm": {
+          "if": 1,
+          "ternary": 1
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "src/app/providers/router/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/app/providers/router/ui/RequireAuth.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 2
+        },
+        "functionForm": {
+          "declaration": 1
+        },
+        "binding": {
+          "const": 5
+        },
+        "conditionalForm": {
+          "if": 3
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "src/app/providers/router/ui/Router.test.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 5
+        },
+        "asyncForm": {
+          "await": 5
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/app/types/global.d.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 5
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/Counter/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/Counter/model/selectors/getCounter/getCounter.test.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/Counter/model/selectors/getCounter/getCounter.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.test.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/Counter/model/slice/counterSlice.test.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/Counter/model/slice/counterSlice.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 3
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/Counter/model/types/counterSchema.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/Counter/ui/Counter.test.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "asyncForm": {
+          "await": 2
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/Counter/ui/Counter.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1,
+          "camelCase": 3
+        },
+        "functionForm": {
+          "arrow": 4
+        },
+        "binding": {
+          "const": 8
+        }
+      },
+      "functionsSampled": 4
+    },
+    {
+      "filePath": "src/entities/User/api/userApi.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 2
+        },
+        "stringForm": {
+          "template": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/User/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/User/model/consts/userConsts.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/User/model/selectors/getUserAuthData/getUserAuthData.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/entities/User/model/selectors/roleSelectors.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 3
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/entities/User/model/services/initAuthData.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/User/model/slice/userSlice.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 4
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/entities/User/model/types/user.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/features/LangSwitcher/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 3
+        },
+        "conditionalForm": {
+          "ternary": 2
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/features/ThemeSwitcher/index.tsx",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/features/ThemeSwitcher/ui/ThemeSwitcher.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/features/UI/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/features/UI/model/selectors/ui.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/features/UI/model/slices/UISlice.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 4
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/features/UI/model/types/UISchema.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/index.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 2
+        },
+        "conditionalForm": {
+          "if": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/pages/AboutPage/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/pages/AboutPage/ui/AboutPage.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/pages/AdminPanelPage/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/pages/AdminPanelPage/ui/AdminPanelPage.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/pages/ForbiddenPage/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/pages/ForbiddenPage/ui/ForbiddenPage.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/pages/MainPage/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/pages/MainPage/ui/MainPage.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/pages/NotFoundPage/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/pages/NotFoundPage/ui/NotFoundPage.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/shared/api/api.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 1
+        },
+        "conditionalForm": {
+          "if": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/api/rtkApi.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 2
+        },
+        "conditionalForm": {
+          "if": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/config/i18n/i18n.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/config/i18n/i18nForTests.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/const/localstorage.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/const/router.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 4
+        },
+        "functionForm": {
+          "arrow": 4
+        },
+        "binding": {
+          "const": 5
+        }
+      },
+      "functionsSampled": 4
+    },
+    {
+      "filePath": "src/shared/const/theme.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/layouts/MainLayout/MainLayout.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/layouts/MainLayout/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/lib/classNames/classNames.test.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 4
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/lib/classNames/classNames.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 2
+        },
+        "functionForm": {
+          "declaration": 1
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "src/shared/lib/context/ThemeContext.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/shared/lib/hooks/useDebounce/useDebounce.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 2
+        },
+        "functionForm": {
+          "declaration": 1
+        },
+        "binding": {
+          "const": 1
+        },
+        "conditionalForm": {
+          "if": 1
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "src/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 2
+        },
+        "functionForm": {
+          "declaration": 1
+        },
+        "binding": {
+          "const": 4
+        },
+        "conditionalForm": {
+          "if": 3
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "src/shared/lib/hooks/useInitialEffect/useInitialEffect.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 2
+        },
+        "functionForm": {
+          "declaration": 1
+        },
+        "conditionalForm": {
+          "if": 1
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "src/shared/lib/hooks/useTheme/useTheme.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 3
+        },
+        "functionForm": {
+          "declaration": 1,
+          "arrow": 1
+        },
+        "binding": {
+          "const": 2,
+          "let": 1
+        }
+      },
+      "functionsSampled": 3
+    },
+    {
+      "filePath": "src/shared/lib/hooks/useThrottle/useThrottle.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 2
+        },
+        "functionForm": {
+          "declaration": 1
+        },
+        "binding": {
+          "const": 1
+        },
+        "conditionalForm": {
+          "if": 1
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "src/shared/lib/store/buildSelector.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 3
+        },
+        "functionForm": {
+          "declaration": 1,
+          "arrow": 1
+        },
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 3
+    },
+    {
+      "filePath": "src/shared/lib/store/buildSlice.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 3
+        },
+        "functionForm": {
+          "declaration": 1,
+          "arrow": 1
+        },
+        "binding": {
+          "const": 3
+        }
+      },
+      "functionsSampled": 3
+    },
+    {
+      "filePath": "src/shared/lib/store/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/lib/tests/TestAsyncThunk/TestAsyncThunk.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 1
+        },
+        "functionForm": {
+          "method": 2
+        },
+        "binding": {
+          "const": 3
+        },
+        "asyncForm": {
+          "await": 1
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 3,
+          "camelCase": 4
+        },
+        "functionForm": {
+          "declaration": 4
+        },
+        "binding": {
+          "const": 4
+        },
+        "stringForm": {
+          "template": 1
+        }
+      },
+      "functionsSampled": 7
+    },
+    {
+      "filePath": "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 2
+        },
+        "functionForm": {
+          "declaration": 1
+        }
+      },
+      "functionsSampled": 2
+    },
+    {
+      "filePath": "src/shared/lib/url/addQueryParams/addQueryParams.test.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 3
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/lib/url/addQueryParams/addQueryParams.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 4
+        },
+        "functionForm": {
+          "declaration": 2
+        },
+        "binding": {
+          "const": 1
+        },
+        "conditionalForm": {
+          "if": 1
+        },
+        "stringForm": {
+          "template": 1
+        }
+      },
+      "functionsSampled": 4
+    },
+    {
+      "filePath": "src/shared/types/router.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/types/tests.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/AppLink/AppLink.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/AppLink/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/Button/Button.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 3
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/Button/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/Icon/Icon.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 3
+        },
+        "conditionalForm": {
+          "if": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/Icon/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/Input/Input.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 3
+        },
+        "functionForm": {
+          "arrow": 3
+        },
+        "binding": {
+          "const": 9
+        },
+        "conditionalForm": {
+          "if": 2
+        }
+      },
+      "functionsSampled": 3
+    },
+    {
+      "filePath": "src/shared/ui/Input/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/Loader/Loader.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/shared/ui/Loader/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/Skeleton/Skeleton.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 3
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/Skeleton/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/Stack/Flex/Flex.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 8
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/shared/ui/Stack/HStack/HStack.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/shared/ui/Stack/VStack/VStack.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/shared/ui/Stack/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/Text/Text.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 7
+        },
+        "stringForm": {
+          "template": 2
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/shared/ui/Text/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/widgets/ErrorPage/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/widgets/ErrorPage/ui/ErrorPage.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "PascalCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/widgets/Navbar/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/widgets/Navbar/model/navbarLinks.ts",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/widgets/Navbar/ui/Navbar.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 4
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/widgets/Page/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/widgets/Page/ui/Page/Page.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 9
+        },
+        "conditionalForm": {
+          "if": 1,
+          "ternary": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/widgets/SideBar/index.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/widgets/SideBar/model/selectors/getSidebarItems.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/widgets/SideBar/model/types/sidebar.ts",
+      "language": "TypeScript",
+      "counters": {},
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/widgets/SideBar/ui/Sidebar/Sidebar.test.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 1
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 1
+        },
+        "functionForm": {
+          "arrow": 1
+        },
+        "binding": {
+          "const": 5
+        }
+      },
+      "functionsSampled": 1
+    },
+    {
+      "filePath": "src/widgets/SideBar/ui/SidebarItem/SidebarItem.tsx",
+      "language": "TypeScript",
+      "counters": {
+        "binding": {
+          "const": 2
+        }
+      },
+      "functionsSampled": 0
+    },
+    {
+      "filePath": "webpack.config.ts",
+      "language": "TypeScript",
+      "counters": {
+        "functionNaming": {
+          "camelCase": 1
+        },
+        "functionForm": {
+          "declaration": 1
+        },
+        "binding": {
+          "const": 7
+        },
+        "conditionalForm": {
+          "if": 2
+        }
+      },
+      "functionsSampled": 1
+    }
+  ],
+  "fileRegions": {
+    "config/babel/babelRemovePropsPlugin.ts": "config/babel/babelRemovePropsPlugin.ts::JSXIdentifier",
+    "config/jest/jestEmptyComponent.tsx": "config/jest/jestEmptyComponent.tsx::jestEmptyComponent",
+    "config/jest/jsdomEnvironment.js": "config/jest/jsdomEnvironment.js::CustomJSDOMEnvironment.setup",
+    "src/app/providers/ErrorBoundary/ui/BugButton.tsx": "src/app/providers/ErrorBoundary/ui/BugButton.tsx::BugButton",
+    "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx": "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx::ErrorBoundary.componentDidCatch",
+    "src/app/providers/StoreProvider/config/store.ts": "src/app/providers/StoreProvider/ui/StoreProvider.tsx::StoreProvider",
+    "src/app/providers/StoreProvider/ui/StoreProvider.tsx": "src/app/providers/StoreProvider/ui/StoreProvider.tsx::StoreProvider",
+    "src/app/providers/ThemeProvider/ui/ThemeProvider.tsx": "src/app/providers/ThemeProvider/ui/ThemeProvider.tsx::ThemeProvider",
+    "src/app/providers/router/config/router.tsx": "src/app/providers/router/config/router.tsx::buildRouteObjects",
+    "src/app/providers/router/ui/RequireAuth.tsx": "src/shared/const/router.ts::getRouteForbidden",
+    "src/entities/Counter/model/selectors/getCounter/getCounter.ts": "src/entities/Counter/model/selectors/getCounter/getCounter.ts::getCounter",
+    "src/entities/Counter/ui/Counter.tsx": "src/entities/Counter/ui/Counter.tsx::Counter",
+    "src/entities/User/model/selectors/getUserAuthData/getUserAuthData.ts": "src/entities/User/model/selectors/getUserAuthData/getUserAuthData.ts::getUserAuthData",
+    "src/entities/User/model/selectors/roleSelectors.ts": "src/entities/User/model/selectors/roleSelectors.ts::getUserRoles",
+    "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx": "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx::toggle",
+    "src/features/UI/model/selectors/ui.ts": "src/features/UI/model/selectors/ui.ts::getUIScroll",
+    "src/pages/AboutPage/ui/AboutPage.tsx": "src/pages/AboutPage/ui/AboutPage.tsx::AboutPage",
+    "src/pages/AdminPanelPage/ui/AdminPanelPage.tsx": "src/pages/AdminPanelPage/ui/AdminPanelPage.tsx::AdminPanelPage",
+    "src/pages/ForbiddenPage/ui/ForbiddenPage.tsx": "src/pages/ForbiddenPage/ui/ForbiddenPage.tsx::ForbiddenPage",
+    "src/pages/MainPage/ui/MainPage.tsx": "src/pages/MainPage/ui/MainPage.tsx::MainPage",
+    "src/pages/NotFoundPage/ui/NotFoundPage.tsx": "src/shared/lib/classNames/classNames.ts::classNames",
+    "src/shared/const/router.ts": "src/shared/const/router.ts::getRouteForbidden",
+    "src/shared/lib/classNames/classNames.ts": "src/shared/lib/classNames/classNames.ts::classNames",
+    "src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts": "src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts::useAppDispatch",
+    "src/shared/lib/hooks/useDebounce/useDebounce.ts": "src/shared/lib/hooks/useDebounce/useDebounce.ts::useDebounce",
+    "src/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll.ts": "src/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll.ts::useInfiniteScroll",
+    "src/shared/lib/hooks/useInitialEffect/useInitialEffect.ts": "src/shared/lib/hooks/useInitialEffect/useInitialEffect.ts::useInitialEffect",
+    "src/shared/lib/hooks/useTheme/useTheme.ts": "src/shared/lib/hooks/useTheme/useTheme.ts::toggleTheme",
+    "src/shared/lib/hooks/useThrottle/useThrottle.ts": "src/shared/lib/hooks/useThrottle/useThrottle.ts::useThrottle",
+    "src/shared/lib/store/buildSelector.ts": "src/shared/lib/store/buildSelector.ts::buildSelector",
+    "src/shared/lib/store/buildSlice.ts": "src/shared/lib/store/buildSlice.ts::buildSlice",
+    "src/shared/lib/url/addQueryParams/addQueryParams.ts": "src/shared/lib/url/addQueryParams/addQueryParams.ts::getQueryParams",
+    "src/shared/ui/Input/Input.tsx": "src/shared/ui/Input/Input.tsx::onBlur",
+    "src/shared/ui/Loader/Loader.tsx": "src/shared/lib/classNames/classNames.ts::classNames",
+    "src/shared/ui/Stack/Flex/Flex.tsx": "src/shared/lib/classNames/classNames.ts::classNames",
+    "src/shared/ui/Stack/HStack/HStack.tsx": "src/shared/ui/Stack/HStack/HStack.tsx::HStack",
+    "src/shared/ui/Stack/VStack/VStack.tsx": "src/shared/ui/Stack/VStack/VStack.tsx::VStack",
+    "src/widgets/ErrorPage/ui/ErrorPage.tsx": "src/widgets/ErrorPage/ui/ErrorPage.tsx::ErrorPage",
+    "src/widgets/SideBar/model/selectors/getSidebarItems.ts": "src/widgets/SideBar/model/selectors/getSidebarItems.ts::useSidebarItems",
+    "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx": "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx::onToggle",
+    "webpack.config.ts": "webpack.config.ts::getApiUrl"
+  },
+  "generatedLanguages": [
+    "JavaScript",
+    "TypeScript"
+  ]
+}

@@ -34,5 +34,5 @@ yarn-error.log*
 /reports/unit
 
 # openlore analysis artifacts (index is rebuildable; architecture rules are shared)
-.openlore/*
-!.openlore/architecture.json
+# .openlore/*
+# !.openlore/architecture.json

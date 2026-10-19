@@ -1,0 +1,1906 @@
+{
+  "generatedAt": "2026-10-11T17:50:39.175Z",
+  "mappingCoverage": {
+    "state": "available",
+    "artifactPath": "/home/horo134pc/work/reps/Frontend-FSD-Template/.openlore/analysis/mapping.json",
+    "source": "cache"
+  },
+  "summary": {
+    "totalFunctions": 107,
+    "coveredFunctions": 11,
+    "coveragePct": 10,
+    "uncoveredCount": 96,
+    "hubGapCount": 2,
+    "orphanRequirementCount": 44,
+    "staleDomainCount": 0
+  },
+  "uncoveredFunctions": [
+    {
+      "name": "createReduxStore",
+      "file": "src/app/providers/StoreProvider/config/store.ts",
+      "kind": "function",
+      "fanIn": 1,
+      "fanOut": 2,
+      "isHub": false
+    },
+    {
+      "name": "ThemeProvider",
+      "file": "src/app/providers/ThemeProvider/ui/ThemeProvider.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 6,
+      "isHub": false
+    },
+    {
+      "name": "constructor",
+      "file": "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx",
+      "kind": "method",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "getDerivedStateFromError",
+      "file": "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx",
+      "kind": "method",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "componentDidCatch",
+      "file": "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx",
+      "kind": "method",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "render",
+      "file": "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx",
+      "kind": "method",
+      "fanIn": 3,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "TestProviders",
+      "file": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "TestProvider",
+      "file": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "componentRender",
+      "file": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "routerRender",
+      "file": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 3,
+      "isHub": false
+    },
+    {
+      "name": "constructor",
+      "file": "src/shared/lib/tests/TestAsyncThunk/TestAsyncThunk.ts",
+      "kind": "method",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "callThunk",
+      "file": "src/shared/lib/tests/TestAsyncThunk/TestAsyncThunk.ts",
+      "kind": "method",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "onChangeHandler",
+      "file": "src/shared/ui/Input/Input.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "onBlur",
+      "file": "src/shared/ui/Input/Input.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "onFocus",
+      "file": "src/shared/ui/Input/Input.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "onToggle",
+      "file": "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "getApiUrl",
+      "file": "webpack.config.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "getUserAuthData",
+      "file": "src/entities/User/model/selectors/getUserAuthData/getUserAuthData.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "toggle",
+      "file": "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "classNames",
+      "file": "src/shared/lib/classNames/classNames.ts",
+      "kind": "function",
+      "fanIn": 3,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "useInfiniteScroll",
+      "file": "src/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 3,
+      "isHub": false
+    },
+    {
+      "name": "useTheme",
+      "file": "src/shared/lib/hooks/useTheme/useTheme.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "toggleTheme",
+      "file": "src/shared/lib/hooks/useTheme/useTheme.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 2,
+      "isHub": false
+    },
+    {
+      "name": "useSelectorHook",
+      "file": "src/shared/lib/store/buildSelector.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 2,
+      "isHub": false
+    },
+    {
+      "name": "Loader",
+      "file": "src/shared/ui/Loader/Loader.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "HStack",
+      "file": "src/shared/ui/Stack/HStack/HStack.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "VStack",
+      "file": "src/shared/ui/Stack/VStack/VStack.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "setup",
+      "file": "config/jest/jsdomEnvironment.js",
+      "kind": "method",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "teardown",
+      "file": "config/jest/jsdomEnvironment.js",
+      "kind": "method",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "Program",
+      "file": "config/babel/babelRemovePropsPlugin.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "JSXIdentifier",
+      "file": "config/babel/babelRemovePropsPlugin.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "BugButton",
+      "file": "src/app/providers/ErrorBoundary/ui/BugButton.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 4,
+      "isHub": false
+    },
+    {
+      "name": "onThrow",
+      "file": "src/app/providers/ErrorBoundary/ui/BugButton.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "handleInc",
+      "file": "src/entities/Counter/ui/Counter.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "handleDec",
+      "file": "src/entities/Counter/ui/Counter.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "handleAddFive",
+      "file": "src/entities/Counter/ui/Counter.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "getUserRoles",
+      "file": "src/entities/User/model/selectors/roleSelectors.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "getUIScroll",
+      "file": "src/features/UI/model/selectors/ui.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "getRouteMain",
+      "file": "src/shared/const/router.ts",
+      "kind": "function",
+      "fanIn": 2,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "getRouteAbout",
+      "file": "src/shared/const/router.ts",
+      "kind": "function",
+      "fanIn": 1,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "getRouteForbidden",
+      "file": "src/shared/const/router.ts",
+      "kind": "function",
+      "fanIn": 1,
+      "fanOut": 0,
+      "isHub": false
+    },
+    {
+      "name": "useAppDispatch",
+      "file": "src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "useDebounce",
+      "file": "src/shared/lib/hooks/useDebounce/useDebounce.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 3,
+      "isHub": false
+    },
+    {
+      "name": "useInitialEffect",
+      "file": "src/shared/lib/hooks/useInitialEffect/useInitialEffect.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 2,
+      "isHub": false
+    },
+    {
+      "name": "useThrottle",
+      "file": "src/shared/lib/hooks/useThrottle/useThrottle.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 3,
+      "isHub": false
+    },
+    {
+      "name": "buildSlice",
+      "file": "src/shared/lib/store/buildSlice.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "useActions",
+      "file": "src/shared/lib/store/buildSlice.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 3,
+      "isHub": false
+    },
+    {
+      "name": "getQueryParams",
+      "file": "src/shared/lib/url/addQueryParams/addQueryParams.ts",
+      "kind": "function",
+      "fanIn": 1,
+      "fanOut": 3,
+      "isHub": false
+    },
+    {
+      "name": "addQueryParams",
+      "file": "src/shared/lib/url/addQueryParams/addQueryParams.ts",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 1,
+      "isHub": false
+    },
+    {
+      "name": "ErrorPage",
+      "file": "src/widgets/ErrorPage/ui/ErrorPage.tsx",
+      "kind": "function",
+      "fanIn": 0,
+      "fanOut": 2,
+      "isHub": false
+    }
+  ],
+  "hubGaps": [
+    {
+      "name": "useTranslation",
+      "file": "external",
+      "kind": "function",
+      "fanIn": 8,
+      "fanOut": 0,
+      "isHub": true
+    },
+    {
+      "name": "t",
+      "file": "external",
+      "kind": "function",
+      "fanIn": 8,
+      "fanOut": 0,
+      "isHub": true
+    }
+  ],
+  "orphanRequirements": [
+    {
+      "requirement": "ExportPublicApi",
+      "domain": "aboutpage",
+      "specFile": "openspec/specs/aboutpage/spec.md"
+    },
+    {
+      "requirement": "RenderAboutPage",
+      "domain": "aboutpage",
+      "specFile": "openspec/specs/aboutpage/spec.md"
+    },
+    {
+      "requirement": "ExposeAdminPanelPage",
+      "domain": "adminpanelpage",
+      "specFile": "openspec/specs/adminpanelpage/spec.md"
+    },
+    {
+      "requirement": "Render",
+      "domain": "adminpanelpage",
+      "specFile": "openspec/specs/adminpanelpage/spec.md"
+    },
+    {
+      "requirement": "ApplinkOverview",
+      "domain": "applink",
+      "specFile": "openspec/specs/applink/spec.md"
+    },
+    {
+      "requirement": "ButtonOverview",
+      "domain": "button",
+      "specFile": "openspec/specs/button/spec.md"
+    },
+    {
+      "requirement": "Counter value selection",
+      "domain": "counter",
+      "specFile": "openspec/specs/counter/spec.md"
+    },
+    {
+      "requirement": "CaptureChildError",
+      "domain": "errorboundary",
+      "specFile": "openspec/specs/errorboundary/spec.md"
+    },
+    {
+      "requirement": "ExportPublicApi",
+      "domain": "errorboundary",
+      "specFile": "openspec/specs/errorboundary/spec.md"
+    },
+    {
+      "requirement": "LogCaughtError",
+      "domain": "errorboundary",
+      "specFile": "openspec/specs/errorboundary/spec.md"
+    },
+    {
+      "requirement": "RenderFallback",
+      "domain": "errorboundary",
+      "specFile": "openspec/specs/errorboundary/spec.md"
+    },
+    {
+      "requirement": "ThrowTestError",
+      "domain": "errorboundary",
+      "specFile": "openspec/specs/errorboundary/spec.md"
+    },
+    {
+      "requirement": "ReloadPage",
+      "domain": "errorpage",
+      "specFile": "openspec/specs/errorpage/spec.md"
+    },
+    {
+      "requirement": "RenderErrorPage",
+      "domain": "errorpage",
+      "specFile": "openspec/specs/errorpage/spec.md"
+    },
+    {
+      "requirement": "ExportPublicApi",
+      "domain": "forbiddenpage",
+      "specFile": "openspec/specs/forbiddenpage/spec.md"
+    },
+    {
+      "requirement": "RenderForbiddenPage",
+      "domain": "forbiddenpage",
+      "specFile": "openspec/specs/forbiddenpage/spec.md"
+    },
+    {
+      "requirement": "IconOverview",
+      "domain": "icon",
+      "specFile": "openspec/specs/icon/spec.md"
+    },
+    {
+      "requirement": "InputOverview",
+      "domain": "input",
+      "specFile": "openspec/specs/input/spec.md"
+    },
+    {
+      "requirement": "DeprecationMarker",
+      "domain": "loader",
+      "specFile": "openspec/specs/loader/spec.md"
+    },
+    {
+      "requirement": "Render",
+      "domain": "loader",
+      "specFile": "openspec/specs/loader/spec.md"
+    },
+    {
+      "requirement": "MainlayoutOverview",
+      "domain": "mainlayout",
+      "specFile": "openspec/specs/mainlayout/spec.md"
+    },
+    {
+      "requirement": "ExportMainPageComponent",
+      "domain": "mainpage",
+      "specFile": "openspec/specs/mainpage/spec.md"
+    },
+    {
+      "requirement": "ExportNavbar",
+      "domain": "navbar",
+      "specFile": "openspec/specs/navbar/spec.md"
+    },
+    {
+      "requirement": "ExportPublicApi",
+      "domain": "notfoundpage",
+      "specFile": "openspec/specs/notfoundpage/spec.md"
+    },
+    {
+      "requirement": "Render",
+      "domain": "notfoundpage",
+      "specFile": "openspec/specs/notfoundpage/spec.md"
+    },
+    {
+      "requirement": "ExposePageId",
+      "domain": "page",
+      "specFile": "openspec/specs/page/spec.md"
+    },
+    {
+      "requirement": "RenderPageContent",
+      "domain": "page",
+      "specFile": "openspec/specs/page/spec.md"
+    },
+    {
+      "requirement": "RestoreScrollPosition",
+      "domain": "page",
+      "specFile": "openspec/specs/page/spec.md"
+    },
+    {
+      "requirement": "SaveScrollPosition",
+      "domain": "page",
+      "specFile": "openspec/specs/page/spec.md"
+    },
+    {
+      "requirement": "RenderSidebar",
+      "domain": "sidebar",
+      "specFile": "openspec/specs/sidebar/spec.md"
+    },
+    {
+      "requirement": "ToggleCollapsed",
+      "domain": "sidebar",
+      "specFile": "openspec/specs/sidebar/spec.md"
+    },
+    {
+      "requirement": "SkeletonOverview",
+      "domain": "skeleton",
+      "specFile": "openspec/specs/skeleton/spec.md"
+    },
+    {
+      "requirement": "ExportStackComponents",
+      "domain": "stack",
+      "specFile": "openspec/specs/stack/spec.md"
+    },
+    {
+      "requirement": "HStack",
+      "domain": "stack",
+      "specFile": "openspec/specs/stack/spec.md"
+    },
+    {
+      "requirement": "VStack",
+      "domain": "stack",
+      "specFile": "openspec/specs/stack/spec.md"
+    },
+    {
+      "requirement": "CreateReduxStore",
+      "domain": "storeprovider",
+      "specFile": "openspec/specs/storeprovider/spec.md"
+    },
+    {
+      "requirement": "DefineRootStateContract",
+      "domain": "storeprovider",
+      "specFile": "openspec/specs/storeprovider/spec.md"
+    },
+    {
+      "requirement": "DefineThunkConfig",
+      "domain": "storeprovider",
+      "specFile": "openspec/specs/storeprovider/spec.md"
+    },
+    {
+      "requirement": "ProvideStore",
+      "domain": "storeprovider",
+      "specFile": "openspec/specs/storeprovider/spec.md"
+    },
+    {
+      "requirement": "TextOverview",
+      "domain": "text",
+      "specFile": "openspec/specs/text/spec.md"
+    },
+    {
+      "requirement": "ApplyTheme",
+      "domain": "themeprovider",
+      "specFile": "openspec/specs/themeprovider/spec.md"
+    },
+    {
+      "requirement": "ThemeProvider",
+      "domain": "themeprovider",
+      "specFile": "openspec/specs/themeprovider/spec.md"
+    },
+    {
+      "requirement": "ExportPublicApi",
+      "domain": "themeswitcher",
+      "specFile": "openspec/specs/themeswitcher/spec.md"
+    },
+    {
+      "requirement": "ToggleTheme",
+      "domain": "themeswitcher",
+      "specFile": "openspec/specs/themeswitcher/spec.md"
+    }
+  ],
+  "staleDomains": [],
+  "scenarioVerification": {
+    "caveat": "a verification path existing means a test reaches the anchored code, never that the test asserts the scenario's behavior.",
+    "scenarios": [
+      {
+        "domain": "aboutpage",
+        "specFile": "openspec/specs/aboutpage/spec.md",
+        "requirement": "RenderAboutPage",
+        "scenario": "AboutPageRendersSuccessfully",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "aboutpage",
+        "specFile": "openspec/specs/aboutpage/spec.md",
+        "requirement": "RenderAboutPage",
+        "scenario": "SnapshotStability",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "aboutpage",
+        "specFile": "openspec/specs/aboutpage/spec.md",
+        "requirement": "ExportPublicApi",
+        "scenario": "NamedReExportAvailable",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "adminpanelpage",
+        "specFile": "openspec/specs/adminpanelpage/spec.md",
+        "requirement": "ExposeAdminPanelPage",
+        "scenario": "BarrelReExportResolves",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "adminpanelpage",
+        "specFile": "openspec/specs/adminpanelpage/spec.md",
+        "requirement": "ExposeAdminPanelPage",
+        "scenario": "InternalPathHidden",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "adminpanelpage",
+        "specFile": "openspec/specs/adminpanelpage/spec.md",
+        "requirement": "Render",
+        "scenario": "PageRendersOnAdminRoute",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "applink",
+        "specFile": "openspec/specs/applink/spec.md",
+        "requirement": "ApplinkOverview",
+        "scenario": "ApplinkOverviewWorks",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "architecture",
+        "specFile": "openspec/specs/architecture/spec.md",
+        "requirement": "FSD layer set",
+        "scenario": "Locate a module",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "no-resolved-anchor",
+        "tests": []
+      },
+      {
+        "domain": "architecture",
+        "specFile": "openspec/specs/architecture/spec.md",
+        "requirement": "Layer dependency direction",
+        "scenario": "Widget imports a shared primitive",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "no-resolved-anchor",
+        "tests": []
+      },
+      {
+        "domain": "architecture",
+        "specFile": "openspec/specs/architecture/spec.md",
+        "requirement": "Layer dependency direction",
+        "scenario": "Shared imports an entity",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "no-resolved-anchor",
+        "tests": []
+      },
+      {
+        "domain": "architecture",
+        "specFile": "openspec/specs/architecture/spec.md",
+        "requirement": "No import cycles",
+        "scenario": "Cycle detection",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "no-resolved-anchor",
+        "tests": []
+      },
+      {
+        "domain": "architecture",
+        "specFile": "openspec/specs/architecture/spec.md",
+        "requirement": "Public API of slices",
+        "scenario": "Import an entity",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "no-resolved-anchor",
+        "tests": []
+      },
+      {
+        "domain": "auth",
+        "specFile": "openspec/specs/auth/spec.md",
+        "requirement": "Public entity API",
+        "scenario": "Widget consumes user roles",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "auth",
+        "specFile": "openspec/specs/auth/spec.md",
+        "requirement": "Auth data initialization",
+        "scenario": "Successful initialization",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "auth",
+        "specFile": "openspec/specs/auth/spec.md",
+        "requirement": "Auth data initialization",
+        "scenario": "Failed initialization",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "auth",
+        "specFile": "openspec/specs/auth/spec.md",
+        "requirement": "Role selectors",
+        "scenario": "Role check",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "auth",
+        "specFile": "openspec/specs/auth/spec.md",
+        "requirement": "User data via RTK Query",
+        "scenario": "Fetching the profile",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "auth",
+        "specFile": "openspec/specs/auth/spec.md",
+        "requirement": "In-memory session scope",
+        "scenario": "Page reload",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "button",
+        "specFile": "openspec/specs/button/spec.md",
+        "requirement": "ButtonOverview",
+        "scenario": "ButtonOverviewWorks",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "counter",
+        "specFile": "openspec/specs/counter/spec.md",
+        "requirement": "Counter state transitions",
+        "scenario": "Increment",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "counter",
+        "specFile": "openspec/specs/counter/spec.md",
+        "requirement": "Counter state transitions",
+        "scenario": "Decrement below zero",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "counter",
+        "specFile": "openspec/specs/counter/spec.md",
+        "requirement": "Unknown actions leave counter state intact",
+        "scenario": "Unrelated action",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "counter",
+        "specFile": "openspec/specs/counter/spec.md",
+        "requirement": "Counter value selection",
+        "scenario": "Read the value",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "stale",
+        "tests": []
+      },
+      {
+        "domain": "counter",
+        "specFile": "openspec/specs/counter/spec.md",
+        "requirement": "Counter UI display and controls",
+        "scenario": "Display the value",
+        "checkability": "checkable",
+        "label": "no-reaching-test",
+        "tests": []
+      },
+      {
+        "domain": "counter",
+        "specFile": "openspec/specs/counter/spec.md",
+        "requirement": "Counter UI display and controls",
+        "scenario": "Increment control",
+        "checkability": "checkable",
+        "label": "no-reaching-test",
+        "tests": []
+      },
+      {
+        "domain": "errorboundary",
+        "specFile": "openspec/specs/errorboundary/spec.md",
+        "requirement": "ExportPublicApi",
+        "scenario": "ModuleImport",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "errorboundary",
+        "specFile": "openspec/specs/errorboundary/spec.md",
+        "requirement": "CaptureChildError",
+        "scenario": "ErrorInChildComponent",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "errorboundary",
+        "specFile": "openspec/specs/errorboundary/spec.md",
+        "requirement": "CaptureChildError",
+        "scenario": "HealthyRender",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "errorboundary",
+        "specFile": "openspec/specs/errorboundary/spec.md",
+        "requirement": "LogCaughtError",
+        "scenario": "ErrorCaptured",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "errorboundary",
+        "specFile": "openspec/specs/errorboundary/spec.md",
+        "requirement": "RenderFallback",
+        "scenario": "ErrorState",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "errorboundary",
+        "specFile": "openspec/specs/errorboundary/spec.md",
+        "requirement": "RenderFallback",
+        "scenario": "NormalState",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "errorboundary",
+        "specFile": "openspec/specs/errorboundary/spec.md",
+        "requirement": "ThrowTestError",
+        "scenario": "TriggerError",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "errorboundary",
+        "specFile": "openspec/specs/errorboundary/spec.md",
+        "requirement": "ThrowTestError",
+        "scenario": "IdleState",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "errorpage",
+        "specFile": "openspec/specs/errorpage/spec.md",
+        "requirement": "RenderErrorPage",
+        "scenario": "ErrorPageDisplayed",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "errorpage",
+        "specFile": "openspec/specs/errorpage/spec.md",
+        "requirement": "RenderErrorPage",
+        "scenario": "LocalizedContent",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "errorpage",
+        "specFile": "openspec/specs/errorpage/spec.md",
+        "requirement": "ReloadPage",
+        "scenario": "UserTriggersReload",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "forbiddenpage",
+        "specFile": "openspec/specs/forbiddenpage/spec.md",
+        "requirement": "RenderForbiddenPage",
+        "scenario": "UnauthorizedAccess",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "forbiddenpage",
+        "specFile": "openspec/specs/forbiddenpage/spec.md",
+        "requirement": "RenderForbiddenPage",
+        "scenario": "IndependentOfAuthStateShape",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "forbiddenpage",
+        "specFile": "openspec/specs/forbiddenpage/spec.md",
+        "requirement": "ExportPublicApi",
+        "scenario": "BarrelExportAvailability",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "i18n",
+        "specFile": "openspec/specs/i18n/spec.md",
+        "requirement": "Translated UI text",
+        "scenario": "Page heading",
+        "checkability": "checkable",
+        "label": "no-reaching-test",
+        "tests": []
+      },
+      {
+        "domain": "i18n",
+        "specFile": "openspec/specs/i18n/spec.md",
+        "requirement": "Locale dictionaries and namespaces",
+        "scenario": "Namespaced translation",
+        "checkability": "checkable",
+        "label": "no-reaching-test",
+        "tests": []
+      },
+      {
+        "domain": "i18n",
+        "specFile": "openspec/specs/i18n/spec.md",
+        "requirement": "Language switching",
+        "scenario": "Switch language",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "i18n",
+        "specFile": "openspec/specs/i18n/spec.md",
+        "requirement": "Translation-aware tests",
+        "scenario": "Testing a translated component",
+        "checkability": "checkable",
+        "label": "verification-path-exists",
+        "tests": [
+          {
+            "file": "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx",
+            "test": "renderWithTranslation"
+          }
+        ],
+        "testCount": 1
+      },
+      {
+        "domain": "icon",
+        "specFile": "openspec/specs/icon/spec.md",
+        "requirement": "IconOverview",
+        "scenario": "IconOverviewWorks",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "input",
+        "specFile": "openspec/specs/input/spec.md",
+        "requirement": "InputOverview",
+        "scenario": "InputOverviewWorks",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "loader",
+        "specFile": "openspec/specs/loader/spec.md",
+        "requirement": "Render",
+        "scenario": "DefaultRender",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "loader",
+        "specFile": "openspec/specs/loader/spec.md",
+        "requirement": "Render",
+        "scenario": "CustomClassNameApplied",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "loader",
+        "specFile": "openspec/specs/loader/spec.md",
+        "requirement": "Render",
+        "scenario": "AnimationVisibleWhileLoading",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "loader",
+        "specFile": "openspec/specs/loader/spec.md",
+        "requirement": "Render",
+        "scenario": "ThemeAwareDotColor",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "loader",
+        "specFile": "openspec/specs/loader/spec.md",
+        "requirement": "DeprecationMarker",
+        "scenario": "DeprecationIsSignaledToConsumers",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "mainlayout",
+        "specFile": "openspec/specs/mainlayout/spec.md",
+        "requirement": "MainlayoutOverview",
+        "scenario": "MainlayoutOverviewWorks",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "mainpage",
+        "specFile": "openspec/specs/mainpage/spec.md",
+        "requirement": "ExportMainPageComponent",
+        "scenario": "ReExportResolution",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "mainpage",
+        "specFile": "openspec/specs/mainpage/spec.md",
+        "requirement": "ExportMainPageComponent",
+        "scenario": "MissingDefaultExport",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "navbar",
+        "specFile": "openspec/specs/navbar/spec.md",
+        "requirement": "ExportNavbar",
+        "scenario": "NavbarIsImportableFromWidgetRoot",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "notfoundpage",
+        "specFile": "openspec/specs/notfoundpage/spec.md",
+        "requirement": "Render",
+        "scenario": "UnmatchedRoute",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "notfoundpage",
+        "specFile": "openspec/specs/notfoundpage/spec.md",
+        "requirement": "Render",
+        "scenario": "StandaloneRendering",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "notfoundpage",
+        "specFile": "openspec/specs/notfoundpage/spec.md",
+        "requirement": "ExportPublicApi",
+        "scenario": "BarrelExportAvailable",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "notfoundpage",
+        "specFile": "openspec/specs/notfoundpage/spec.md",
+        "requirement": "ExportPublicApi",
+        "scenario": "Encapsulation",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "overview",
+        "specFile": "openspec/specs/overview/spec.md",
+        "requirement": "Template application surface",
+        "scenario": "First launch",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "no-resolved-anchor",
+        "tests": []
+      },
+      {
+        "domain": "overview",
+        "specFile": "openspec/specs/overview/spec.md",
+        "requirement": "Capability spec map",
+        "scenario": "Find the governing spec",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "no-resolved-anchor",
+        "tests": []
+      },
+      {
+        "domain": "page",
+        "specFile": "openspec/specs/page/spec.md",
+        "requirement": "RenderPageContent",
+        "scenario": "RenderChildren",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "page",
+        "specFile": "openspec/specs/page/spec.md",
+        "requirement": "RenderPageContent",
+        "scenario": "CustomClassName",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "page",
+        "specFile": "openspec/specs/page/spec.md",
+        "requirement": "ExposePageId",
+        "scenario": "StableIdentifier",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "page",
+        "specFile": "openspec/specs/page/spec.md",
+        "requirement": "SaveScrollPosition",
+        "scenario": "UserScrollsPage",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "page",
+        "specFile": "openspec/specs/page/spec.md",
+        "requirement": "SaveScrollPosition",
+        "scenario": "NoScrolling",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "page",
+        "specFile": "openspec/specs/page/spec.md",
+        "requirement": "RestoreScrollPosition",
+        "scenario": "ReturnToVisitedRoute",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "page",
+        "specFile": "openspec/specs/page/spec.md",
+        "requirement": "RestoreScrollPosition",
+        "scenario": "FirstVisitToARoute",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "routing",
+        "specFile": "openspec/specs/routing/spec.md",
+        "requirement": "Central route table",
+        "scenario": "Add a new page route",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "routing",
+        "specFile": "openspec/specs/routing/spec.md",
+        "requirement": "Route path helpers",
+        "scenario": "Navigate by helper",
+        "checkability": "checkable",
+        "label": "no-reaching-test",
+        "tests": []
+      },
+      {
+        "domain": "routing",
+        "specFile": "openspec/specs/routing/spec.md",
+        "requirement": "Role-based route protection",
+        "scenario": "Protected route declared",
+        "checkability": "checkable",
+        "label": "verification-path-exists",
+        "tests": [
+          {
+            "file": "src/shared/lib/tests/componentRender/componentRender.tsx",
+            "test": "routerRender"
+          }
+        ],
+        "testCount": 1
+      },
+      {
+        "domain": "routing",
+        "specFile": "openspec/specs/routing/spec.md",
+        "requirement": "Unauthenticated redirect",
+        "scenario": "Anonymous opens protected route",
+        "checkability": "checkable",
+        "label": "no-reaching-test",
+        "tests": []
+      },
+      {
+        "domain": "routing",
+        "specFile": "openspec/specs/routing/spec.md",
+        "requirement": "Insufficient-role redirect",
+        "scenario": "User without required role",
+        "checkability": "checkable",
+        "label": "no-reaching-test",
+        "tests": []
+      },
+      {
+        "domain": "routing",
+        "specFile": "openspec/specs/routing/spec.md",
+        "requirement": "Error and not-found fallbacks",
+        "scenario": "Unknown URL",
+        "checkability": "checkable",
+        "label": "no-reaching-test",
+        "tests": []
+      },
+      {
+        "domain": "routing",
+        "specFile": "openspec/specs/routing/spec.md",
+        "requirement": "Lazy page loading",
+        "scenario": "First visit to a page",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "sidebar",
+        "specFile": "openspec/specs/sidebar/spec.md",
+        "requirement": "RenderSidebar",
+        "scenario": "ExpandedStateRendersFullSidebar",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "sidebar",
+        "specFile": "openspec/specs/sidebar/spec.md",
+        "requirement": "RenderSidebar",
+        "scenario": "CollapsedStateRendersCompactSidebar",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "sidebar",
+        "specFile": "openspec/specs/sidebar/spec.md",
+        "requirement": "ToggleCollapsed",
+        "scenario": "CollapseExpandedSidebar",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "sidebar",
+        "specFile": "openspec/specs/sidebar/spec.md",
+        "requirement": "ToggleCollapsed",
+        "scenario": "ExpandCollapsedSidebar",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "skeleton",
+        "specFile": "openspec/specs/skeleton/spec.md",
+        "requirement": "SkeletonOverview",
+        "scenario": "SkeletonOverviewWorks",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "stack",
+        "specFile": "openspec/specs/stack/spec.md",
+        "requirement": "ExportStackComponents",
+        "scenario": "BarrelReExport",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "stack",
+        "specFile": "openspec/specs/stack/spec.md",
+        "requirement": "HStack",
+        "scenario": "HorizontalArrangement",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "stack",
+        "specFile": "openspec/specs/stack/spec.md",
+        "requirement": "HStack",
+        "scenario": "DefaultAlignment",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "stack",
+        "specFile": "openspec/specs/stack/spec.md",
+        "requirement": "HStack",
+        "scenario": "PropForwarding",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "stack",
+        "specFile": "openspec/specs/stack/spec.md",
+        "requirement": "VStack",
+        "scenario": "VerticalArrangement",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "stack",
+        "specFile": "openspec/specs/stack/spec.md",
+        "requirement": "VStack",
+        "scenario": "DefaultAlignment",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "stack",
+        "specFile": "openspec/specs/stack/spec.md",
+        "requirement": "VStack",
+        "scenario": "PropForwarding",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "state-store",
+        "specFile": "openspec/specs/state-store/spec.md",
+        "requirement": "Store provider",
+        "scenario": "App bootstrap",
+        "checkability": "checkable",
+        "label": "no-reaching-test",
+        "tests": []
+      },
+      {
+        "domain": "state-store",
+        "specFile": "openspec/specs/state-store/spec.md",
+        "requirement": "Store provider",
+        "scenario": "Tests preload state",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "no-reaching-test",
+        "tests": []
+      },
+      {
+        "domain": "state-store",
+        "specFile": "openspec/specs/state-store/spec.md",
+        "requirement": "Single base API",
+        "scenario": "New endpoint set",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "state-store",
+        "specFile": "openspec/specs/state-store/spec.md",
+        "requirement": "API reducer registration",
+        "scenario": "Store assembly",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "state-store",
+        "specFile": "openspec/specs/state-store/spec.md",
+        "requirement": "Shared slice and selector builders",
+        "scenario": "Creating an entity slice",
+        "checkability": "checkable",
+        "label": "no-reaching-test",
+        "tests": []
+      },
+      {
+        "domain": "storeprovider",
+        "specFile": "openspec/specs/storeprovider/spec.md",
+        "requirement": "ProvideStore",
+        "scenario": "ProvideStoreToChildren",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "storeprovider",
+        "specFile": "openspec/specs/storeprovider/spec.md",
+        "requirement": "ProvideStore",
+        "scenario": "HydrateFromPreloadedState",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "storeprovider",
+        "specFile": "openspec/specs/storeprovider/spec.md",
+        "requirement": "ProvideStore",
+        "scenario": "DefaultInitialization",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "storeprovider",
+        "specFile": "openspec/specs/storeprovider/spec.md",
+        "requirement": "CreateReduxStore",
+        "scenario": "CreateStoreWithDefaults",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "storeprovider",
+        "specFile": "openspec/specs/storeprovider/spec.md",
+        "requirement": "CreateReduxStore",
+        "scenario": "CreateStoreWithPreloadedState",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "storeprovider",
+        "specFile": "openspec/specs/storeprovider/spec.md",
+        "requirement": "CreateReduxStore",
+        "scenario": "ThunkExtraArgumentAvailability",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "storeprovider",
+        "specFile": "openspec/specs/storeprovider/spec.md",
+        "requirement": "CreateReduxStore",
+        "scenario": "DevToolsEnabledInDevelopment",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "storeprovider",
+        "specFile": "openspec/specs/storeprovider/spec.md",
+        "requirement": "CreateReduxStore",
+        "scenario": "DevToolsDisabledInProduction",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "storeprovider",
+        "specFile": "openspec/specs/storeprovider/spec.md",
+        "requirement": "DefineRootStateContract",
+        "scenario": "StateSlicesTyped",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "storeprovider",
+        "specFile": "openspec/specs/storeprovider/spec.md",
+        "requirement": "DefineRootStateContract",
+        "scenario": "PartialStateHydrationSupport",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "storeprovider",
+        "specFile": "openspec/specs/storeprovider/spec.md",
+        "requirement": "DefineThunkConfig",
+        "scenario": "TypedThunkUsage",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "text",
+        "specFile": "openspec/specs/text/spec.md",
+        "requirement": "TextOverview",
+        "scenario": "TextOverviewWorks",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "themeprovider",
+        "specFile": "openspec/specs/themeprovider/spec.md",
+        "requirement": "ThemeProvider",
+        "scenario": "ProvidesThemeContextToChildren",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "themeprovider",
+        "specFile": "openspec/specs/themeprovider/spec.md",
+        "requirement": "ThemeProvider",
+        "scenario": "AppliesStoredThemeOnMount",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "themeprovider",
+        "specFile": "openspec/specs/themeprovider/spec.md",
+        "requirement": "ThemeProvider",
+        "scenario": "FallsBackToDefaultTheme",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "themeprovider",
+        "specFile": "openspec/specs/themeprovider/spec.md",
+        "requirement": "ThemeProvider",
+        "scenario": "ReRendersOnThemeChange",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "themeprovider",
+        "specFile": "openspec/specs/themeprovider/spec.md",
+        "requirement": "ApplyTheme",
+        "scenario": "ThemeAppliedToDocument",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "themeprovider",
+        "specFile": "openspec/specs/themeprovider/spec.md",
+        "requirement": "ApplyTheme",
+        "scenario": "ThemeSwitchUpdatesDocument",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "themeswitcher",
+        "specFile": "openspec/specs/themeswitcher/spec.md",
+        "requirement": "ExportPublicApi",
+        "scenario": "ImportViaFeatureBarrel",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "themeswitcher",
+        "specFile": "openspec/specs/themeswitcher/spec.md",
+        "requirement": "ExportPublicApi",
+        "scenario": "EncapsulatedInternals",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "themeswitcher",
+        "specFile": "openspec/specs/themeswitcher/spec.md",
+        "requirement": "ExportPublicApi",
+        "scenario": "MissingImplementationExport",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "themeswitcher",
+        "specFile": "openspec/specs/themeswitcher/spec.md",
+        "requirement": "ToggleTheme",
+        "scenario": "SwitchToDarkTheme",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "themeswitcher",
+        "specFile": "openspec/specs/themeswitcher/spec.md",
+        "requirement": "ToggleTheme",
+        "scenario": "SwitchBackToLightTheme",
+        "checkability": "unverifiable-shape",
+        "shapeReason": "unobservable-then",
+        "label": "not-assessable",
+        "reason": "unmapped",
+        "tests": []
+      },
+      {
+        "domain": "ui-kit",
+        "specFile": "openspec/specs/ui-kit/spec.md",
+        "requirement": "Primitive inventory",
+        "scenario": "Composing a form",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "ui-kit",
+        "specFile": "openspec/specs/ui-kit/spec.md",
+        "requirement": "Variant-driven styling",
+        "scenario": "Button variants",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "ui-kit",
+        "specFile": "openspec/specs/ui-kit/spec.md",
+        "requirement": "Ref and className forwarding",
+        "scenario": "Ref access",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "ui-kit",
+        "specFile": "openspec/specs/ui-kit/spec.md",
+        "requirement": "Accessible interactive components",
+        "scenario": "Adding a dropdown",
+        "checkability": "checkable",
+        "label": "not-assessable",
+        "reason": "anchor-absent-from-call-graph",
+        "tests": []
+      },
+      {
+        "domain": "ui-kit",
+        "specFile": "openspec/specs/ui-kit/spec.md",
+        "requirement": "Layout via stack primitives",
+        "scenario": "Row layout",
+        "checkability": "checkable",
+        "label": "no-reaching-test",
+        "tests": []
+      }
+    ]
+  }
+}

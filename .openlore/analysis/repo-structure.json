@@ -1,0 +1,3224 @@
+{
+  "projectName": "advanced_frontend",
+  "projectType": "node-typescript",
+  "frameworks": [
+    "React",
+    "Jest"
+  ],
+  "architecture": {
+    "pattern": "unknown",
+    "layers": [
+      {
+        "name": "API Layer",
+        "purpose": "HTTP request handling and routing",
+        "files": [
+          "src/entities/User/api/userApi.ts",
+          "src/shared/api/api.ts",
+          "src/shared/api/rtkApi.ts",
+          "src/app/providers/router/config/routeConfig.tsx",
+          "src/shared/types/router.ts",
+          "src/app/providers/router/config/router.tsx",
+          "src/shared/const/router.ts"
+        ],
+        "representativeFile": "src/entities/User/api/userApi.ts"
+      },
+      {
+        "name": "Service Layer",
+        "purpose": "Business logic and domain operations",
+        "files": [
+          "src/entities/User/model/services/initAuthData.ts"
+        ],
+        "representativeFile": "src/entities/User/model/services/initAuthData.ts"
+      },
+      {
+        "name": "Infrastructure Layer",
+        "purpose": "Configuration, middleware, and utilities",
+        "files": [
+          "src/app/providers/StoreProvider/config/StateSchema.ts",
+          "src/app/providers/StoreProvider/config/store.ts",
+          "src/app/providers/router/config/routeConfig.tsx",
+          "eslint.config.mjs",
+          "tsconfig.json",
+          "config/jest/jest.config.mjs",
+          "babel.config.json",
+          "webpack.config.ts",
+          "config/jest/jsdomEnvironment.js",
+          "package.json",
+          "config/babel/babelRemovePropsPlugin.ts",
+          "src/app/providers/router/config/router.tsx",
+          ".browserslistrc",
+          ".prettierrc.json",
+          ".stylelintrc.json",
+          "config/jest/jestEmptyComponent.tsx",
+          "config/jest/setupTests.ts",
+          "src/shared/config/i18n/i18n.ts",
+          "src/shared/config/i18n/i18nForTests.ts"
+        ],
+        "representativeFile": "src/app/providers/StoreProvider/config/StateSchema.ts"
+      }
+    ]
+  },
+  "domains": [
+    {
+      "name": "aboutpage",
+      "suggestedSpecPath": "openspec/specs/aboutpage/spec.md",
+      "files": [
+        "src/pages/AboutPage/index.ts"
+      ],
+      "definingFiles": [
+        "src/pages/AboutPage/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/pages/AboutPage/index.ts"
+    },
+    {
+      "name": "adminpanelpage",
+      "suggestedSpecPath": "openspec/specs/adminpanelpage/spec.md",
+      "files": [
+        "src/pages/AdminPanelPage/index.ts"
+      ],
+      "definingFiles": [
+        "src/pages/AdminPanelPage/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/pages/AdminPanelPage/index.ts"
+    },
+    {
+      "name": "agents",
+      "suggestedSpecPath": "openspec/specs/agents/spec.md",
+      "files": [
+        ".gitignore",
+        ".prettierignore",
+        ".stylelintignore",
+        "index.html"
+      ],
+      "definingFiles": [
+        ".gitignore",
+        ".prettierignore",
+        ".stylelintignore",
+        "index.html"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": ".gitignore"
+    },
+    {
+      "name": "applink",
+      "suggestedSpecPath": "openspec/specs/applink/spec.md",
+      "files": [
+        "src/shared/ui/AppLink/AppLink.module.scss",
+        "src/shared/ui/AppLink/AppLink.tsx",
+        "src/shared/ui/AppLink/index.ts"
+      ],
+      "definingFiles": [
+        "src/shared/ui/AppLink/AppLink.module.scss",
+        "src/shared/ui/AppLink/AppLink.tsx",
+        "src/shared/ui/AppLink/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "AppLinkModule",
+        "AppLink"
+      ],
+      "keyFile": "src/shared/ui/AppLink/AppLink.tsx"
+    },
+    {
+      "name": "button",
+      "suggestedSpecPath": "openspec/specs/button/spec.md",
+      "files": [
+        "src/shared/ui/Button/Button.module.scss",
+        "src/shared/ui/Button/Button.tsx",
+        "src/shared/ui/Button/index.ts"
+      ],
+      "definingFiles": [
+        "src/shared/ui/Button/Button.module.scss",
+        "src/shared/ui/Button/Button.tsx",
+        "src/shared/ui/Button/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "ButtonModule",
+        "Button"
+      ],
+      "keyFile": "src/shared/ui/Button/Button.tsx"
+    },
+    {
+      "name": "config",
+      "suggestedSpecPath": "openspec/specs/config/spec.md",
+      "files": [
+        "config/babel/babelRemovePropsPlugin.ts",
+        "config/jest/jestEmptyComponent.tsx",
+        "config/jest/jsdomEnvironment.js",
+        "config/jest/setupTests.ts"
+      ],
+      "definingFiles": [
+        "config/babel/babelRemovePropsPlugin.ts",
+        "config/jest/jestEmptyComponent.tsx",
+        "config/jest/jsdomEnvironment.js",
+        "config/jest/setupTests.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "BabelRemovePropsPlugin",
+        "JestEmptyComponent",
+        "JsdomEnvironment",
+        "SetupTests"
+      ],
+      "keyFile": "config/jest/jsdomEnvironment.js"
+    },
+    {
+      "name": "counter",
+      "suggestedSpecPath": "openspec/specs/counter/spec.md",
+      "files": [
+        "src/entities/Counter/index.ts"
+      ],
+      "definingFiles": [
+        "src/entities/Counter/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/entities/Counter/index.ts"
+    },
+    {
+      "name": "domain",
+      "suggestedSpecPath": "openspec/specs/domain/spec.md",
+      "files": [
+        "src/entities/Counter/model/selectors/getCounter/getCounter.ts",
+        "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.ts",
+        "src/entities/Counter/model/slice/counterSlice.ts",
+        "src/entities/Counter/model/types/counterSchema.ts",
+        "src/entities/Counter/ui/Counter.tsx",
+        "src/entities/User/api/userApi.ts",
+        "src/entities/User/model/consts/userConsts.ts",
+        "src/entities/User/model/selectors/getUserAuthData/getUserAuthData.ts",
+        "src/entities/User/model/selectors/roleSelectors.ts",
+        "src/entities/User/model/services/initAuthData.ts",
+        "src/entities/User/model/slice/userSlice.ts",
+        "src/entities/User/model/types/user.ts",
+        "src/entities/Counter/model/selectors/getCounter/getCounter.test.ts",
+        "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.test.ts",
+        "src/entities/Counter/model/slice/counterSlice.test.ts",
+        "src/entities/Counter/README.md",
+        "src/entities/Counter/ui/Counter.test.tsx",
+        "src/entities/User/README.md"
+      ],
+      "definingFiles": [
+        "src/entities/Counter/model/selectors/getCounter/getCounter.ts",
+        "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.ts",
+        "src/entities/Counter/model/slice/counterSlice.ts",
+        "src/entities/Counter/model/types/counterSchema.ts",
+        "src/entities/Counter/ui/Counter.tsx",
+        "src/entities/User/api/userApi.ts",
+        "src/entities/User/model/consts/userConsts.ts",
+        "src/entities/User/model/selectors/getUserAuthData/getUserAuthData.ts",
+        "src/entities/User/model/selectors/roleSelectors.ts",
+        "src/entities/User/model/services/initAuthData.ts",
+        "src/entities/User/model/slice/userSlice.ts",
+        "src/entities/User/model/types/user.ts"
+      ],
+      "supportingFiles": [
+        "src/entities/Counter/model/selectors/getCounter/getCounter.test.ts",
+        "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.test.ts",
+        "src/entities/Counter/model/slice/counterSlice.test.ts",
+        "src/entities/Counter/README.md",
+        "src/entities/Counter/ui/Counter.test.tsx",
+        "src/entities/User/README.md"
+      ],
+      "entities": [
+        "GetCounter",
+        "GetCounterValue",
+        "CounterSlice",
+        "CounterSchema",
+        "Counter"
+      ],
+      "keyFile": "src/entities/Counter/model/types/counterSchema.ts"
+    },
+    {
+      "name": "en",
+      "suggestedSpecPath": "openspec/specs/en/spec.md",
+      "files": [
+        "public/locales/en/about.json",
+        "public/locales/en/main.json",
+        "public/locales/en/translation.json"
+      ],
+      "definingFiles": [
+        "public/locales/en/about.json",
+        "public/locales/en/main.json",
+        "public/locales/en/translation.json"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "About",
+        "Main",
+        "Translation"
+      ],
+      "keyFile": "public/locales/en/about.json"
+    },
+    {
+      "name": "errorboundary",
+      "suggestedSpecPath": "openspec/specs/errorboundary/spec.md",
+      "files": [
+        "src/app/providers/ErrorBoundary/index.ts"
+      ],
+      "definingFiles": [
+        "src/app/providers/ErrorBoundary/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/app/providers/ErrorBoundary/index.ts"
+    },
+    {
+      "name": "errorpage",
+      "suggestedSpecPath": "openspec/specs/errorpage/spec.md",
+      "files": [
+        "src/widgets/ErrorPage/index.ts"
+      ],
+      "definingFiles": [
+        "src/widgets/ErrorPage/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/widgets/ErrorPage/index.ts"
+    },
+    {
+      "name": "features",
+      "suggestedSpecPath": "openspec/specs/features/spec.md",
+      "files": [
+        "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx",
+        "src/features/ThemeSwitcher/ui/ThemeSwitcher.tsx",
+        "src/features/UI/model/selectors/ui.ts",
+        "src/features/UI/model/slices/UISlice.ts",
+        "src/features/UI/model/types/UISchema.ts",
+        "src/features/LangSwitcher/README.md",
+        "src/features/ThemeSwitcher/README.md",
+        "src/features/UI/README.md"
+      ],
+      "definingFiles": [
+        "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx",
+        "src/features/ThemeSwitcher/ui/ThemeSwitcher.tsx",
+        "src/features/UI/model/selectors/ui.ts",
+        "src/features/UI/model/slices/UISlice.ts",
+        "src/features/UI/model/types/UISchema.ts"
+      ],
+      "supportingFiles": [
+        "src/features/LangSwitcher/README.md",
+        "src/features/ThemeSwitcher/README.md",
+        "src/features/UI/README.md"
+      ],
+      "entities": [
+        "LangSwitcher",
+        "ThemeSwitcher",
+        "UISlice",
+        "UISchema"
+      ],
+      "keyFile": "src/features/UI/model/types/UISchema.ts"
+    },
+    {
+      "name": "forbiddenpage",
+      "suggestedSpecPath": "openspec/specs/forbiddenpage/spec.md",
+      "files": [
+        "src/pages/ForbiddenPage/index.ts"
+      ],
+      "definingFiles": [
+        "src/pages/ForbiddenPage/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/pages/ForbiddenPage/index.ts"
+    },
+    {
+      "name": "icon",
+      "suggestedSpecPath": "openspec/specs/icon/spec.md",
+      "files": [
+        "src/shared/ui/Icon/Icon.module.scss",
+        "src/shared/ui/Icon/Icon.tsx",
+        "src/shared/ui/Icon/index.ts"
+      ],
+      "definingFiles": [
+        "src/shared/ui/Icon/Icon.module.scss",
+        "src/shared/ui/Icon/Icon.tsx",
+        "src/shared/ui/Icon/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "IconModule",
+        "Icon"
+      ],
+      "keyFile": "src/shared/ui/Icon/Icon.tsx"
+    },
+    {
+      "name": "input",
+      "suggestedSpecPath": "openspec/specs/input/spec.md",
+      "files": [
+        "src/shared/ui/Input/index.ts",
+        "src/shared/ui/Input/Input.module.scss",
+        "src/shared/ui/Input/Input.tsx"
+      ],
+      "definingFiles": [
+        "src/shared/ui/Input/index.ts",
+        "src/shared/ui/Input/Input.module.scss",
+        "src/shared/ui/Input/Input.tsx"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "InputModule",
+        "Input"
+      ],
+      "keyFile": "src/shared/ui/Input/Input.tsx"
+    },
+    {
+      "name": "langswitcher",
+      "suggestedSpecPath": "openspec/specs/langswitcher/spec.md",
+      "files": [
+        "src/features/LangSwitcher/index.ts"
+      ],
+      "definingFiles": [
+        "src/features/LangSwitcher/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/features/LangSwitcher/index.ts"
+    },
+    {
+      "name": "loader",
+      "suggestedSpecPath": "openspec/specs/loader/spec.md",
+      "files": [
+        "src/shared/ui/Loader/index.ts",
+        "src/shared/ui/Loader/Loader.scss",
+        "src/shared/ui/Loader/Loader.tsx"
+      ],
+      "definingFiles": [
+        "src/shared/ui/Loader/index.ts",
+        "src/shared/ui/Loader/Loader.scss",
+        "src/shared/ui/Loader/Loader.tsx"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "Loader"
+      ],
+      "keyFile": "src/shared/ui/Loader/Loader.tsx"
+    },
+    {
+      "name": "mainlayout",
+      "suggestedSpecPath": "openspec/specs/mainlayout/spec.md",
+      "files": [
+        "src/shared/layouts/MainLayout/index.ts",
+        "src/shared/layouts/MainLayout/MainLayout.module.scss",
+        "src/shared/layouts/MainLayout/MainLayout.tsx"
+      ],
+      "definingFiles": [
+        "src/shared/layouts/MainLayout/index.ts",
+        "src/shared/layouts/MainLayout/MainLayout.module.scss",
+        "src/shared/layouts/MainLayout/MainLayout.tsx"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "MainLayoutModule",
+        "MainLayout"
+      ],
+      "keyFile": "src/shared/layouts/MainLayout/MainLayout.tsx"
+    },
+    {
+      "name": "mainpage",
+      "suggestedSpecPath": "openspec/specs/mainpage/spec.md",
+      "files": [
+        "src/pages/MainPage/index.ts"
+      ],
+      "definingFiles": [
+        "src/pages/MainPage/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/pages/MainPage/index.ts"
+    },
+    {
+      "name": "navbar",
+      "suggestedSpecPath": "openspec/specs/navbar/spec.md",
+      "files": [
+        "src/widgets/Navbar/index.ts"
+      ],
+      "definingFiles": [
+        "src/widgets/Navbar/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/widgets/Navbar/index.ts"
+    },
+    {
+      "name": "notfoundpage",
+      "suggestedSpecPath": "openspec/specs/notfoundpage/spec.md",
+      "files": [
+        "src/pages/NotFoundPage/index.ts"
+      ],
+      "definingFiles": [
+        "src/pages/NotFoundPage/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/pages/NotFoundPage/index.ts"
+    },
+    {
+      "name": "page",
+      "suggestedSpecPath": "openspec/specs/page/spec.md",
+      "files": [
+        "src/widgets/Page/index.ts"
+      ],
+      "definingFiles": [
+        "src/widgets/Page/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/widgets/Page/index.ts"
+    },
+    {
+      "name": "pages",
+      "suggestedSpecPath": "openspec/specs/pages/spec.md",
+      "files": [
+        "src/pages/AboutPage/ui/AboutPage.tsx",
+        "src/pages/AdminPanelPage/ui/AdminPanelPage.tsx",
+        "src/pages/ForbiddenPage/ui/ForbiddenPage.tsx",
+        "src/pages/MainPage/ui/MainPage.tsx",
+        "src/pages/NotFoundPage/ui/NotFoundPage.module.scss",
+        "src/pages/NotFoundPage/ui/NotFoundPage.tsx"
+      ],
+      "definingFiles": [
+        "src/pages/AboutPage/ui/AboutPage.tsx",
+        "src/pages/AdminPanelPage/ui/AdminPanelPage.tsx",
+        "src/pages/ForbiddenPage/ui/ForbiddenPage.tsx",
+        "src/pages/MainPage/ui/MainPage.tsx",
+        "src/pages/NotFoundPage/ui/NotFoundPage.module.scss",
+        "src/pages/NotFoundPage/ui/NotFoundPage.tsx"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "AboutPage",
+        "AdminPanelPage",
+        "ForbiddenPage",
+        "MainPage",
+        "NotFoundPageModule"
+      ],
+      "keyFile": "src/pages/NotFoundPage/ui/NotFoundPage.tsx"
+    },
+    {
+      "name": "providers",
+      "suggestedSpecPath": "openspec/specs/providers/spec.md",
+      "files": [
+        "src/app/providers/ErrorBoundary/ui/BugButton.tsx",
+        "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx",
+        "src/app/providers/router/config/routeConfig.tsx",
+        "src/app/providers/router/config/router.tsx",
+        "src/app/providers/router/ui/RequireAuth.tsx",
+        "src/app/providers/StoreProvider/config/StateSchema.ts",
+        "src/app/providers/StoreProvider/config/store.ts",
+        "src/app/providers/StoreProvider/ui/StoreProvider.tsx",
+        "src/app/providers/ThemeProvider/ui/ThemeProvider.tsx",
+        "src/app/providers/router/README.md",
+        "src/app/providers/router/ui/Router.test.tsx"
+      ],
+      "definingFiles": [
+        "src/app/providers/ErrorBoundary/ui/BugButton.tsx",
+        "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx",
+        "src/app/providers/router/config/routeConfig.tsx",
+        "src/app/providers/router/config/router.tsx",
+        "src/app/providers/router/ui/RequireAuth.tsx",
+        "src/app/providers/StoreProvider/config/StateSchema.ts",
+        "src/app/providers/StoreProvider/config/store.ts",
+        "src/app/providers/StoreProvider/ui/StoreProvider.tsx",
+        "src/app/providers/ThemeProvider/ui/ThemeProvider.tsx"
+      ],
+      "supportingFiles": [
+        "src/app/providers/router/README.md",
+        "src/app/providers/router/ui/Router.test.tsx"
+      ],
+      "entities": [
+        "BugButton",
+        "ErrorBoundary",
+        "RouteConfig",
+        "Router",
+        "RequireAuth"
+      ],
+      "keyFile": "src/app/providers/router/ui/RequireAuth.tsx"
+    },
+    {
+      "name": "public",
+      "suggestedSpecPath": "openspec/specs/public/spec.md",
+      "files": [
+        "public/index.html"
+      ],
+      "definingFiles": [
+        "public/index.html"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "public/index.html"
+    },
+    {
+      "name": "router",
+      "suggestedSpecPath": "openspec/specs/router/spec.md",
+      "files": [
+        "src/app/providers/router/index.ts"
+      ],
+      "definingFiles": [
+        "src/app/providers/router/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/app/providers/router/index.ts"
+    },
+    {
+      "name": "ru",
+      "suggestedSpecPath": "openspec/specs/ru/spec.md",
+      "files": [
+        "public/locales/ru/about.json",
+        "public/locales/ru/main.json",
+        "public/locales/ru/translation.json"
+      ],
+      "definingFiles": [
+        "public/locales/ru/about.json",
+        "public/locales/ru/main.json",
+        "public/locales/ru/translation.json"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "About",
+        "Main",
+        "Translation"
+      ],
+      "keyFile": "public/locales/ru/about.json"
+    },
+    {
+      "name": "shared",
+      "suggestedSpecPath": "openspec/specs/shared/spec.md",
+      "files": [
+        "src/shared/api/api.ts",
+        "src/shared/api/rtkApi.ts",
+        "src/shared/config/i18n/i18n.ts",
+        "src/shared/config/i18n/i18nForTests.ts",
+        "src/shared/const/localstorage.ts",
+        "src/shared/const/router.ts",
+        "src/shared/const/theme.ts",
+        "src/shared/lib/classNames/classNames.ts",
+        "src/shared/lib/context/ThemeContext.ts",
+        "src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts",
+        "src/shared/lib/hooks/useDebounce/useDebounce.ts",
+        "src/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll.ts",
+        "src/shared/lib/hooks/useInitialEffect/useInitialEffect.ts",
+        "src/shared/lib/hooks/useTheme/useTheme.ts",
+        "src/shared/lib/hooks/useThrottle/useThrottle.ts",
+        "src/shared/lib/url/addQueryParams/addQueryParams.ts",
+        "src/shared/types/router.ts",
+        "src/shared/types/tests.ts",
+        "src/shared/ui/Stack/Flex/Flex.module.scss",
+        "src/shared/ui/Stack/Flex/Flex.tsx",
+        "src/shared/ui/Stack/HStack/HStack.tsx",
+        "src/shared/ui/Stack/VStack/VStack.tsx",
+        "src/shared/lib/classNames/classNames.test.ts",
+        "src/shared/lib/tests/componentRender/componentRender.tsx",
+        "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx",
+        "src/shared/lib/tests/TestAsyncThunk/TestAsyncThunk.ts",
+        "src/shared/lib/url/addQueryParams/addQueryParams.test.ts"
+      ],
+      "definingFiles": [
+        "src/shared/api/api.ts",
+        "src/shared/api/rtkApi.ts",
+        "src/shared/config/i18n/i18n.ts",
+        "src/shared/config/i18n/i18nForTests.ts",
+        "src/shared/const/localstorage.ts",
+        "src/shared/const/router.ts",
+        "src/shared/const/theme.ts",
+        "src/shared/lib/classNames/classNames.ts",
+        "src/shared/lib/context/ThemeContext.ts",
+        "src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts",
+        "src/shared/lib/hooks/useDebounce/useDebounce.ts",
+        "src/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll.ts",
+        "src/shared/lib/hooks/useInitialEffect/useInitialEffect.ts",
+        "src/shared/lib/hooks/useTheme/useTheme.ts",
+        "src/shared/lib/hooks/useThrottle/useThrottle.ts",
+        "src/shared/lib/url/addQueryParams/addQueryParams.ts",
+        "src/shared/types/router.ts",
+        "src/shared/types/tests.ts",
+        "src/shared/ui/Stack/Flex/Flex.module.scss",
+        "src/shared/ui/Stack/Flex/Flex.tsx",
+        "src/shared/ui/Stack/HStack/HStack.tsx",
+        "src/shared/ui/Stack/VStack/VStack.tsx"
+      ],
+      "supportingFiles": [
+        "src/shared/lib/classNames/classNames.test.ts",
+        "src/shared/lib/tests/componentRender/componentRender.tsx",
+        "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx",
+        "src/shared/lib/tests/TestAsyncThunk/TestAsyncThunk.ts",
+        "src/shared/lib/url/addQueryParams/addQueryParams.test.ts"
+      ],
+      "entities": [
+        "Api",
+        "RtkApi",
+        "I18n",
+        "I18nForTests",
+        "Localstorage"
+      ],
+      "keyFile": "src/shared/api/api.ts"
+    },
+    {
+      "name": "sidebar",
+      "suggestedSpecPath": "openspec/specs/sidebar/spec.md",
+      "files": [
+        "src/widgets/SideBar/index.ts",
+        "src/widgets/SideBar/ui/Sidebar/Sidebar.test.tsx"
+      ],
+      "definingFiles": [
+        "src/widgets/SideBar/index.ts"
+      ],
+      "supportingFiles": [
+        "src/widgets/SideBar/ui/Sidebar/Sidebar.test.tsx"
+      ],
+      "entities": [],
+      "keyFile": "src/widgets/SideBar/index.ts"
+    },
+    {
+      "name": "skeleton",
+      "suggestedSpecPath": "openspec/specs/skeleton/spec.md",
+      "files": [
+        "src/shared/ui/Skeleton/index.ts",
+        "src/shared/ui/Skeleton/Skeleton.module.scss",
+        "src/shared/ui/Skeleton/Skeleton.tsx"
+      ],
+      "definingFiles": [
+        "src/shared/ui/Skeleton/index.ts",
+        "src/shared/ui/Skeleton/Skeleton.module.scss",
+        "src/shared/ui/Skeleton/Skeleton.tsx"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "SkeletonModule",
+        "Skeleton"
+      ],
+      "keyFile": "src/shared/ui/Skeleton/Skeleton.tsx"
+    },
+    {
+      "name": "stack",
+      "suggestedSpecPath": "openspec/specs/stack/spec.md",
+      "files": [
+        "src/shared/ui/Stack/index.ts"
+      ],
+      "definingFiles": [
+        "src/shared/ui/Stack/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/shared/ui/Stack/index.ts"
+    },
+    {
+      "name": "store",
+      "suggestedSpecPath": "openspec/specs/store/spec.md",
+      "files": [
+        "src/shared/lib/store/buildSelector.ts",
+        "src/shared/lib/store/buildSlice.ts",
+        "src/shared/lib/store/index.ts"
+      ],
+      "definingFiles": [
+        "src/shared/lib/store/buildSelector.ts",
+        "src/shared/lib/store/buildSlice.ts",
+        "src/shared/lib/store/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "BuildSelector",
+        "BuildSlice"
+      ],
+      "keyFile": "src/shared/lib/store/buildSelector.ts"
+    },
+    {
+      "name": "storeprovider",
+      "suggestedSpecPath": "openspec/specs/storeprovider/spec.md",
+      "files": [
+        "src/app/providers/StoreProvider/index.ts"
+      ],
+      "definingFiles": [
+        "src/app/providers/StoreProvider/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/app/providers/StoreProvider/index.ts"
+    },
+    {
+      "name": "styles",
+      "suggestedSpecPath": "openspec/specs/styles/spec.md",
+      "files": [
+        "src/app/styles/index.scss",
+        "src/app/styles/reset.scss",
+        "src/app/styles/themes/dark.scss",
+        "src/app/styles/themes/normal.scss",
+        "src/app/styles/variables/global.scss"
+      ],
+      "definingFiles": [
+        "src/app/styles/index.scss",
+        "src/app/styles/reset.scss",
+        "src/app/styles/themes/dark.scss",
+        "src/app/styles/themes/normal.scss",
+        "src/app/styles/variables/global.scss"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "Reset",
+        "Dark",
+        "Normal",
+        "Global"
+      ],
+      "keyFile": "src/app/styles/index.scss"
+    },
+    {
+      "name": "text",
+      "suggestedSpecPath": "openspec/specs/text/spec.md",
+      "files": [
+        "src/shared/ui/Text/index.ts",
+        "src/shared/ui/Text/Text.module.scss",
+        "src/shared/ui/Text/Text.tsx"
+      ],
+      "definingFiles": [
+        "src/shared/ui/Text/index.ts",
+        "src/shared/ui/Text/Text.module.scss",
+        "src/shared/ui/Text/Text.tsx"
+      ],
+      "supportingFiles": [],
+      "entities": [
+        "TextModule",
+        "Text"
+      ],
+      "keyFile": "src/shared/ui/Text/Text.tsx"
+    },
+    {
+      "name": "themeprovider",
+      "suggestedSpecPath": "openspec/specs/themeprovider/spec.md",
+      "files": [
+        "src/app/providers/ThemeProvider/index.ts"
+      ],
+      "definingFiles": [
+        "src/app/providers/ThemeProvider/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/app/providers/ThemeProvider/index.ts"
+    },
+    {
+      "name": "themeswitcher",
+      "suggestedSpecPath": "openspec/specs/themeswitcher/spec.md",
+      "files": [
+        "src/features/ThemeSwitcher/index.tsx"
+      ],
+      "definingFiles": [
+        "src/features/ThemeSwitcher/index.tsx"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/features/ThemeSwitcher/index.tsx"
+    },
+    {
+      "name": "ui",
+      "suggestedSpecPath": "openspec/specs/ui/spec.md",
+      "files": [
+        "src/features/UI/index.ts"
+      ],
+      "definingFiles": [
+        "src/features/UI/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/features/UI/index.ts"
+    },
+    {
+      "name": "users",
+      "suggestedSpecPath": "openspec/specs/users/spec.md",
+      "files": [
+        "src/entities/User/index.ts"
+      ],
+      "definingFiles": [
+        "src/entities/User/index.ts"
+      ],
+      "supportingFiles": [],
+      "entities": [],
+      "keyFile": "src/entities/User/index.ts"
+    },
+    {
+      "name": "widgets",
+      "suggestedSpecPath": "openspec/specs/widgets/spec.md",
+      "files": [
+        "src/widgets/ErrorPage/ui/ErrorPage.tsx",
+        "src/widgets/Navbar/model/navbarLinks.ts",
+        "src/widgets/Navbar/ui/Navbar.module.scss",
+        "src/widgets/Navbar/ui/Navbar.tsx",
+        "src/widgets/Page/ui/Page/Page.module.scss",
+        "src/widgets/Page/ui/Page/Page.tsx",
+        "src/widgets/SideBar/model/selectors/getSidebarItems.ts",
+        "src/widgets/SideBar/model/types/sidebar.ts",
+        "src/widgets/SideBar/ui/Sidebar/Sidebar.module.scss",
+        "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx",
+        "src/widgets/SideBar/ui/SidebarItem/SidebarItem.module.scss",
+        "src/widgets/SideBar/ui/SidebarItem/SidebarItem.tsx",
+        "src/widgets/Navbar/README.md"
+      ],
+      "definingFiles": [
+        "src/widgets/ErrorPage/ui/ErrorPage.tsx",
+        "src/widgets/Navbar/model/navbarLinks.ts",
+        "src/widgets/Navbar/ui/Navbar.module.scss",
+        "src/widgets/Navbar/ui/Navbar.tsx",
+        "src/widgets/Page/ui/Page/Page.module.scss",
+        "src/widgets/Page/ui/Page/Page.tsx",
+        "src/widgets/SideBar/model/selectors/getSidebarItems.ts",
+        "src/widgets/SideBar/model/types/sidebar.ts",
+        "src/widgets/SideBar/ui/Sidebar/Sidebar.module.scss",
+        "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx",
+        "src/widgets/SideBar/ui/SidebarItem/SidebarItem.module.scss",
+        "src/widgets/SideBar/ui/SidebarItem/SidebarItem.tsx"
+      ],
+      "supportingFiles": [
+        "src/widgets/Navbar/README.md"
+      ],
+      "entities": [
+        "ErrorPage",
+        "NavbarLinks",
+        "NavbarModule",
+        "Navbar",
+        "PageModule"
+      ],
+      "keyFile": "src/widgets/Navbar/ui/Navbar.tsx"
+    }
+  ],
+  "domainDecisions": [
+    {
+      "candidate": "aboutpage",
+      "path": "src/pages/AboutPage",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "aboutpage",
+      "files": [
+        "src/pages/AboutPage/index.ts"
+      ]
+    },
+    {
+      "candidate": "addqueryparams",
+      "path": "src/shared/lib/url/addQueryParams",
+      "sources": [
+        "dependency-cluster",
+        "filename"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "shared",
+      "files": [
+        "src/shared/lib/url/addQueryParams/addQueryParams.test.ts",
+        "src/shared/lib/url/addQueryParams/addQueryParams.ts"
+      ]
+    },
+    {
+      "candidate": "adminpanelpage",
+      "path": "src/pages/AdminPanelPage",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "adminpanelpage",
+      "files": [
+        "src/pages/AdminPanelPage/index.ts"
+      ]
+    },
+    {
+      "candidate": "agents",
+      "path": "(root)",
+      "sources": [
+        "dependency-cluster",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "ownership-root",
+      "owner": "agents",
+      "files": [
+        ".browserslistrc",
+        ".gitignore",
+        ".prettierignore",
+        ".prettierrc.json",
+        ".stylelintignore",
+        ".stylelintrc.json",
+        "AGENTS.md",
+        "README.md",
+        "babel.config.json",
+        "eslint.config.mjs",
+        "index.html",
+        "package.json",
+        "tsconfig.json",
+        "webpack.config.ts"
+      ]
+    },
+    {
+      "candidate": "AGENTS.md",
+      "path": "AGENTS.md",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "excluded",
+      "reason": "supporting-unattached",
+      "files": [
+        "AGENTS.md"
+      ]
+    },
+    {
+      "candidate": "api",
+      "path": "src/shared/api",
+      "sources": [
+        "dependency-cluster",
+        "technical-role"
+      ],
+      "disposition": "merged",
+      "reason": "technical-child",
+      "owner": "shared",
+      "files": [
+        "src/shared/api/api.ts",
+        "src/shared/api/rtkApi.ts"
+      ]
+    },
+    {
+      "candidate": "applink",
+      "path": "src/shared/ui/AppLink",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "applink",
+      "files": [
+        "src/shared/ui/AppLink/index.ts"
+      ]
+    },
+    {
+      "candidate": "applink",
+      "path": "src/shared/ui/AppLink",
+      "sources": [
+        "dependency-cluster",
+        "filename",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "applink",
+      "files": [
+        "src/shared/ui/AppLink/AppLink.module.scss",
+        "src/shared/ui/AppLink/AppLink.tsx",
+        "src/shared/ui/AppLink/index.ts"
+      ]
+    },
+    {
+      "candidate": "button",
+      "path": "src/shared/ui/Button",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "button",
+      "files": [
+        "src/shared/ui/Button/index.ts"
+      ]
+    },
+    {
+      "candidate": "button",
+      "path": "src/shared/ui/Button",
+      "sources": [
+        "dependency-cluster",
+        "filename",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "button",
+      "files": [
+        "src/shared/ui/Button/Button.module.scss",
+        "src/shared/ui/Button/Button.tsx",
+        "src/shared/ui/Button/index.ts"
+      ]
+    },
+    {
+      "candidate": "classnames",
+      "path": "src/shared/lib/classNames",
+      "sources": [
+        "dependency-cluster",
+        "filename"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "shared",
+      "files": [
+        "src/shared/lib/classNames/classNames.test.ts",
+        "src/shared/lib/classNames/classNames.ts"
+      ]
+    },
+    {
+      "candidate": "config",
+      "path": "config",
+      "sources": [
+        "directory",
+        "technical-role"
+      ],
+      "disposition": "promoted",
+      "reason": "ownership-root",
+      "owner": "config",
+      "files": [
+        "config/babel/babelRemovePropsPlugin.ts",
+        "config/jest/jestEmptyComponent.tsx",
+        "config/jest/jsdomEnvironment.js",
+        "config/jest/setupTests.ts"
+      ]
+    },
+    {
+      "candidate": "config",
+      "path": "src/app/providers/router/config",
+      "sources": [
+        "dependency-cluster",
+        "technical-role"
+      ],
+      "disposition": "merged",
+      "reason": "technical-child",
+      "owner": "providers",
+      "files": [
+        "src/app/providers/router/config/routeConfig.tsx",
+        "src/app/providers/router/config/router.tsx"
+      ]
+    },
+    {
+      "candidate": "config",
+      "path": "src/app/providers/StoreProvider/config",
+      "sources": [
+        "dependency-cluster",
+        "technical-role"
+      ],
+      "disposition": "merged",
+      "reason": "technical-child",
+      "owner": "providers",
+      "files": [
+        "src/app/providers/StoreProvider/config/StateSchema.ts",
+        "src/app/providers/StoreProvider/config/store.ts"
+      ]
+    },
+    {
+      "candidate": "const",
+      "path": "src/shared/const",
+      "sources": [
+        "dependency-cluster"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "shared",
+      "files": [
+        "src/shared/const/localstorage.ts",
+        "src/shared/const/router.ts",
+        "src/shared/const/theme.ts"
+      ]
+    },
+    {
+      "candidate": "counter",
+      "path": "src/entities/Counter",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "counter",
+      "files": [
+        "src/entities/Counter/index.ts"
+      ]
+    },
+    {
+      "candidate": "counter",
+      "path": "src/entities/Counter",
+      "sources": [
+        "dependency-cluster",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "counter",
+      "files": [
+        "src/entities/Counter/README.md",
+        "src/entities/Counter/index.ts"
+      ]
+    },
+    {
+      "candidate": "domain",
+      "path": "src/entities",
+      "sources": [
+        "directory",
+        "public-entry",
+        "technical-role"
+      ],
+      "disposition": "promoted",
+      "reason": "ownership-root",
+      "owner": "domain",
+      "files": [
+        "src/entities/Counter/index.ts",
+        "src/entities/Counter/model/selectors/getCounter/getCounter.ts",
+        "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.ts",
+        "src/entities/Counter/model/slice/counterSlice.ts",
+        "src/entities/Counter/model/types/counterSchema.ts",
+        "src/entities/Counter/ui/Counter.tsx",
+        "src/entities/User/api/userApi.ts",
+        "src/entities/User/index.ts",
+        "src/entities/User/model/consts/userConsts.ts",
+        "src/entities/User/model/selectors/getUserAuthData/getUserAuthData.ts",
+        "src/entities/User/model/selectors/roleSelectors.ts",
+        "src/entities/User/model/services/initAuthData.ts",
+        "src/entities/User/model/slice/userSlice.ts",
+        "src/entities/User/model/types/user.ts"
+      ]
+    },
+    {
+      "candidate": "en",
+      "path": "public/locales/en",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "en",
+      "files": [
+        "public/locales/en/main.json"
+      ]
+    },
+    {
+      "candidate": "en",
+      "path": "public/locales/en",
+      "sources": [
+        "dependency-cluster",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "en",
+      "files": [
+        "public/locales/en/about.json",
+        "public/locales/en/main.json",
+        "public/locales/en/translation.json"
+      ]
+    },
+    {
+      "candidate": "errorboundary",
+      "path": "src/app/providers/ErrorBoundary",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "errorboundary",
+      "files": [
+        "src/app/providers/ErrorBoundary/index.ts"
+      ]
+    },
+    {
+      "candidate": "errorpage",
+      "path": "src/widgets/ErrorPage",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "errorpage",
+      "files": [
+        "src/widgets/ErrorPage/index.ts"
+      ]
+    },
+    {
+      "candidate": "features",
+      "path": "src/features",
+      "sources": [
+        "directory",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "ownership-root",
+      "owner": "features",
+      "files": [
+        "src/features/LangSwitcher/index.ts",
+        "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx",
+        "src/features/ThemeSwitcher/index.tsx",
+        "src/features/ThemeSwitcher/ui/ThemeSwitcher.tsx",
+        "src/features/UI/index.ts",
+        "src/features/UI/model/selectors/ui.ts",
+        "src/features/UI/model/slices/UISlice.ts",
+        "src/features/UI/model/types/UISchema.ts"
+      ]
+    },
+    {
+      "candidate": "flex",
+      "path": "src/shared/ui/Stack/Flex",
+      "sources": [
+        "dependency-cluster",
+        "filename"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "shared",
+      "files": [
+        "src/shared/ui/Stack/Flex/Flex.module.scss",
+        "src/shared/ui/Stack/Flex/Flex.tsx"
+      ]
+    },
+    {
+      "candidate": "forbiddenpage",
+      "path": "src/pages/ForbiddenPage",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "forbiddenpage",
+      "files": [
+        "src/pages/ForbiddenPage/index.ts"
+      ]
+    },
+    {
+      "candidate": "getcounter",
+      "path": "src/entities/Counter/model/selectors/getCounter",
+      "sources": [
+        "dependency-cluster",
+        "filename"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "domain",
+      "files": [
+        "src/entities/Counter/model/selectors/getCounter/getCounter.test.ts",
+        "src/entities/Counter/model/selectors/getCounter/getCounter.ts"
+      ]
+    },
+    {
+      "candidate": "getcountervalue",
+      "path": "src/entities/Counter/model/selectors/getCounterValue",
+      "sources": [
+        "dependency-cluster",
+        "filename"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "domain",
+      "files": [
+        "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.test.ts",
+        "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.ts"
+      ]
+    },
+    {
+      "candidate": "i18n",
+      "path": "src/shared/config/i18n",
+      "sources": [
+        "dependency-cluster"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "shared",
+      "files": [
+        "src/shared/config/i18n/i18n.ts",
+        "src/shared/config/i18n/i18nForTests.ts"
+      ]
+    },
+    {
+      "candidate": "icon",
+      "path": "src/shared/ui/Icon",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "icon",
+      "files": [
+        "src/shared/ui/Icon/index.ts"
+      ]
+    },
+    {
+      "candidate": "icon",
+      "path": "src/shared/ui/Icon",
+      "sources": [
+        "dependency-cluster",
+        "filename",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "icon",
+      "files": [
+        "src/shared/ui/Icon/Icon.module.scss",
+        "src/shared/ui/Icon/Icon.tsx",
+        "src/shared/ui/Icon/index.ts"
+      ]
+    },
+    {
+      "candidate": "input",
+      "path": "src/shared/ui/Input",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "input",
+      "files": [
+        "src/shared/ui/Input/index.ts"
+      ]
+    },
+    {
+      "candidate": "input",
+      "path": "src/shared/ui/Input",
+      "sources": [
+        "dependency-cluster",
+        "filename",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "input",
+      "files": [
+        "src/shared/ui/Input/Input.module.scss",
+        "src/shared/ui/Input/Input.tsx",
+        "src/shared/ui/Input/index.ts"
+      ]
+    },
+    {
+      "candidate": "jest",
+      "path": "config/jest",
+      "sources": [
+        "dependency-cluster"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "config",
+      "files": [
+        "config/jest/jest.config.mjs",
+        "config/jest/jestEmptyComponent.tsx",
+        "config/jest/jsdomEnvironment.js",
+        "config/jest/setupTests.ts"
+      ]
+    },
+    {
+      "candidate": "langswitcher",
+      "path": "src/features/LangSwitcher",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "langswitcher",
+      "files": [
+        "src/features/LangSwitcher/index.ts"
+      ]
+    },
+    {
+      "candidate": "langswitcher",
+      "path": "src/features/LangSwitcher",
+      "sources": [
+        "dependency-cluster",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "langswitcher",
+      "files": [
+        "src/features/LangSwitcher/README.md",
+        "src/features/LangSwitcher/index.ts"
+      ]
+    },
+    {
+      "candidate": "loader",
+      "path": "src/shared/ui/Loader",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "loader",
+      "files": [
+        "src/shared/ui/Loader/index.ts"
+      ]
+    },
+    {
+      "candidate": "loader",
+      "path": "src/shared/ui/Loader",
+      "sources": [
+        "dependency-cluster",
+        "filename",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "loader",
+      "files": [
+        "src/shared/ui/Loader/Loader.scss",
+        "src/shared/ui/Loader/Loader.tsx",
+        "src/shared/ui/Loader/index.ts"
+      ]
+    },
+    {
+      "candidate": "mainlayout",
+      "path": "src/shared/layouts/MainLayout",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "mainlayout",
+      "files": [
+        "src/shared/layouts/MainLayout/index.ts"
+      ]
+    },
+    {
+      "candidate": "mainlayout",
+      "path": "src/shared/layouts/MainLayout",
+      "sources": [
+        "dependency-cluster",
+        "filename",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "mainlayout",
+      "files": [
+        "src/shared/layouts/MainLayout/MainLayout.module.scss",
+        "src/shared/layouts/MainLayout/MainLayout.tsx",
+        "src/shared/layouts/MainLayout/index.ts"
+      ]
+    },
+    {
+      "candidate": "mainpage",
+      "path": "src/pages/MainPage",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "mainpage",
+      "files": [
+        "src/pages/MainPage/index.ts"
+      ]
+    },
+    {
+      "candidate": "navbar",
+      "path": "src/widgets/Navbar",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "navbar",
+      "files": [
+        "src/widgets/Navbar/index.ts"
+      ]
+    },
+    {
+      "candidate": "navbar",
+      "path": "src/widgets/Navbar",
+      "sources": [
+        "dependency-cluster",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "navbar",
+      "files": [
+        "src/widgets/Navbar/README.md",
+        "src/widgets/Navbar/index.ts"
+      ]
+    },
+    {
+      "candidate": "notfoundpage",
+      "path": "src/pages/NotFoundPage",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "notfoundpage",
+      "files": [
+        "src/pages/NotFoundPage/index.ts"
+      ]
+    },
+    {
+      "candidate": "page",
+      "path": "src/widgets/Page",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "page",
+      "files": [
+        "src/widgets/Page/index.ts"
+      ]
+    },
+    {
+      "candidate": "page",
+      "path": "src/widgets/Page/ui/Page",
+      "sources": [
+        "dependency-cluster",
+        "filename"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "widgets",
+      "files": [
+        "src/widgets/Page/ui/Page/Page.module.scss",
+        "src/widgets/Page/ui/Page/Page.tsx"
+      ]
+    },
+    {
+      "candidate": "pages",
+      "path": "src/pages",
+      "sources": [
+        "directory",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "ownership-root",
+      "owner": "pages",
+      "files": [
+        "src/pages/AboutPage/index.ts",
+        "src/pages/AboutPage/ui/AboutPage.tsx",
+        "src/pages/AdminPanelPage/index.ts",
+        "src/pages/AdminPanelPage/ui/AdminPanelPage.tsx",
+        "src/pages/ForbiddenPage/index.ts",
+        "src/pages/ForbiddenPage/ui/ForbiddenPage.tsx",
+        "src/pages/MainPage/index.ts",
+        "src/pages/MainPage/ui/MainPage.tsx",
+        "src/pages/NotFoundPage/index.ts",
+        "src/pages/NotFoundPage/ui/NotFoundPage.module.scss",
+        "src/pages/NotFoundPage/ui/NotFoundPage.tsx"
+      ]
+    },
+    {
+      "candidate": "providers",
+      "path": "src/app/providers",
+      "sources": [
+        "directory",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "ownership-root",
+      "owner": "providers",
+      "files": [
+        "src/app/providers/ErrorBoundary/index.ts",
+        "src/app/providers/ErrorBoundary/ui/BugButton.tsx",
+        "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx",
+        "src/app/providers/StoreProvider/config/StateSchema.ts",
+        "src/app/providers/StoreProvider/config/store.ts",
+        "src/app/providers/StoreProvider/index.ts",
+        "src/app/providers/StoreProvider/ui/StoreProvider.tsx",
+        "src/app/providers/ThemeProvider/index.ts",
+        "src/app/providers/ThemeProvider/ui/ThemeProvider.tsx",
+        "src/app/providers/router/config/routeConfig.tsx",
+        "src/app/providers/router/config/router.tsx",
+        "src/app/providers/router/index.ts",
+        "src/app/providers/router/ui/RequireAuth.tsx"
+      ]
+    },
+    {
+      "candidate": "public",
+      "path": "public",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "merged",
+      "reason": "exact-duplicate",
+      "owner": "public",
+      "files": [
+        "public/index.html"
+      ]
+    },
+    {
+      "candidate": "public",
+      "path": "public",
+      "sources": [
+        "directory",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "ownership-root",
+      "owner": "public",
+      "files": [
+        "public/index.html",
+        "public/locales/en/about.json",
+        "public/locales/en/main.json",
+        "public/locales/en/translation.json",
+        "public/locales/ru/about.json",
+        "public/locales/ru/main.json",
+        "public/locales/ru/translation.json"
+      ]
+    },
+    {
+      "candidate": "README.md",
+      "path": "README.md",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "excluded",
+      "reason": "supporting-unattached",
+      "files": [
+        "README.md"
+      ]
+    },
+    {
+      "candidate": "router",
+      "path": "src/app/providers/router",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "router",
+      "files": [
+        "src/app/providers/router/index.ts"
+      ]
+    },
+    {
+      "candidate": "router",
+      "path": "src/app/providers/router",
+      "sources": [
+        "dependency-cluster",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "router",
+      "files": [
+        "src/app/providers/router/README.md",
+        "src/app/providers/router/index.ts"
+      ]
+    },
+    {
+      "candidate": "ru",
+      "path": "public/locales/ru",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "ru",
+      "files": [
+        "public/locales/ru/main.json"
+      ]
+    },
+    {
+      "candidate": "ru",
+      "path": "public/locales/ru",
+      "sources": [
+        "dependency-cluster",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "ru",
+      "files": [
+        "public/locales/ru/about.json",
+        "public/locales/ru/main.json",
+        "public/locales/ru/translation.json"
+      ]
+    },
+    {
+      "candidate": "shared",
+      "path": "src/shared",
+      "sources": [
+        "directory",
+        "public-entry",
+        "technical-role"
+      ],
+      "disposition": "promoted",
+      "reason": "ownership-root",
+      "owner": "shared",
+      "files": [
+        "src/shared/api/api.ts",
+        "src/shared/api/rtkApi.ts",
+        "src/shared/config/i18n/i18n.ts",
+        "src/shared/config/i18n/i18nForTests.ts",
+        "src/shared/const/localstorage.ts",
+        "src/shared/const/router.ts",
+        "src/shared/const/theme.ts",
+        "src/shared/layouts/MainLayout/MainLayout.module.scss",
+        "src/shared/layouts/MainLayout/MainLayout.tsx",
+        "src/shared/layouts/MainLayout/index.ts",
+        "src/shared/lib/classNames/classNames.ts",
+        "src/shared/lib/context/ThemeContext.ts",
+        "src/shared/lib/hooks/useAppDispatch/useAppDispatch.ts",
+        "src/shared/lib/hooks/useDebounce/useDebounce.ts",
+        "src/shared/lib/hooks/useInfiniteScroll/useInfiniteScroll.ts",
+        "src/shared/lib/hooks/useInitialEffect/useInitialEffect.ts",
+        "src/shared/lib/hooks/useTheme/useTheme.ts",
+        "src/shared/lib/hooks/useThrottle/useThrottle.ts",
+        "src/shared/lib/store/buildSelector.ts",
+        "src/shared/lib/store/buildSlice.ts",
+        "src/shared/lib/store/index.ts",
+        "src/shared/lib/url/addQueryParams/addQueryParams.ts",
+        "src/shared/types/router.ts",
+        "src/shared/types/tests.ts",
+        "src/shared/ui/AppLink/AppLink.module.scss",
+        "src/shared/ui/AppLink/AppLink.tsx",
+        "src/shared/ui/AppLink/index.ts",
+        "src/shared/ui/Button/Button.module.scss",
+        "src/shared/ui/Button/Button.tsx",
+        "src/shared/ui/Button/index.ts",
+        "src/shared/ui/Icon/Icon.module.scss",
+        "src/shared/ui/Icon/Icon.tsx",
+        "src/shared/ui/Icon/index.ts",
+        "src/shared/ui/Input/Input.module.scss",
+        "src/shared/ui/Input/Input.tsx",
+        "src/shared/ui/Input/index.ts",
+        "src/shared/ui/Loader/Loader.scss",
+        "src/shared/ui/Loader/Loader.tsx",
+        "src/shared/ui/Loader/index.ts",
+        "src/shared/ui/Skeleton/Skeleton.module.scss",
+        "src/shared/ui/Skeleton/Skeleton.tsx",
+        "src/shared/ui/Skeleton/index.ts",
+        "src/shared/ui/Stack/Flex/Flex.module.scss",
+        "src/shared/ui/Stack/Flex/Flex.tsx",
+        "src/shared/ui/Stack/HStack/HStack.tsx",
+        "src/shared/ui/Stack/VStack/VStack.tsx",
+        "src/shared/ui/Stack/index.ts",
+        "src/shared/ui/Text/Text.module.scss",
+        "src/shared/ui/Text/Text.tsx",
+        "src/shared/ui/Text/index.ts"
+      ]
+    },
+    {
+      "candidate": "sidebar",
+      "path": "src/widgets/SideBar",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "sidebar",
+      "files": [
+        "src/widgets/SideBar/index.ts"
+      ]
+    },
+    {
+      "candidate": "sidebar",
+      "path": "src/widgets/SideBar/ui/Sidebar",
+      "sources": [
+        "dependency-cluster",
+        "filename"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "widgets",
+      "files": [
+        "src/widgets/SideBar/ui/Sidebar/Sidebar.module.scss",
+        "src/widgets/SideBar/ui/Sidebar/Sidebar.test.tsx",
+        "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx"
+      ]
+    },
+    {
+      "candidate": "sidebaritem",
+      "path": "src/widgets/SideBar/ui/SidebarItem",
+      "sources": [
+        "dependency-cluster",
+        "filename"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "widgets",
+      "files": [
+        "src/widgets/SideBar/ui/SidebarItem/SidebarItem.module.scss",
+        "src/widgets/SideBar/ui/SidebarItem/SidebarItem.tsx"
+      ]
+    },
+    {
+      "candidate": "skeleton",
+      "path": "src/shared/ui/Skeleton",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "skeleton",
+      "files": [
+        "src/shared/ui/Skeleton/index.ts"
+      ]
+    },
+    {
+      "candidate": "skeleton",
+      "path": "src/shared/ui/Skeleton",
+      "sources": [
+        "dependency-cluster",
+        "filename",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "skeleton",
+      "files": [
+        "src/shared/ui/Skeleton/Skeleton.module.scss",
+        "src/shared/ui/Skeleton/Skeleton.tsx",
+        "src/shared/ui/Skeleton/index.ts"
+      ]
+    },
+    {
+      "candidate": "slice",
+      "path": "src/entities/Counter/model/slice",
+      "sources": [
+        "dependency-cluster"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "domain",
+      "files": [
+        "src/entities/Counter/model/slice/counterSlice.test.ts",
+        "src/entities/Counter/model/slice/counterSlice.ts"
+      ]
+    },
+    {
+      "candidate": "src/app/providers/router/README.md",
+      "path": "src/app/providers/router/README.md",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-path-owner",
+      "owner": "providers",
+      "files": [
+        "src/app/providers/router/README.md"
+      ]
+    },
+    {
+      "candidate": "src/app/providers/router/ui/Router.test.tsx",
+      "path": "src/app/providers/router/ui/Router.test.tsx",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-path-owner",
+      "owner": "providers",
+      "files": [
+        "src/app/providers/router/ui/Router.test.tsx"
+      ]
+    },
+    {
+      "candidate": "src/entities/Counter/model/selectors/getCounter/getCounter.test.ts",
+      "path": "src/entities/Counter/model/selectors/getCounter/getCounter.test.ts",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-import-owner",
+      "owner": "domain",
+      "files": [
+        "src/entities/Counter/model/selectors/getCounter/getCounter.test.ts"
+      ]
+    },
+    {
+      "candidate": "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.test.ts",
+      "path": "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.test.ts",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-import-owner",
+      "owner": "domain",
+      "files": [
+        "src/entities/Counter/model/selectors/getCounterValue/getCounterValue.test.ts"
+      ]
+    },
+    {
+      "candidate": "src/entities/Counter/model/slice/counterSlice.test.ts",
+      "path": "src/entities/Counter/model/slice/counterSlice.test.ts",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-import-owner",
+      "owner": "domain",
+      "files": [
+        "src/entities/Counter/model/slice/counterSlice.test.ts"
+      ]
+    },
+    {
+      "candidate": "src/entities/Counter/README.md",
+      "path": "src/entities/Counter/README.md",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-path-owner",
+      "owner": "domain",
+      "files": [
+        "src/entities/Counter/README.md"
+      ]
+    },
+    {
+      "candidate": "src/entities/Counter/ui/Counter.test.tsx",
+      "path": "src/entities/Counter/ui/Counter.test.tsx",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-import-owner",
+      "owner": "domain",
+      "files": [
+        "src/entities/Counter/ui/Counter.test.tsx"
+      ]
+    },
+    {
+      "candidate": "src/entities/User/README.md",
+      "path": "src/entities/User/README.md",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-path-owner",
+      "owner": "domain",
+      "files": [
+        "src/entities/User/README.md"
+      ]
+    },
+    {
+      "candidate": "src/features/LangSwitcher/README.md",
+      "path": "src/features/LangSwitcher/README.md",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-path-owner",
+      "owner": "features",
+      "files": [
+        "src/features/LangSwitcher/README.md"
+      ]
+    },
+    {
+      "candidate": "src/features/ThemeSwitcher/README.md",
+      "path": "src/features/ThemeSwitcher/README.md",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-path-owner",
+      "owner": "features",
+      "files": [
+        "src/features/ThemeSwitcher/README.md"
+      ]
+    },
+    {
+      "candidate": "src/features/UI/README.md",
+      "path": "src/features/UI/README.md",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-path-owner",
+      "owner": "features",
+      "files": [
+        "src/features/UI/README.md"
+      ]
+    },
+    {
+      "candidate": "src/shared/lib/classNames/classNames.test.ts",
+      "path": "src/shared/lib/classNames/classNames.test.ts",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-import-owner",
+      "owner": "shared",
+      "files": [
+        "src/shared/lib/classNames/classNames.test.ts"
+      ]
+    },
+    {
+      "candidate": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "path": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-path-owner",
+      "owner": "shared",
+      "files": [
+        "src/shared/lib/tests/componentRender/componentRender.tsx"
+      ]
+    },
+    {
+      "candidate": "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx",
+      "path": "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-path-owner",
+      "owner": "shared",
+      "files": [
+        "src/shared/lib/tests/renderWithTranslation/renderWithTranslation.tsx"
+      ]
+    },
+    {
+      "candidate": "src/shared/lib/tests/TestAsyncThunk/TestAsyncThunk.ts",
+      "path": "src/shared/lib/tests/TestAsyncThunk/TestAsyncThunk.ts",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-path-owner",
+      "owner": "shared",
+      "files": [
+        "src/shared/lib/tests/TestAsyncThunk/TestAsyncThunk.ts"
+      ]
+    },
+    {
+      "candidate": "src/shared/lib/url/addQueryParams/addQueryParams.test.ts",
+      "path": "src/shared/lib/url/addQueryParams/addQueryParams.test.ts",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-import-owner",
+      "owner": "shared",
+      "files": [
+        "src/shared/lib/url/addQueryParams/addQueryParams.test.ts"
+      ]
+    },
+    {
+      "candidate": "src/widgets/Navbar/README.md",
+      "path": "src/widgets/Navbar/README.md",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-path-owner",
+      "owner": "widgets",
+      "files": [
+        "src/widgets/Navbar/README.md"
+      ]
+    },
+    {
+      "candidate": "src/widgets/SideBar/ui/Sidebar/Sidebar.test.tsx",
+      "path": "src/widgets/SideBar/ui/Sidebar/Sidebar.test.tsx",
+      "sources": [
+        "supporting-file"
+      ],
+      "disposition": "attached",
+      "reason": "supporting-import-owner",
+      "owner": "sidebar",
+      "files": [
+        "src/widgets/SideBar/ui/Sidebar/Sidebar.test.tsx"
+      ]
+    },
+    {
+      "candidate": "stack",
+      "path": "src/shared/ui/Stack",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "stack",
+      "files": [
+        "src/shared/ui/Stack/index.ts"
+      ]
+    },
+    {
+      "candidate": "store",
+      "path": "src/shared/lib/store",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "store",
+      "files": [
+        "src/shared/lib/store/index.ts"
+      ]
+    },
+    {
+      "candidate": "store",
+      "path": "src/shared/lib/store",
+      "sources": [
+        "dependency-cluster",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "store",
+      "files": [
+        "src/shared/lib/store/buildSelector.ts",
+        "src/shared/lib/store/buildSlice.ts",
+        "src/shared/lib/store/index.ts"
+      ]
+    },
+    {
+      "candidate": "storeprovider",
+      "path": "src/app/providers/StoreProvider",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "storeprovider",
+      "files": [
+        "src/app/providers/StoreProvider/index.ts"
+      ]
+    },
+    {
+      "candidate": "styles",
+      "path": "src/app/styles",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "merged",
+      "reason": "exact-duplicate",
+      "owner": "styles",
+      "files": [
+        "src/app/styles/index.scss"
+      ]
+    },
+    {
+      "candidate": "styles",
+      "path": "src/app/styles",
+      "sources": [
+        "dependency-cluster",
+        "public-entry"
+      ],
+      "disposition": "merged",
+      "reason": "exact-duplicate",
+      "owner": "styles",
+      "files": [
+        "src/app/styles/index.scss",
+        "src/app/styles/reset.scss"
+      ]
+    },
+    {
+      "candidate": "styles",
+      "path": "src/app/styles",
+      "sources": [
+        "directory",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "ownership-root",
+      "owner": "styles",
+      "files": [
+        "src/app/styles/index.scss",
+        "src/app/styles/reset.scss",
+        "src/app/styles/themes/dark.scss",
+        "src/app/styles/themes/normal.scss",
+        "src/app/styles/variables/global.scss"
+      ]
+    },
+    {
+      "candidate": "text",
+      "path": "src/shared/ui/Text",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "text",
+      "files": [
+        "src/shared/ui/Text/index.ts"
+      ]
+    },
+    {
+      "candidate": "text",
+      "path": "src/shared/ui/Text",
+      "sources": [
+        "dependency-cluster",
+        "filename",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "text",
+      "files": [
+        "src/shared/ui/Text/Text.module.scss",
+        "src/shared/ui/Text/Text.tsx",
+        "src/shared/ui/Text/index.ts"
+      ]
+    },
+    {
+      "candidate": "themeprovider",
+      "path": "src/app/providers/ThemeProvider",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "themeprovider",
+      "files": [
+        "src/app/providers/ThemeProvider/index.ts"
+      ]
+    },
+    {
+      "candidate": "themes",
+      "path": "src/app/styles/themes",
+      "sources": [
+        "dependency-cluster"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "styles",
+      "files": [
+        "src/app/styles/themes/dark.scss",
+        "src/app/styles/themes/normal.scss"
+      ]
+    },
+    {
+      "candidate": "themeswitcher",
+      "path": "src/features/ThemeSwitcher",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "themeswitcher",
+      "files": [
+        "src/features/ThemeSwitcher/index.tsx"
+      ]
+    },
+    {
+      "candidate": "themeswitcher",
+      "path": "src/features/ThemeSwitcher",
+      "sources": [
+        "dependency-cluster",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "themeswitcher",
+      "files": [
+        "src/features/ThemeSwitcher/README.md",
+        "src/features/ThemeSwitcher/index.tsx"
+      ]
+    },
+    {
+      "candidate": "types",
+      "path": "src/shared/types",
+      "sources": [
+        "dependency-cluster"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "shared",
+      "files": [
+        "src/shared/types/router.ts",
+        "src/shared/types/tests.ts"
+      ]
+    },
+    {
+      "candidate": "ui",
+      "path": "src/app/providers/ErrorBoundary/ui",
+      "sources": [
+        "dependency-cluster"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "providers",
+      "files": [
+        "src/app/providers/ErrorBoundary/ui/BugButton.tsx",
+        "src/app/providers/ErrorBoundary/ui/ErrorBoundary.tsx"
+      ]
+    },
+    {
+      "candidate": "ui",
+      "path": "src/app/providers/router/ui",
+      "sources": [
+        "dependency-cluster"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "providers",
+      "files": [
+        "src/app/providers/router/ui/RequireAuth.tsx",
+        "src/app/providers/router/ui/Router.test.tsx"
+      ]
+    },
+    {
+      "candidate": "ui",
+      "path": "src/entities/Counter/ui",
+      "sources": [
+        "dependency-cluster"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "domain",
+      "files": [
+        "src/entities/Counter/ui/Counter.test.tsx",
+        "src/entities/Counter/ui/Counter.tsx"
+      ]
+    },
+    {
+      "candidate": "ui",
+      "path": "src/features/UI",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "ui",
+      "files": [
+        "src/features/UI/index.ts"
+      ]
+    },
+    {
+      "candidate": "ui",
+      "path": "src/features/UI",
+      "sources": [
+        "dependency-cluster",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "ui",
+      "files": [
+        "src/features/UI/README.md",
+        "src/features/UI/index.ts"
+      ]
+    },
+    {
+      "candidate": "ui",
+      "path": "src/pages/NotFoundPage/ui",
+      "sources": [
+        "dependency-cluster"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "pages",
+      "files": [
+        "src/pages/NotFoundPage/ui/NotFoundPage.module.scss",
+        "src/pages/NotFoundPage/ui/NotFoundPage.tsx"
+      ]
+    },
+    {
+      "candidate": "ui",
+      "path": "src/widgets/Navbar/ui",
+      "sources": [
+        "dependency-cluster"
+      ],
+      "disposition": "merged",
+      "reason": "contained-footprint",
+      "owner": "widgets",
+      "files": [
+        "src/widgets/Navbar/ui/Navbar.module.scss",
+        "src/widgets/Navbar/ui/Navbar.tsx"
+      ]
+    },
+    {
+      "candidate": "users",
+      "path": "src/entities/User",
+      "sources": [
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "users",
+      "files": [
+        "src/entities/User/index.ts"
+      ]
+    },
+    {
+      "candidate": "users",
+      "path": "src/entities/User",
+      "sources": [
+        "dependency-cluster",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "independent-boundary",
+      "owner": "users",
+      "files": [
+        "src/entities/User/README.md",
+        "src/entities/User/index.ts"
+      ]
+    },
+    {
+      "candidate": "widgets",
+      "path": "src/widgets",
+      "sources": [
+        "directory",
+        "public-entry"
+      ],
+      "disposition": "promoted",
+      "reason": "ownership-root",
+      "owner": "widgets",
+      "files": [
+        "src/widgets/ErrorPage/index.ts",
+        "src/widgets/ErrorPage/ui/ErrorPage.tsx",
+        "src/widgets/Navbar/index.ts",
+        "src/widgets/Navbar/model/navbarLinks.ts",
+        "src/widgets/Navbar/ui/Navbar.module.scss",
+        "src/widgets/Navbar/ui/Navbar.tsx",
+        "src/widgets/Page/index.ts",
+        "src/widgets/Page/ui/Page/Page.module.scss",
+        "src/widgets/Page/ui/Page/Page.tsx",
+        "src/widgets/SideBar/index.ts",
+        "src/widgets/SideBar/model/selectors/getSidebarItems.ts",
+        "src/widgets/SideBar/model/types/sidebar.ts",
+        "src/widgets/SideBar/ui/Sidebar/Sidebar.module.scss",
+        "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx",
+        "src/widgets/SideBar/ui/SidebarItem/SidebarItem.module.scss",
+        "src/widgets/SideBar/ui/SidebarItem/SidebarItem.tsx"
+      ]
+    }
+  ],
+  "domainDecisionSummary": {
+    "total": 103,
+    "emitted": 103,
+    "omitted": 0,
+    "limit": 500,
+    "filesPerDecisionLimit": 50
+  },
+  "undomained": [
+    ".browserslistrc",
+    ".prettierrc.json",
+    ".stylelintrc.json",
+    "AGENTS.md",
+    "README.md",
+    "babel.config.json",
+    "config/jest/jest.config.mjs",
+    "eslint.config.mjs",
+    "package.json",
+    "src/app/App.tsx",
+    "src/app/types/global.d.ts",
+    "src/index.tsx",
+    "tsconfig.json",
+    "webpack.config.ts"
+  ],
+  "undomainedEvidence": [
+    {
+      "path": ".browserslistrc",
+      "role": "excluded",
+      "reason": "config-file"
+    },
+    {
+      "path": ".prettierrc.json",
+      "role": "excluded",
+      "reason": "config-file"
+    },
+    {
+      "path": ".stylelintrc.json",
+      "role": "excluded",
+      "reason": "config-file"
+    },
+    {
+      "path": "AGENTS.md",
+      "role": "supporting",
+      "reason": "documentation-file"
+    },
+    {
+      "path": "babel.config.json",
+      "role": "excluded",
+      "reason": "config-file"
+    },
+    {
+      "path": "config/jest/jest.config.mjs",
+      "role": "excluded",
+      "reason": "config-file"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "role": "excluded",
+      "reason": "config-file"
+    },
+    {
+      "path": "package.json",
+      "role": "excluded",
+      "reason": "config-file"
+    },
+    {
+      "path": "README.md",
+      "role": "supporting",
+      "reason": "documentation-file"
+    },
+    {
+      "path": "src/app/App.tsx",
+      "role": "defining",
+      "reason": "production-source"
+    },
+    {
+      "path": "src/app/types/global.d.ts",
+      "role": "excluded",
+      "reason": "generated-file"
+    },
+    {
+      "path": "src/index.tsx",
+      "role": "defining",
+      "reason": "production-source"
+    },
+    {
+      "path": "tsconfig.json",
+      "role": "excluded",
+      "reason": "config-file"
+    },
+    {
+      "path": "webpack.config.ts",
+      "role": "excluded",
+      "reason": "config-file"
+    }
+  ],
+  "entryPoints": [
+    {
+      "file": "src/app/providers/StoreProvider/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/entities/User/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/features/UI/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "index.html",
+      "type": "application-entry",
+      "initializes": []
+    },
+    {
+      "file": "src/app/providers/ErrorBoundary/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/app/providers/router/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/app/providers/ThemeProvider/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/app/styles/index.scss",
+      "type": "application-entry",
+      "initializes": []
+    },
+    {
+      "file": "src/app/App.tsx",
+      "type": "application-entry",
+      "initializes": []
+    },
+    {
+      "file": "src/entities/Counter/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/features/LangSwitcher/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/features/ThemeSwitcher/index.tsx",
+      "type": "application-entry",
+      "initializes": []
+    },
+    {
+      "file": "src/pages/AboutPage/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/pages/AdminPanelPage/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/pages/ForbiddenPage/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/pages/MainPage/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/pages/NotFoundPage/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/shared/layouts/MainLayout/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/shared/lib/store/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/shared/ui/AppLink/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/shared/ui/Button/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/shared/ui/Icon/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/shared/ui/Input/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/shared/ui/Loader/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/shared/ui/Skeleton/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/shared/ui/Stack/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/shared/ui/Text/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/widgets/ErrorPage/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/widgets/Navbar/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/widgets/Page/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/widgets/SideBar/index.ts",
+      "type": "application-entry",
+      "initializes": [
+        "application"
+      ]
+    },
+    {
+      "file": "src/index.tsx",
+      "type": "application-entry",
+      "initializes": []
+    },
+    {
+      "file": "public/locales/en/main.json",
+      "type": "application-entry",
+      "initializes": []
+    },
+    {
+      "file": "public/locales/ru/main.json",
+      "type": "application-entry",
+      "initializes": []
+    },
+    {
+      "file": "public/index.html",
+      "type": "application-entry",
+      "initializes": []
+    }
+  ],
+  "dataFlow": {
+    "sources": [
+      "src/entities/User/api/userApi.ts",
+      "src/shared/api/api.ts",
+      "src/shared/api/rtkApi.ts"
+    ],
+    "sinks": [],
+    "transformers": [
+      "src/entities/User/model/services/initAuthData.ts"
+    ]
+  },
+  "keyFiles": {
+    "schemas": [
+      "src/app/providers/StoreProvider/config/StateSchema.ts",
+      "src/entities/Counter/model/types/counterSchema.ts",
+      "src/features/UI/model/types/UISchema.ts"
+    ],
+    "config": [
+      "src/app/providers/StoreProvider/config/StateSchema.ts",
+      "src/app/providers/StoreProvider/config/store.ts",
+      "src/app/providers/router/config/routeConfig.tsx",
+      "eslint.config.mjs",
+      "tsconfig.json",
+      "config/jest/jest.config.mjs",
+      "babel.config.json",
+      "webpack.config.ts",
+      "config/jest/jsdomEnvironment.js",
+      "package.json",
+      "config/babel/babelRemovePropsPlugin.ts",
+      "src/app/providers/router/config/router.tsx",
+      ".browserslistrc",
+      ".prettierrc.json",
+      ".stylelintrc.json",
+      "config/jest/jestEmptyComponent.tsx",
+      "config/jest/setupTests.ts",
+      "src/shared/config/i18n/i18n.ts",
+      "src/shared/config/i18n/i18nForTests.ts"
+    ],
+    "auth": [
+      "src/app/providers/router/ui/RequireAuth.tsx",
+      "src/entities/User/model/services/initAuthData.ts",
+      "src/entities/User/model/selectors/getUserAuthData/getUserAuthData.ts"
+    ],
+    "database": [],
+    "routes": [
+      "src/app/providers/router/config/routeConfig.tsx",
+      "src/shared/types/router.ts",
+      "src/app/providers/router/config/router.tsx",
+      "src/app/providers/router/ui/Router.test.tsx",
+      "src/shared/const/router.ts"
+    ],
+    "services": [
+      "src/entities/User/model/services/initAuthData.ts"
+    ]
+  },
+  "uiComponents": [
+    {
+      "name": "RequireAuth",
+      "file": "src/app/providers/router/ui/RequireAuth.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 12,
+      "props": [
+        {
+          "name": "children",
+          "type": "React.ReactElement",
+          "required": true
+        },
+        {
+          "name": "roles",
+          "type": "UserRole[]",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "StoreProvider",
+      "file": "src/app/providers/StoreProvider/ui/StoreProvider.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 10,
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": false
+        },
+        {
+          "name": "initialState",
+          "type": "StorePreloadedState",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "TestProvider",
+      "file": "src/shared/lib/tests/componentRender/componentRender.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 55,
+      "props": [
+        {
+          "name": "children",
+          "type": "ReactNode",
+          "required": true
+        },
+        {
+          "name": "options",
+          "type": "componentRenderOptions",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Button",
+      "file": "src/shared/ui/Button/Button.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 48,
+      "props": []
+    },
+    {
+      "name": "Icon",
+      "file": "src/shared/ui/Icon/Icon.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 23,
+      "props": []
+    },
+    {
+      "name": "Input",
+      "file": "src/shared/ui/Input/Input.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 33,
+      "props": []
+    },
+    {
+      "name": "Flex",
+      "file": "src/shared/ui/Stack/Flex/Flex.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 53,
+      "props": []
+    },
+    {
+      "name": "Text",
+      "file": "src/shared/ui/Text/Text.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 36,
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "title",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "variant",
+          "type": "TextVariant",
+          "required": false
+        },
+        {
+          "name": "align",
+          "type": "TextAlign",
+          "required": false
+        },
+        {
+          "name": "size",
+          "type": "TextSize",
+          "required": false
+        },
+        {
+          "name": "bold",
+          "type": "boolean",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Navbar",
+      "file": "src/widgets/Navbar/ui/Navbar.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 17,
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Sidebar",
+      "file": "src/widgets/SideBar/ui/Sidebar/Sidebar.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 16,
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "LangSwitcher",
+      "file": "src/features/LangSwitcher/ui/LangSwitcher/LangSwitcher.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 11,
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "short",
+          "type": "boolean",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "ThemeSwitcher",
+      "file": "src/features/ThemeSwitcher/ui/ThemeSwitcher.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 10,
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "NotFoundPage",
+      "file": "src/pages/NotFoundPage/ui/NotFoundPage.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 9,
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "MainLayout",
+      "file": "src/shared/layouts/MainLayout/MainLayout.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 12,
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "header",
+          "type": "ReactElement",
+          "required": true
+        },
+        {
+          "name": "content",
+          "type": "ReactElement",
+          "required": true
+        },
+        {
+          "name": "sidebar",
+          "type": "ReactElement",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "AppLink",
+      "file": "src/shared/ui/AppLink/AppLink.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 16,
+      "props": []
+    },
+    {
+      "name": "Loader",
+      "file": "src/shared/ui/Loader/Loader.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 12,
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Skeleton",
+      "file": "src/shared/ui/Skeleton/Skeleton.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 12,
+      "props": [
+        {
+          "name": "className",
+          "type": "string",
+          "required": false
+        },
+        {
+          "name": "height",
+          "type": "string | number",
+          "required": false
+        },
+        {
+          "name": "width",
+          "type": "string | number",
+          "required": false
+        },
+        {
+          "name": "border",
+          "type": "string",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "HStack",
+      "file": "src/shared/ui/Stack/HStack/HStack.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 5,
+      "props": []
+    },
+    {
+      "name": "VStack",
+      "file": "src/shared/ui/Stack/VStack/VStack.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 5,
+      "props": []
+    },
+    {
+      "name": "Page",
+      "file": "src/widgets/Page/ui/Page/Page.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 22,
+      "props": []
+    },
+    {
+      "name": "SidebarItem",
+      "file": "src/widgets/SideBar/ui/SidebarItem/SidebarItem.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 14,
+      "props": [
+        {
+          "name": "item",
+          "type": "SidebarItemType",
+          "required": true
+        },
+        {
+          "name": "collapsed",
+          "type": "boolean",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "BugButton",
+      "file": "src/app/providers/ErrorBoundary/ui/BugButton.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 6,
+      "props": []
+    },
+    {
+      "name": "Counter",
+      "file": "src/entities/Counter/ui/Counter.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 7,
+      "props": []
+    },
+    {
+      "name": "ErrorPage",
+      "file": "src/widgets/ErrorPage/ui/ErrorPage.tsx",
+      "framework": "react",
+      "isDefault": false,
+      "line": 4,
+      "props": []
+    }
+  ],
+  "schemas": [],
+  "routeInventory": {
+    "total": 0,
+    "byMethod": {},
+    "byFramework": {},
+    "routes": []
+  },
+  "middleware": [],
+  "envVars": [],
+  "statistics": {
+    "totalFiles": 177,
+    "analyzedFiles": 164,
+    "skippedFiles": 13,
+    "avgFileScore": 19,
+    "nodeCount": 164,
+    "edgeCount": 64,
+    "cycleCount": 0,
+    "clusterCount": 42,
+    "rawDomainCandidateCount": 83,
+    "finalDomainCount": 40
+  }
+}
